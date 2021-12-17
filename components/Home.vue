@@ -1,13 +1,25 @@
 <template>
   <div class="wrapper">
     <div class="container mx-auto">
-      <MainHeader/>
+      <MainHeader
+        :content = content
+      />
       <main>
-        <SectionHeader/>
-        <CitizenshipSteps/>
-        <SearchDossier/>
-        <SectionNews/>
-        <SectionPartners/>
+        <SectionHeader
+          :content = content
+        />
+        <CitizenshipSteps
+          :content = content
+        />
+        <SearchDossier
+          :content = content
+        />
+        <SectionNews
+          :content = content
+        />
+        <SectionPartners
+          :content = content
+        />
       </main>
     </div>
     <footer>
@@ -17,7 +29,7 @@
 </template>
 
 <script>
-import * as content from '../content.json'
+import * as data from '../content.json'
 import MainHeader from '~/components/MainHeader'
 import SectionHeader from '~/components/SectionHeader'
 import CitizenshipSteps from '~/components/CitizenshipSteps'
@@ -30,25 +42,26 @@ export default {
   components: { SectionPartners, SectionNews, SearchDossier, CitizenshipSteps, SectionHeader, MainHeader },
   data: () => ({
     posts: [],
-    ip: null
+    ip: null,
+    content: {}
   }),
-  async mounted () {
-    await this.fetchSomething()
-    console.log(this.ip)
+  created () {
+    this.content = this.getContent()
+  },
+  mounted () {
+    this.content = this.getContent()
   },
   methods:{
     async fetchSomething() {
-      const ip = await this.$axios.$get('http://icanhazip.com')
+      // const ip = await this.$axios.$get('http://icanhazip.com')
       // const data = await this.$axios.$get('http://localhost/api/collections/get/menu?token=af7d2f20a484eddc8ad3e612cd9527')
-      const content = await this.getContent()
-      this.ip = ip
-      // console.log(data)
-      console.log(content)
+      // const content = await this.getContent()
+      // this.ip = ip
     },
-    async getContent() {
-      return await content
+    getContent() {
+      return data.data
     }
-  },
+  }
 }
 </script>
 

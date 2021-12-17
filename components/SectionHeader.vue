@@ -1,10 +1,8 @@
 <template>
   <section class="hero flex justify-end">
     <div class="hero-block flex flex-col justify-center items-start">
-      <h1 class="hero-block__message font-bold text-size text-5xl">
-        Lorem ipsum dolor sit amet.
-      </h1>
-      <h5 class="hero-block__subtitle flex font-bold">Lorem ipsum dolor sit amet, consectetur.</h5>
+      <h1 class="hero-block__message font-bold text-size text-5xl">{{ content.heroBlock.title }}</h1>
+      <h5 class="hero-block__subtitle flex font-bold">{{ content.heroBlock.subtitle }}</h5>
       <button class="btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
         Button
       </button>
@@ -18,7 +16,14 @@
 </template>
 <script>
 export default {
-  name: 'SectionHeader'
+  name: 'SectionHeader',
+  props: {
+    content: {
+      type: Object, default: () => {
+        return {}
+      }, required: false
+    }
+  }
 }
 </script>
 <style scoped>

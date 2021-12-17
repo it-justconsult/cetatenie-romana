@@ -1,14 +1,11 @@
 <template>
   <header class="main-header flex justify-between">
     <div class="logo">
-      <img src="~/assets/img/logo.png" alt="Logo" class="logo__image">
+      <img alt="Logo" class="logo__image" src="~/assets/img/logo.png">
     </div>
     <div class="main-menu">
       <ul class="main-menu__items inline-flex justify-end">
-        <li class="main-menu__item pl-6">Principală</li>
-        <li class="main-menu__item pl-6">Acte românești</li>
-        <li class="main-menu__item pl-6">Noutăți</li>
-        <li class="main-menu__item pl-6">Contacte</li>
+        <li v-for="item in content.menu" :key="item.id" class="main-menu__item pl-6">{{ item.title }}</li>
       </ul>
     </div>
   </header>
@@ -17,7 +14,11 @@
 export default {
   name: 'MainHeader',
   props: {
-    menu: { type: Object, default: null, required: false }
+    content: {
+      type: Object, default: () => {
+        return {}
+      }, required: false
+    }
   }
 }
 </script>
@@ -27,16 +28,14 @@ export default {
 }
 
 .main-header {
-  //display: flex;
-  //justify-content: space-between;
+//display: flex; //justify-content: space-between;
 }
 
 .main-menu .main-menu__item {
-  //padding-left: 38px;
+//padding-left: 38px;
 }
 
 .main-menu__items {
-  //display: inline-flex;
-  //justify-content: flex-end;
+//display: inline-flex; //justify-content: flex-end;
 }
 </style>

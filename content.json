@@ -1,6 +1,102 @@
 {
-  "menu" : {
-    "title": "Main",
-    "href": "/"
+  "data": {
+    "menu": [
+      {
+        "id": 1,
+        "title": "Principală",
+        "href": "/"
+      },
+      {
+        "id": 2,
+        "title": "Acte românești",
+        "submenu": [
+          {
+            "id": 3,
+            "title": "Submenu",
+            "href": "/"
+          }
+        ],
+        "href": "/"
+      },
+      {
+        "id": 4,
+        "title": "Noutăți",
+        "href": "/"
+      },
+      {
+        "id": 5,
+        "title": "Contacte",
+        "href": "/"
+      }
+    ],
+    "logo": "logo.png",
+    "heroBlock": {
+      "title": "Lorem ipsum dolor sit amet, consectetur.",
+      "subtitle": "Lorem ipsum dolor sit amet",
+      "image": "https://link"
+    },
+    "citizenshipSteps": {
+      "title": "Etapele",
+      "subtitle": "Text",
+      "steps": [
+        {
+          "stepTitle": "Etapa 1",
+          "stepText": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus!"
+        },
+        {
+          "stepTitle": "Etapa 2",
+          "stepText": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus!"
+        },
+        {
+          "stepTitle": "Etapa 3",
+          "stepText": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus!"
+        },
+        {
+          "stepTitle": "Etapa 4",
+          "stepText": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus!"
+        }
+      ]
+    },
+    "searchDossier": {
+      "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "subtitle": "Lorem ipsum dolor sit amet.",
+      "buttonTitle": "Află numărul dosarului"
+    },
+    "searchOrder": {
+      "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "subtitle": "Lorem ipsum dolor sit amet.",
+      "buttonTitle": "Abonează-te"
+    },
+    "newsBlock": {
+      "title": "ultimele știri",
+      "buttonTitle": "Vezi mai multe știri",
+      "lastNews": [
+        {
+          "id": 1,
+          "title": "Title",
+          "subtitle": "Subtitle",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda at atque consectetur consequuntur\n            corporis, ducimus eligendi est labore mollitia, perferendis saepe ullam?"
+        },
+        {
+          "id": 2,
+          "title": "Title2",
+          "subtitle": "Subtitle2",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda at atque consectetur consequuntur\n            corporis, ducimus eligendi est labore mollitia, perferendis saepe ullam?"
+        },
+        {
+          "id": 3,
+          "title": "Title3",
+          "subtitle": "Subtitle3",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda at atque consectetur consequuntur\n            corporis, ducimus eligendi est labore mollitia, perferendis saepe ullam?"
+        },
+        {
+          "id": 4,
+          "title": "Title4",
+          "subtitle": "Subtitle4",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda at atque consectetur consequuntur\n            corporis, ducimus eligendi est labore mollitia, perferendis saepe ullam?"
+        }
+      ]
+    },
+    "footerMenu": []
   }
 }

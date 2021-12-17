@@ -55,5 +55,8 @@ export default {
       },
     },
   },
-  ssr: false
+  ssr: false,
+  devServer: {
+    hot: true,
+  },
 }
