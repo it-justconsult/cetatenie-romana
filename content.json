@@ -12,7 +12,17 @@
         "submenu": [
           {
             "id": 3,
-            "title": "Submenu",
+            "title": "Buletin",
+            "href": "/"
+          },
+          {
+            "id": 99,
+            "title": "Pașaport",
+            "href": "/"
+          },
+          {
+            "id": 100,
+            "title": "Cetățenie",
             "href": "/"
           }
         ],
@@ -29,11 +39,11 @@
         "href": "/"
       }
     ],
-    "logo": "logo.png",
+    "logo": "http://localhost/storage/uploads/img/logo.png",
     "heroBlock": {
       "title": "Lorem ipsum dolor sit amet, consectetur.",
       "subtitle": "Lorem ipsum dolor sit amet",
-      "image": "https://link"
+      "image": "http://localhost/storage/uploads/test/dacia.png"
     },
     "citizenshipSteps": {
       "title": "Etapele",
@@ -61,7 +71,7 @@
       "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
       "subtitle": "Lorem ipsum dolor sit amet.",
       "buttonTitle": "Află numărul dosarului"
-    },
+      },
     "searchOrder": {
       "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
       "subtitle": "Lorem ipsum dolor sit amet.",
