@@ -42,8 +42,8 @@
     "logo": "http://localhost/storage/uploads/img/logo.png",
     "heroBlock": {
       "title": "Lorem ipsum dolor sit amet, consectetur.",
-      "subtitle": "Lorem ipsum dolor sit amet",
-      "image": "http://localhost/storage/uploads/test/dacia.png"
+      "subtitle": "Lorem ipsum dolor sit amet2",
+      "image": "http://localhost/storage/uploads/img/hero-image2.png"
     },
     "citizenshipSteps": {
       "title": "Etapele",

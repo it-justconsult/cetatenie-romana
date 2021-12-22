@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <div class="container mx-auto">
+    <div class="container  mx-auto">
       <MainHeader
         :content = content
       />
@@ -23,7 +23,7 @@
       </main>
     </div>
     <footer>
-      <FooterComponent></FooterComponent>
+      <!--<FooterComponent></FooterComponent> -->
     </footer>
   </div>
 </template>
@@ -36,10 +36,13 @@ import CitizenshipSteps from '~/components/CitizenshipSteps'
 import SearchDossier from '~/components/SearchDossier'
 import SectionNews from '~/components/SectionNews'
 import SectionPartners from '~/components/SectionPartners'
+import FooterComponent from '~/components/FooterComponent'
+
 
 export default {
   name: 'HomeComponent',
-  components: { SectionPartners, SectionNews, SearchDossier, CitizenshipSteps, SectionHeader, MainHeader },
+  layout: 'default',
+  components: { SectionPartners, SectionNews, SearchDossier, CitizenshipSteps, SectionHeader, MainHeader, FooterComponent },
   data: () => ({
     posts: [],
     ip: null,

@@ -27,7 +27,8 @@ export default {
     content: {
       type: Object, default: () => {
         return {}
-      }, required: false
+      },
+      required: false
     }
   }
 }

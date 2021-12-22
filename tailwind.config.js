@@ -1,11 +1,6 @@
+const tailwindColors = require('tailwind-colors')
 module.exports = {
-  content: [
-    "./components/**/*.{js,vue,ts}",
-    "./layouts/**/*.vue",
-    "./pages/**/*.vue",
-    "./plugins/**/*.{js,ts}",
-    "./nuxt.config.{js,ts}",
-  ],
+  srcDir: 'src',
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -16,13 +11,9 @@ module.exports = {
       xl: '1440px',
     },
     colors: {
-      'blue': '#1fb6ff',
-      'green': '#72BB5D',
-      'black': '#000',
-      'white': '#fff',
-      'gray-dark': '#273444',
-      'gray': '#8492a6',
-      'gray-light': '#d3dce6',
+      ...tailwindColors,
+      transparent: 'transparent',
+      current: 'currentColor',
     },
     extend: {
       spacing: {

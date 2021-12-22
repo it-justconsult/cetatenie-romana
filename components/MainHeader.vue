@@ -120,28 +120,5 @@ export default {
 }
 </script>
 <style scoped>
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-.nav {
-  @apply px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8;
-}
-
-
-.has-submenu:hover .subnav {
-  display: flex;
-  justify-content: flex-start;
-//flex-direction: row;
-}
-
-.has-submenu:hover ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.logo-image {
-  max-width: 220px;
-}
 </style>
