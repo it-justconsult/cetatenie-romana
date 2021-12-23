@@ -1,43 +1,43 @@
 <template>
-  <section class="search-dossier flex justify-center items-center mt-3">
-    <div class="dossier-block ml-3">
-      <form action="">
-        <div class="input-block">
-          <input
-            id="dossier_number"
-            class="dossier_number placeholder-gray
-            bg-gray-700 rounded w-full py-2 px-4 text-2xl focus:outline-none focus:bg-white" name="dossier_number"
-            placeholder="Numărul dosarului" type="text">
-        </div>
-        <div class="get-info-block bg-cetro-black text-2xl text-cetro-white text-white text-center">
-          <p class="questions">{{ content.searchDossier.title }}</p>
-          <p class="questions">{{ content.searchDossier.subtitle }}</p>
-          <img alt="Link to partners" class="get-info-image min-w-[140] min-h-[140]" src="">
-          <button class="get-info-button text-black bg-cetro-green text-2xl rounded-2xl p-2" type="submit">{{ content.searchDossier.buttonTitle }}</button>
-        </div>
-      </form>
-    </div>
-    <div class="order-block flex flex-col justify-between ml-3 bg-cetro-black text-2xl text-white text-center">
-      <form action="">
-        <div class="input-block">
-          <input
-            class="dossier_number bg-gray-700 rounded w-full py-2 px-4 text-2xl focus:outline-none focus:bg-white focus:border-purple-500"
-            name="order_number" placeholder="Numărul ordinului" type="text">
-        </div>
+  <!--  <section class="search-dossier flex justify-center items-center mt-3">
+      <div class="dossier-block ml-3">
+        <form action="">
+          <div class="input-block">
+            <input
+              id="dossier_number"
+              class="dossier_number placeholder-gray
+              bg-gray-700 rounded w-full py-2 px-4 text-2xl focus:outline-none focus:bg-white" name="dossier_number"
+              placeholder="Numărul dosarului" type="text">
+          </div>
+          <div class="get-info-block bg-cetro-black text-2xl text-cetro-white text-white text-center">
+            <p class="questions">{{ content.searchDossier.title }}</p>
+            <p class="questions">{{ content.searchDossier.subtitle }}</p>
+            <img alt="Link to partners" class="get-info-image min-w-[140] min-h-[140]" src="">
+            <button class="get-info-button text-black bg-cetro-green text-2xl rounded-2xl p-2" type="submit">{{ content.searchDossier.buttonTitle }}</button>
+          </div>
+        </form>
+      </div>
+      <div class="order-block flex flex-col justify-between ml-3 bg-cetro-black text-2xl text-white text-center">
+        <form action="">
+          <div class="input-block">
+            <input
+              class="dossier_number bg-gray-700 rounded w-full py-2 px-4 text-2xl focus:outline-none focus:bg-white focus:border-purple-500"
+              name="order_number" placeholder="Numărul ordinului" type="text">
+          </div>
 
-        <div class="text-block">
-          <p>{{ content.searchOrder.title }}</p>
-          <p>{{ content.searchOrder.subtitle }}</p>
-        </div>
-        <div class="subscribe-block flex flex-col items-center justify-between">
-          <input class="subscribe-block__item mt-3 text-black placeholder-black" placeholder="Nume Prenume" type="text">
-          <input class="subscribe-block__item mt-3 text-black placeholder-black" placeholder="Număr de contact" type="tel">
-          <input class="subscribe-block__item mt-3 text-black placeholder-black" placeholder="Email" type="email">
-          <button class="subscribe-block__item subscribe-button p-1 text-black text-2xl rounded-2xl bg-cetro-green" type="submit">{{ content.searchOrder.buttonTitle }}</button>
-        </div>
-      </form>
-    </div>
-  </section>
+          <div class="text-block">
+            <p>{{ content.searchOrder.title }}</p>
+            <p>{{ content.searchOrder.subtitle }}</p>
+          </div>
+          <div class="subscribe-block flex flex-col items-center justify-between">
+            <input class="subscribe-block__item mt-3 text-black placeholder-black" placeholder="Nume Prenume" type="text">
+            <input class="subscribe-block__item mt-3 text-black placeholder-black" placeholder="Număr de contact" type="tel">
+            <input class="subscribe-block__item mt-3 text-black placeholder-black" placeholder="Email" type="email">
+            <button class="subscribe-block__item subscribe-button p-1 text-black text-2xl rounded-2xl bg-cetro-green" type="submit">{{ content.searchOrder.buttonTitle }}</button>
+          </div>
+        </form>
+      </div>
+    </section>-->
 </template>
 <script>
 export default {

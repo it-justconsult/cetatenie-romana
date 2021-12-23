@@ -43,11 +43,13 @@
     "heroBlock": {
       "title": "Lorem ipsum dolor sit amet, consectetur.",
       "subtitle": "Lorem ipsum dolor sit amet2",
+      "created_at":  "2020-12-28",
       "image": "http://localhost/storage/uploads/img/hero-image2.png"
     },
     "citizenshipSteps": {
       "title": "Etapele",
       "subtitle": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.",
+      "created_at":  "2020-12-28",
       "steps": [
         {
           "stepTitle": "Etapa 1",
@@ -70,11 +72,13 @@
     "searchDossier": {
       "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
       "subtitle": "Lorem ipsum dolor sit amet.",
+      "created_at": "2020-12-28",
       "buttonTitle": "Află numărul dosarului"
       },
     "searchOrder": {
       "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
       "subtitle": "Lorem ipsum dolor sit amet.",
+      "created_at": "2020-12-28",
       "buttonTitle": "Abonează-te"
     },
     "newsBlock": {
@@ -83,27 +87,35 @@
       "lastNews": [
         {
           "id": 1,
-          "title": "Title",
+          "title": "Visit the East",
           "subtitle": "Subtitle",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda at atque consectetur consequuntur\n            corporis, ducimus eligendi est labore mollitia, perferendis saepe ullam?"
+          "created_at": "2020-12-28",
+          "image": "https://images.pexels.com/photos/2408666/pexels-photo-2408666.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500",
+          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
         },
         {
           "id": 2,
-          "title": "Title2",
+          "title": "Simple is better",
           "subtitle": "Subtitle2",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda at atque consectetur consequuntur\n            corporis, ducimus eligendi est labore mollitia, perferendis saepe ullam?"
+          "created_at": "2021-06-15",
+          "image": "https://images.pexels.com/photos/447592/pexels-photo-447592.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
+          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
         },
         {
           "id": 3,
-          "title": "Title3",
+          "title": "Film It!",
           "subtitle": "Subtitle3",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda at atque consectetur consequuntur\n            corporis, ducimus eligendi est labore mollitia, perferendis saepe ullam?"
+          "created_at": "2021-01-06",
+          "image": "https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
+          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
         },
         {
           "id": 4,
-          "title": "Title4",
+          "title": "Visit the East",
           "subtitle": "Subtitle4",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda at atque consectetur consequuntur\n            corporis, ducimus eligendi est labore mollitia, perferendis saepe ullam?"
+          "created_at": "2021-12-22",
+          "image": "https://images.pexels.com/photos/2408666/pexels-photo-2408666.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500",
+          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
         }
       ]
     },
