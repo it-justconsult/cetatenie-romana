@@ -23,15 +23,12 @@
               Brand new
             </p>
           </div>-->
-          <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-300 sm:text-4xl sm:leading-none">
+          <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-black sm:text-4xl sm:leading-none">
             {{ content.heroBlock.title }}
           </h2>
           <p class="text-base text-gray-700 md:text-lg">
             {{ content.heroBlock.subtitle }}
           </p>
-          <button class="btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded bg-red-900 text-blue">
-            Button
-          </button>
         </div>
       </div>
       <div class="flex items-center justify-center lg:w-1/2">
