@@ -1,9 +1,6 @@
 <template>
   <div class="wrapper">
     <div class="mx-auto">
-      <MainHeader
-        :content = content
-      />
       <main>
         <SectionHeader
           :content = content

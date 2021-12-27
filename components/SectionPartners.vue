@@ -25,7 +25,7 @@
       </h2>
     </div>
     <div class="grid gap-10 mx-auto lg:max-w-screen-lg sm:grid-cols-2 lg:grid-cols-4">
-      <div class="flex flex-col items-center" v-for="partner in content.partnersBlock.partners" :key="partner">
+      <div class="flex flex-col items-center" v-for="partner in content.partnersBlock.partners" :key="partner.id">
         <img class="object-cover w-60 h-60 mb-6 rounded-2xl shadow" :src="partner.image" alt="Person" />
         <div class="flex flex-col items-center">
           <p class="text-sm font-bold">{{partner.title}}</p>

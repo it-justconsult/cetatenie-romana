@@ -28,7 +28,7 @@
         </p>
       </div>
       <div class='grid gap-8 row-gap-0 lg:grid-cols-4'>
-        <div
+        <a href='#'
 v-for='step in content.citizenshipSteps.steps' :key='step.id'
              class='citizenship-step relative text-center'>
           <div
@@ -58,7 +58,7 @@ v-for='step in content.citizenshipSteps.steps' :key='step.id'
               <polyline fill='none' points='15,5 22,12 15,19 ' stroke-miterlimit='10'></polyline>
             </svg>
           </div>
-        </div>
+        </a>
         <!--        <div class='relative text-center'>
                   <div
                     class='flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20'>
@@ -120,7 +120,7 @@ v-for='step in content.citizenshipSteps.steps' :key='step.id'
           {{ content.citizenshipSteps.subtitle }}
         </p>
       </div>
-      <div class='relative grid gap-8 row-gap-5 mb-8 md:row-gap-8 lg:grid-cols-4 sm:grid-cols-2'>
+      <a class='relative grid gap-8 row-gap-5 mb-8 md:row-gap-8 lg:grid-cols-4 sm:grid-cols-2' href='#'>
         <div class='absolute inset-0 flex items-center justify-center sm:hidden lg:flex'>
           <div class='w-px h-full bg-gray-300 lg:w-full lg:h-px'></div>
         </div>
@@ -172,7 +172,7 @@ v-for='step in content.citizenshipSteps.steps' :key='step.id'
             Bro ipsum dolor sit amet gaper backside single track, manny Bike epic clipless.
           </p>
         </div>
-      </div>
+      </a>
       <div class='text-center'>
         <a
           class='inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none'
