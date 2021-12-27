@@ -3,9 +3,9 @@
     <div class="nav">
       <div class="relative flex items-center justify-between">
         <a
-          aria-label="Company" class="columns-1 items-center" href="/" title="Company">
+          aria-label="Company" class="columns-1 items-center  w-32" href="/" title="Company">
           <!-- TODO: change to logo image? -->
-          <img alt="Logo" :src="content.logo" class="logo-image">
+          <img alt="Logo" :src="content.logo"  class="logo-image">
         </a>
         <ul class="menu-block flex hidden space-x-8 lg:flex">
           <li
@@ -121,4 +121,24 @@ export default {
 </script>
 <style scoped>
 
+.nav {
+  @apply px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8;
+}
+
+
+.has-submenu:hover .subnav {
+  display: flex;
+  justify-content: flex-start;
+//flex-direction: row;
+}
+
+.has-submenu:hover ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.logo-image {
+  //max-width: 220px;
+}
 </style>

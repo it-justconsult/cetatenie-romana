@@ -119,6 +119,31 @@
         }
       ]
     },
+    "partnersBlock": {
+      "title": "parteneri",
+      "partners": [
+        {
+          "id": 1,
+          "title": "Mercedes",
+          "image": "http://localhost/storage/uploads/partners/apple.png"
+        },
+        {
+          "id": 2,
+          "title": "Simple is better",
+          "image": "http://localhost/storage/uploads/partners/bmw.png"
+        },
+        {
+          "id": 3,
+          "title": "Film It!",
+          "image": "http://localhost/storage/uploads/partners/dacia.png"
+        },
+        {
+          "id": 4,
+          "title": "Visit the East",
+          "image": "http://localhost/storage/uploads/partners/zaporojets.png"
+        }
+      ]
+    },
     "footerMenu": []
   }
 }
