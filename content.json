@@ -35,11 +35,19 @@
       },
       {
         "id": 5,
+        "title": "Întrebări frecvente",
+        "href": "/"
+      },
+      {
+        "id": 6,
         "title": "Contacte",
         "href": "/"
       }
     ],
-    "logo": "http://localhost/storage/uploads/img/logo.png",
+    "logo": {
+      "src": "http://localhost/storage/uploads/img/logo.png",
+      "name": "Cetățenie"
+    },
     "heroBlock": {
       "title": "Lorem ipsum dolor sit amet, consectetur.",
       "subtitle": "Lorem ipsum dolor sit amet2",

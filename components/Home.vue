@@ -1,21 +1,21 @@
 <template>
-  <div class="wrapper">
-    <div class="mx-auto">
+  <div class='wrapper'>
+    <div class='mx-auto'>
       <main>
         <SectionHeader
-          :content = content
+          :content=content
         />
         <CitizenshipSteps
-          :content = content
+          :content=content
         />
         <SearchDossier
-          :content = content
+          :content=content
         />
         <SectionNews
-          :content = content
+          :content=content
         />
         <SectionPartners
-          :content = content
+          :content=content
         />
       </main>
     </div>
@@ -27,19 +27,16 @@
 
 <script>
 import * as data from '../content.json'
-import MainHeader from '~/components/MainHeader'
 import SectionHeader from '~/components/SectionHeader'
 import CitizenshipSteps from '~/components/CitizenshipSteps'
 import SearchDossier from '~/components/SearchDossier'
 import SectionNews from '~/components/SectionNews'
 import SectionPartners from '~/components/SectionPartners'
-import FooterComponent from '~/components/FooterComponent'
-
 
 export default {
   name: 'HomeComponent',
+  components: { SectionPartners, SectionNews, SearchDossier, CitizenshipSteps, SectionHeader },
   layout: 'default',
-  components: { SectionPartners, SectionNews, SearchDossier, CitizenshipSteps, SectionHeader, MainHeader, FooterComponent },
   data: () => ({
     posts: [],
     ip: null,
@@ -50,15 +47,17 @@ export default {
   },
   mounted () {
     this.content = this.getContent()
+    console.log(this.content)
+
   },
-  methods:{
-    async fetchSomething() {
+  methods: {
+    async fetchSomething () {
       // const ip = await this.$axios.$get('http://icanhazip.com')
       // const data = await this.$axios.$get('http://localhost/api/collections/get/menu?token=af7d2f20a484eddc8ad3e612cd9527')
       // const content = await this.getContent()
       // this.ip = ip
     },
-    getContent() {
+    getContent () {
       return data.data
     }
   }
