@@ -144,6 +144,113 @@
         }
       ]
     },
-    "footerMenu": []
+    "footerMenu": [],
+    "newsPage": {
+      "articles": [
+        {
+          "id": 1,
+          "title": "Diving to the deep",
+          "subtitle": "Subtitle",
+          "created_at": "2020-12-28",
+          "image": "https://images.pexels.com/photos/932638/pexels-photo-932638.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260",
+          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+        },
+        {
+          "id": 2,
+          "title": "Conquer the World",
+          "subtitle": "Subtitle2",
+          "created_at": "2021-06-15",
+          "image": "https://images.pexels.com/photos/1576937/pexels-photo-1576937.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500",
+          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+        },
+        {
+          "id": 3,
+          "title": "Explore the beautiful",
+          "subtitle": "Subtitle3",
+          "created_at": "2021-01-06",
+          "image": "https://images.pexels.com/photos/2123755/pexels-photo-2123755.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
+          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+        },
+        {
+          "id": 4,
+          "title": "Visit the East",
+          "subtitle": "Subtitle4",
+          "created_at": "2021-12-22",
+          "image": "https://images.pexels.com/photos/2408666/pexels-photo-2408666.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500",
+          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+        },
+        {
+          "id": 5,
+          "title": "Visit the East",
+          "subtitle": "Subtitle4",
+          "created_at": "2021-12-22",
+          "image": "https://images.pexels.com/photos/2408666/pexels-photo-2408666.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500",
+          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+        },
+        {
+          "id": 6,
+          "title": "Visit the East",
+          "subtitle": "Subtitle4",
+          "created_at": "2021-12-22",
+          "image": "https://images.pexels.com/photos/447592/pexels-photo-447592.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
+          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+        },
+        {
+          "id": 7,
+          "title": "Visit the East",
+          "subtitle": "Subtitle4",
+          "created_at": "2021-12-22",
+          "image": "https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
+          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+        }
+      ]
+    },
+    "questionsPage": {
+      "questions": [
+        {
+          "id": 1,
+          "title": "Diving to the deep",
+          "created_at": "2020-12-28",
+          "answer": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+        },
+        {
+          "id": 2,
+          "title": "Conquer the World",
+          "created_at": "2021-06-15",
+          "answer": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+        },
+        {
+          "id": 3,
+          "title": "Explore the beautiful",
+          "created_at": "2021-01-06",
+          "answer": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+        },
+        {
+          "id": 4,
+          "title": "Visit the East",
+          "created_at": "2021-12-22",
+          "answer": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+        },
+        {
+          "id": 5,
+          "title": "Visit the East",
+          "created_at": "2021-12-22",
+          "answer": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+        },
+        {
+          "id": 6,
+          "title": "Visit the East",
+          "created_at": "2021-12-22",
+          "answer": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+        },
+        {
+          "id": 7,
+          "title": "Visit the East",
+          "created_at": "2021-12-22",
+          "answer": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+        }
+      ]
+    }
+
   }
 }

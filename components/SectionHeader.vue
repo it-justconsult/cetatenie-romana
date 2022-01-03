@@ -23,7 +23,7 @@
               Brand new
             </p>
           </div>-->
-          <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-black sm:text-4xl sm:leading-none">
+          <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-cetro-green sm:text-4xl sm:leading-none">
             {{ content.heroBlock.title }}
           </h2>
           <p class="text-base text-gray-700 md:text-lg">

@@ -1,30 +1,30 @@
 <template>
   <div>
-<!--    <section class='news mt-1.7 text-center bg-cetro-green'>
-      <h2 class='news__last-news text-3xl text-white uppercase font-bold'>{{ content.newsBlock.title }}</h2>
-      <div class='news-wrapper flex justify-between'>
-        <div
-v-for='article in content.newsBlock.lastNews' :key=article.id
-             class='article bg-cetro-white text-center m-2'>
-          <div class='article article__image block'>
-            image &lt;!&ndash;TODO: delete&ndash;&gt;
-            <img alt='' src=''>
+    <!--    <section class='news mt-1.7 text-center bg-cetro-green'>
+          <h2 class='news__last-news text-3xl text-white uppercase font-bold'>{{ content.newsBlock.title }}</h2>
+          <div class='news-wrapper flex justify-between'>
+            <div
+    v-for='article in content.newsBlock.lastNews' :key=article.id
+                 class='article bg-cetro-white text-center m-2'>
+              <div class='article article__image block'>
+                image &lt;!&ndash;TODO: delete&ndash;&gt;
+                <img alt='' src=''>
+              </div>
+              <div class='article article__title text-2xl font-bold'>
+                <h3>{{ article.title }}</h3>
+              </div>
+              <div class='article article__description text-lg'>
+                <p>{{ article.text }}</p>
+              </div>
+            </div>
           </div>
-          <div class='article article__title text-2xl font-bold'>
-            <h3>{{ article.title }}</h3>
+          <div class='more-news'>
+            <a
+    class='more-news__button p-1 m-3 bg-cetro-black text-lg text-white text-center rounded'
+               href='#'>{{ content.newsBlock.buttonTitle
+              }}</a>
           </div>
-          <div class='article article__description text-lg'>
-            <p>{{ article.text }}</p>
-          </div>
-        </div>
-      </div>
-      <div class='more-news'>
-        <a
-class='more-news__button p-1 m-3 bg-cetro-black text-lg text-white text-center rounded'
-           href='#'>{{ content.newsBlock.buttonTitle
-          }}</a>
-      </div>
-    </section>-->
+        </section>-->
     <div class='px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20'>
       <div class='max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12'>
         <h2
@@ -33,23 +33,28 @@ class='more-news__button p-1 m-3 bg-cetro-black text-lg text-white text-center r
         </h2>
       </div>
       <div class='grid gap-8 lg:grid-cols-4 sm:max-w-sm sm:mx-auto lg:max-w-full'>
-        <div v-for="article in content.newsBlock.lastNews" :key="article.id" class='overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm'>
+        <div
+v-for='article in content.newsBlock.lastNews' :key='article.id'
+             class='overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm'>
           <img
-            alt=''
-            class='object-cover w-full h-64' :src="article.image" />
+            :src='article.image'
+            alt='' class='object-cover w-full h-64' />
           <div class='p-5 border border-t-0'>
             <p class='mb-3 text-xs font-semibold tracking-wide uppercase'>
               <span class='text-gray-600'>{{ article.created_at }}</span>
             </p>
             <a
-aria-label='Category' class='inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700' href='/'
-               title='Visit the East'>{{ article.title}}</a>
+              aria-label='Category'
+              class='inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700'
+              href='/'
+              title='Visit the East'>{{ article.title }}</a>
             <p class='mb-2 text-gray-700'>
-              {{ article.text}}
+              {{ article.text }}
             </p>
             <a
-aria-label='' class='inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800'
-               href='/'>Learn
+              aria-label=''
+              class='inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800'
+              href='/'>Learn
               more</a>
           </div>
         </div>
