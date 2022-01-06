@@ -27,7 +27,7 @@
 
 <script>
 import * as data from '../content.json'
-import SectionHeader from '~/components/SectionHeader'
+import SectionHeader from '~/components/SectionHero'
 import CitizenshipSteps from '~/components/CitizenshipSteps'
 import SearchDossier from '~/components/SearchDossier'
 import SectionNews from '~/components/SectionNews'
@@ -51,12 +51,12 @@ export default {
 
   },
   methods: {
-    async fetchSomething () {
+    // async fetchSomething () {
       // const ip = await this.$axios.$get('http://icanhazip.com')
       // const data = await this.$axios.$get('http://localhost/api/collections/get/menu?token=af7d2f20a484eddc8ad3e612cd9527')
       // const content = await this.getContent()
       // this.ip = ip
-    },
+    // },
     getContent () {
       return data.data
     }

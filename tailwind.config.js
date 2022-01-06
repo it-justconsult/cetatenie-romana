@@ -312,6 +312,7 @@ module.exports = {
         },
         'regal-blue': '#243c5a',
         'cetro-green': '#72BB5D',
+        'cetro-gray': '#EFF2F2',
         'cetro-white': '#fff',
         'cetro-black': '#424242',
       },

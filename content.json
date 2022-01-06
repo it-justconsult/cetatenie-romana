@@ -98,7 +98,7 @@
     },
     "newsBlock": {
       "title": "ultimele știri",
-      "buttonTitle": "Vezi mai multe știri",
+      "buttonTitle": "Vezi detalii",
       "lastNews": [
         {
           "id": 1,

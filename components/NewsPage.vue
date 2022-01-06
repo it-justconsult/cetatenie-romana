@@ -50,7 +50,33 @@
           {{ content.newsBlock.title }}
         </h2>
       </div>
-      <div
+      <div class='grid gap-8 lg:grid-cols-4 sm:max-w-sm sm:mx-auto lg:max-w-full'>
+        <div
+          v-for='article in content.newsPage.articles' :key='article.id'
+          class='overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm'>
+          <img
+            :src='article.image'
+            alt='' class='object-cover w-full h-64' />
+          <div class='p-5 border border-t-0'>
+            <p class='mb-3 text-xs font-semibold tracking-wide uppercase'>
+              <span class='text-gray-600'>{{ article.created_at }}</span>
+            </p>
+            <a
+              aria-label='Category'
+              class='inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-cetro-green'
+              href='/'
+              title='Visit the East'>{{ article.title }}</a>
+            <p class='mb-2 text-gray-700'>
+              {{ article.text }}
+            </p>
+            <a
+              aria-label=''
+              class='inline-flex items-center font-semibold transition-colors duration-200 text-cetro-green hover:text-cetro-green'
+              href='/'>{{content.newsBlock.buttonTitle}}</a>
+          </div>
+        </div>
+      </div>
+<!--      <div
         class="grid gap-5 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full"
       >
         <div
@@ -94,7 +120,7 @@
             </p>
           </div>
         </div>
-      </div>
+      </div>-->
     </div>
   </div>
 </template>

@@ -1,28 +1,8 @@
 <template>
-<!--  <section class="hero flex justify-end">
-    <div class="hero-block flex flex-col justify-center items-start">
-      <h1 class="hero-block__message font-bold text-size text-5xl">{{ content.heroBlock.title }}</h1>
-      <h5 class="hero-block__subtitle flex font-bold">{{ content.heroBlock.subtitle }}</h5>
-      <button class="btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        Button
-      </button>
-    </div>
-    <div class="hero-image">
-      <div class="hero-image__image">
-        <img :src="content.heroBlock.image" alt="Promo image">
-      </div>
-    </div>
-  </section>-->
-
   <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
     <div class="flex flex-col items-center justify-between w-full mb-10 lg:flex-row">
       <div class="mb-16 lg:mb-0 lg:max-w-lg lg:pr-5">
         <div class="max-w-xl mb-6">
-<!--          <div>
-            <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider rounded-full">
-              Brand new
-            </p>
-          </div>-->
           <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-cetro-green sm:text-4xl sm:leading-none">
             {{ content.heroBlock.title }}
           </h2>
@@ -50,7 +30,7 @@
 </template>
 <script>
 export default {
-  name: 'SectionHeader',
+  name: 'SectionHero',
   props: {
     content: {
       type: Object, default: () => {
@@ -60,28 +40,3 @@ export default {
   }
 }
 </script>
-<style scoped>
-
-
-
-.hero {
-  //display: flex;
-  //justify-content: flex-end;
-}
-
-.hero-block {
-  //display: flex;
-  //flex-direction: column;
-  //justify-content: center;
-  //align-items: flex-start;
-}
-
-h1.hero-block__message {
-  //font-size: 60px;
-  //font-weight: bold;
-}
-
-.hero-block__subtitle {
-  //justify-content: flex-end;
-}
-</style>

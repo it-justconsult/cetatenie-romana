@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-cetro-gray">
     <div
       class="
         px-4
@@ -81,6 +81,7 @@
             {{ step.stepText }}
           </p>
           <a
+            :href="step.stepUrl"
             aria-label=""
             class="
               justify-self-end
@@ -92,7 +93,6 @@
               text-cetro-green
               hover:text-cetro-green
             "
-            :href="step.stepUrl"
             >Learn more</a
           >
           <div
@@ -150,7 +150,6 @@ export default {
 }
 </script>
 <style>
-
 .citizenship-step:last-of-type .arrow-to-right {
   display: none;
 }

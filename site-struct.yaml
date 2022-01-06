@@ -1,0 +1,8 @@
+Home: Pagina principala
+components:
+  MainHeader(layout): +
+  SectionHero: +
+  CitizenshipSteps: +
+  SearchDossier:
+  SectionNews: +
+  SectionPartners: +
