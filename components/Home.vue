@@ -16,30 +16,19 @@
 </template>
 
 <script>
-import * as data from '~/content.json'
 import SectionHeader from '~/components/SectionHero'
 import CitizenshipSteps from '~/components/CitizenshipSteps'
 import SearchDossier from '~/components/SearchDossier'
 import SectionNews from '~/components/SectionNews'
 import SectionPartners from '~/components/SectionPartners'
+import uploadContent from '~/mixins/uploadContent'
 
 export default {
   name: 'HomeComponent',
+  // eslint-disable-next-line vue/no-unused-components
   components: { SectionPartners, SectionNews, SearchDossier, CitizenshipSteps, SectionHeader },
+  mixins: [uploadContent],
   layout: 'default',
-  data: () => ({
-    posts: [],
-    ip: null,
-    content: {}
-  }),
-  created () {
-    this.content = this.getContent()
-  },
-  mounted () {
-    this.content = this.getContent()
-    console.log(this.content)
-
-  },
   methods: {
     // async fetchSomething () {
       // const ip = await this.$axios.$get('http://icanhazip.com')
@@ -47,9 +36,6 @@ export default {
       // const content = await this.getContent()
       // this.ip = ip
     // },
-    getContent () {
-      return data.data
-    },
   },
 }
 </script>

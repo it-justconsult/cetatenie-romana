@@ -11,27 +11,12 @@
 </template>
 <script>
 import MainHeader from '~/components/MainHeader'
-import * as data from '~/content.json'
 import FooterComponent from '~/components/FooterComponent'
+import uploadContent from '~/mixins/uploadContent'
 
 export default {
   name: 'DefaultLayout',
   components: { FooterComponent, MainHeader },
-  data () {
-    return {
-      content: {}
-    }
-  },
-  mounted () {
-    this.content = this.getContent()
-  },
-  created () {
-    this.content = this.getContent()
-  },
-  methods: {
-    getContent () {
-      return data.data
-    }
-  }
+  mixins: [uploadContent]
 }
 </script>

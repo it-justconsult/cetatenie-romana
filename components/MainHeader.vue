@@ -3,16 +3,16 @@
     <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
       <div class="relative flex items-center justify-between">
         <a
-          :aria-label="content.logo.name"
-          :title="content.logo.name"
+          :aria-label="logoName"
+          :title="logoName"
           class="columns-2 items-center w-48"
           href="/"
         >
-          <img :src="content.logo.src" alt="Logo" class="logo-image" />
+          <img :src="logoSrc" alt="Logo" class="logo-image" />
         </a>
         <ul class="menu-block hidden space-x-8 lg:flex">
           <li
-            v-for="item in content.menu"
+            v-for="item in menu"
             :key="item.id"
             :class="item.submenu ? 'has-submenu' : 'no-submenu'"
             class="relative"
@@ -130,6 +130,17 @@ export default {
   data() {
     return {
       isVisibleMobileMenu: false,
+    }
+  },
+  computed: {
+    logoName(){
+      return (this.content.logo || {}).name
+    },
+    logoSrc(){
+      return (this.content.logo || {}).src
+    },
+    menu(){
+      return (this.content || {}).menu
     }
   },
   methods: {

@@ -156,15 +156,11 @@
   </div>
 </template>
 <script>
+import hasContentProps from '~/mixins/hasContentProps'
+
 export default {
   name: 'SearchDossier',
-  props: {
-    content: {
-      type: Object, default: () => {
-        return {}
-      }, required: false
-    }
-  }
+  mixins: [hasContentProps],
 }
 </script>
 <style>
