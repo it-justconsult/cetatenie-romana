@@ -1,22 +1,12 @@
 <template>
-  <div class='wrapper'>
-    <div class='mx-auto'>
+  <div class="wrapper">
+    <div class="mx-auto">
       <main>
-        <SectionHeader
-          :content=content
-        />
-        <CitizenshipSteps
-          :content=content
-        />
-        <SearchDossier
-          :content=content
-        />
-        <SectionNews
-          :content=content
-        />
-        <SectionPartners
-          :content=content
-        />
+        <SectionHeader :content="content" />
+        <CitizenshipSteps :content="content" />
+        <SearchDossier :content="content" />
+        <SectionNews :content="content" />
+        <SectionPartners :content="content" />
       </main>
     </div>
     <footer>
@@ -26,7 +16,7 @@
 </template>
 
 <script>
-import * as data from '../content.json'
+import * as data from '~/content.json'
 import SectionHeader from '~/components/SectionHero'
 import CitizenshipSteps from '~/components/CitizenshipSteps'
 import SearchDossier from '~/components/SearchDossier'
@@ -59,8 +49,7 @@ export default {
     // },
     getContent () {
       return data.data
-    }
-  }
+    },
+  },
 }
 </script>
-

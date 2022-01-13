@@ -4,16 +4,16 @@
       <div class="mb-16 lg:mb-0 lg:max-w-lg lg:pr-5">
         <div class="max-w-xl mb-6">
           <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-cetro-green sm:text-4xl sm:leading-none">
-            {{ content.heroBlock.title }}
+            {{ (content.heroBlock || {}).title  }}
           </h2>
           <p class="text-base text-gray-700 md:text-lg">
-            {{ content.heroBlock.subtitle }}
+            {{ (content.heroBlock || {}).subtitle }}
           </p>
         </div>
       </div>
       <div class="flex items-center justify-center lg:w-1/2">
         <div class="">
-          <img class="object-cover" :src="content.heroBlock.image" alt="" />
+          <img class="object-cover" :src="(content.heroBlock || {}).image" alt="" />
         </div>
       </div>
     </div>
@@ -31,12 +31,5 @@
 <script>
 export default {
   name: 'SectionHero',
-  props: {
-    content: {
-      type: Object, default: () => {
-        return {}
-      }, required: false
-    }
-  }
 }
 </script>

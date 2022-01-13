@@ -1,11 +1,11 @@
 <template>
   <div>
     <MainHeader
-      :content=content
+      :content="content"
     ></MainHeader>
-    <Nuxt />
+    <Nuxt :content="content" />
     <FooterComponent
-      :content=content
+      :content="content"
     ></FooterComponent>
   </div>
 </template>
