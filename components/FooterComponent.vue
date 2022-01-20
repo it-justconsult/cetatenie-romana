@@ -42,66 +42,16 @@
 
 
 <script>
+import uploadContent from '~/mixins/uploadContent'
+
 export default {
-  props: {
-    content: {
-      type: Object, default: () => {
-        return {}
-      }, required: false
-    }
-  }
+  mixins: [uploadContent]
 }
 
 </script>
 <style>
-.main-footer {
-//background-color: #424242;
-//min-height: 320px;
-}
-
-.terms-and-conditions {
-//display: flex;
-//color: #fff;
-}
-.terms {
-//margin-right: 30px;
-}
-hr.delimiter {
-//margin-top: 12px;
-//height: 1px;
-//border: none;
-//background-color: #fff;
-//color: #fff;
-}
-
-.footer-menu {
-//display: flex;
-//justify-content: space-between;
-//color: #fff;
-}
-.footer-menu div{
-//display: flex;
-//margin-right: 14px;
-//flex-direction: column;
-//justify-content: space-between;
-}
-
-.first-column {
-}
-
-.footer-menu__item {
-}
 .footer-menu__item.active {
   text-transform: uppercase;
 }
-
-.active {
-}
-
-.conditions {
-}
-.main-footer {
-}
-
 
 </style>
