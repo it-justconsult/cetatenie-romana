@@ -313,7 +313,9 @@ module.exports = {
         'regal-blue': '#243c5a',
         'cetro-green': '#72BB5D',
         'cetro-gray': '#EFF2F2',
+        'cetro-text-gray': '#898989',
         'cetro-white': '#fff',
+        'cetro-footer-bg': '#222',
         'cetro-black': '#424242',
       },
       spacing: {
