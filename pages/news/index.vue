@@ -4,7 +4,7 @@
   </div>
 </template>
 <script>
-import NewsPage from '~/components/NewsPage'
+import NewsPage from '~/components/pages/NewsPage'
 export default {
   components: { NewsPage }
 }

@@ -62,7 +62,7 @@
 import * as data from '~/content.json'
 
 export default {
-  name: 'QuestionsPage',
+  name: 'QuestionPage',
   // components: { SectionNews },
   data() {
 

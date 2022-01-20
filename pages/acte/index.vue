@@ -4,7 +4,7 @@
   </div>
 </template>
 <script>
-import DocumentsPage from '~/components/DocumentsPage'
+import DocumentsPage from '~/components/pages/DocumentsPage'
 export default {
   components: { DocumentsPage }
 }
