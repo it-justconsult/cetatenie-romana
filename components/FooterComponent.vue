@@ -22,10 +22,11 @@
 
 
 <script>
-import uploadContent from '~/mixins/uploadContent'
+
+import hasContentProps from '~/mixins/hasContentProps'
 
 export default {
-  mixins: [uploadContent],
+  mixins: [hasContentProps],
   computed: {
     topMenuItems () {
         return (this.content.footerMenu || {}).topMenu
