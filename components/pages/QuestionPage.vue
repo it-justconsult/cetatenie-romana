@@ -8,43 +8,11 @@
         <p class="text-base text-gray-700 md:text-lg">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.</p>
       </div>
       <div class="space-y-4">
-        <div class="border-b">
+        <div  v-for='question in getQuestions()' :key='question.id' class="border-b">
           <button type="button" aria-label="Open item" title="Open item" class="flex items-center justify-between w-full p-4 focus:outline-none">
-            <p class="text-lg font-medium">The quick, brown fox jumps over a lazy dog?</p>
+            <p class="text-lg font-medium">{{question.title}}</p>
             <!-- Add "transform rotate-180" classes on svg, if is open" -->
             <svg viewBox="0 0 24 24" class="w-3 text-gray-600 transition-transform duration-200">
-              <polyline fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points="2,7 12,17 22,7" stroke-linejoin="round"></polyline>
-            </svg>
-          </button>
-          <!-- Show content if is open
-          <div class="p-4 pt-0"><p class="text-gray-700">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.</p></div>
-          -->
-        </div>
-        <div class="border-b">
-          <button type="button" aria-label="Open item" title="Open item" class="flex items-center justify-between w-full p-4 focus:outline-none">
-            <p class="text-lg font-medium">The first mate and his Skipper too will do?</p>
-            <svg viewBox="0 0 24 24" class="w-3 text-gray-600 transition-transform duration-200 transform rotate-180">
-              <polyline fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points="2,7 12,17 22,7" stroke-linejoin="round"></polyline>
-            </svg>
-          </button>
-          <!-- Show content if is open
-          <div class="p-4 pt-0"><p class="text-gray-700">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.</p></div>
-          -->
-        </div>
-        <div class="border-b">
-          <button type="button" aria-label="Open item" title="Open item" class="flex items-center justify-between w-full p-4 focus:outline-none">
-            <p class="text-lg font-medium">Is the Space Pope reptilian!?</p>
-            <svg viewBox="0 0 24 24" class="w-3 text-gray-600 transition-transform duration-200 transform rotate-180">
-              <polyline fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points="2,7 12,17 22,7" stroke-linejoin="round"></polyline>
-            </svg>
-          </button>
-<!--           Show content if is open-->
-          <div class="p-4 pt-0"><p class="text-gray-700">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.</p></div>
-        </div>
-        <div class="border-b">
-          <button type="button" aria-label="Open item" title="Open item" class="flex items-center justify-between w-full p-4 focus:outline-none">
-            <p class="text-lg font-medium">How much money you got on you?</p>
-            <svg viewBox="0 0 24 24" class="w-3 text-gray-600 transition-transform duration-200 transform rotate-180">
               <polyline fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points="2,7 12,17 22,7" stroke-linejoin="round"></polyline>
             </svg>
           </button>
@@ -58,29 +26,34 @@
 </template>
 
 <script>
-// import SectionNews from '~/components/SectionNews'
-import * as data from '~/content.json'
+import uploadContent from '~/mixins/uploadContent'
 
 export default {
   name: 'QuestionPage',
-  // components: { SectionNews },
-  data() {
-
-    return {
-      content: {},
-    }
-  },
-  mounted() {
-    this.content = this.getContent()
-  },
-  created() {
-    this.content = this.getContent()
-  },
-  methods: {
-    getContent() {
-      return data.data
+  props: {
+    categoryId: {
+      type: Number,
+      default: 0
     },
   },
+  mixins: [uploadContent],
+  computed: {
+
+  },
+  mounted () {
+    // console.log(this.categoryId)
+  },
+  methods: {
+    getQuestions () {
+      // console.log('**************************************************')
+      const  arr = ((this.content || {}).questionsPage || {}).questionsByCategories
+      const filteredArr = arr && arr.filter((el) => el.id === this.categoryId)
+      console.log(filteredArr)
+      console.log('--------------------------------------------------')
+      // return (this.content.questionsPage.questionsByCategories || {}).filter((el) => console.log(el))
+      return []
+    }
+  }
 }
 </script>
 

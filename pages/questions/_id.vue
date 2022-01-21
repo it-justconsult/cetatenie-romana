@@ -1,14 +1,21 @@
 <template>
   <div>
-     <QuestionPage></QuestionPage>
+    <QuestionPage :categoryId='categoryId'></QuestionPage>
   </div>
 </template>
 
 <script>
 import QuestionPage from '~/components/pages/QuestionPage'
+
 export default {
-  name: '_id',
-  components: { QuestionPage }
+  components: { QuestionPage },
+  validate({ params }) {
+    return /^\d+$/.test(params.id)
+  },
+  asyncData({ params }) {
+    const categoryId = parseInt(params.id)
+    return { categoryId }
+  }
 }
 </script>
 

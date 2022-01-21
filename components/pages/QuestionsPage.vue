@@ -34,7 +34,8 @@
             </div>
             <p class='mb-2 text-sm text-gray-900'>{{ category.description }}</p>
             <a
-              :href='category.href' aria-label=''
+              @click.prevent='goTo(category.id)'
+              href='#' aria-label=''
               class='inline-flex items-center text-sm font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800'>Learn
               more</a>
           </div>
@@ -57,6 +58,11 @@ export default {
     questionCategories () {
       return (this.content.questionsPage || {}).questionCategories
     }
+  },
+  methods: {
+    goTo(user) {
+      this.$router.push('/questions/' + user)
+    },
   }
 }
 </script>
