@@ -15,7 +15,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
+        sans: ['Roboto','Montserrat', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         red: {
