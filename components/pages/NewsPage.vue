@@ -26,7 +26,7 @@
             <a
               aria-label="Category"
               class="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-cetro-green"
-              href="/"
+              :href="article.slug"
               title="Visit the East"
               >{{ article.title }}</a
             >
@@ -36,7 +36,7 @@
             <a
               aria-label=""
               class="inline-flex items-center font-semibold transition-colors duration-200 text-cetro-green hover:text-cetro-green"
-              href="/"
+              :href="article.slug"
               >{{ content.newsBlock.buttonTitle }}</a
             >
           </div>
