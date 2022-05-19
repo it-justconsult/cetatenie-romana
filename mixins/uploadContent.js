@@ -1,3 +1,4 @@
+import content from '../static/content.json'
 export default {
   data () {
    return {
@@ -6,7 +7,7 @@ export default {
  },
  async beforeMount () {
    await this.$axios.$get(
-     `http://localhost/api/cockpit/getContent?token=${this.$config.apiToken}`
+     `http://localhost:3000/content.json`
    ).then((res) => {
      this.content = res.data
    })

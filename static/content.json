@@ -1,0 +1,462 @@
+{
+  "data": {
+    "menu": [
+      {
+        "id": 1,
+        "title": "Principală",
+        "href": "/"
+      },
+      {
+        "id": 2,
+        "title": "Acte românești",
+        "href" : "/acte",
+        "submenu": [
+          {
+            "id": 3,
+            "title": "Buletin",
+            "href": "/acte/buletin"
+          },
+          {
+            "id": 99,
+            "title": "Pașaport",
+            "href": "/acte/pasaport"
+          },
+          {
+            "id": 100,
+            "title": "Cetățenie",
+            "href": "/acte/cetatenie"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Noutăți",
+        "href": "/news"
+      },
+      {
+        "id": 5,
+        "title": "Întrebări frecvente",
+        "href": "/questions"
+      },
+      {
+        "id": 6,
+        "title": "Contacte",
+        "href": "/contacts"
+      }
+    ],
+    "logo": {
+      "src": "http://localhost/storage/uploads/img/logo.png",
+      "name": "Cetățenie"
+    },
+    "heroBlock": {
+      "title": "Lorem ipsum dolor sit amet, consectetur.",
+      "subtitle": "Lorem ipsum dolor sit amet2",
+      "created_at":  "2020-12-28",
+      "video_background": "http://localhost/storage/uploads/media/europe.mp4"
+    },
+    "citizenshipSteps": {
+      "title": "Etapele",
+      "subtitle": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.",
+      "steps": [
+        {
+          "id": 1,
+          "title": "Etapa 1",
+          "text": "Doresc să obțin cetățenie română",
+          "url": "/steps/1"
+        },
+        {
+          "id": 2,
+          "title": "Etapa 2",
+          "text": "Am depus pentru cetățenie română - Sunt în așteptare",
+          "url": "/steps/2"
+        },
+        {
+          "id": 3,
+          "title": "Etapa 3",
+          "text": "Am cetățenie română, Ce fac mai departe?",
+          "url": "/steps/3"
+        },
+        {
+          "id": 4,
+          "title": "Etapa 4",
+          "text": "Am cetățenie română, dar îmi mai trebuie câteva acte",
+          "url": "/steps/4"
+        }
+      ]
+    },
+    "searchDossier": {
+      "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "subtitle": "Lorem ipsum dolor sit amet.",
+      "created_at": "2020-12-28",
+      "buttonTitle": "Află numărul dosarului"
+      },
+    "searchOrder": {
+      "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "subtitle": "Lorem ipsum dolor sit amet.",
+      "created_at": "2020-12-28",
+      "buttonTitle": "Abonează-te"
+    },
+    "newsBlock": {
+      "title": "ultimele știri",
+      "buttonTitle": "Vezi detalii",
+      "lastNews": [
+        {
+          "id": 1,
+          "title": "Visit the East",
+          "subtitle": "Subtitle",
+          "created_at": "2020-12-28",
+          "image": "https://images.pexels.com/photos/2408666/pexels-photo-2408666.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500",
+          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+        },
+        {
+          "id": 2,
+          "title": "Simple is better",
+          "subtitle": "Subtitle2",
+          "created_at": "2021-06-15",
+          "image": "https://images.pexels.com/photos/447592/pexels-photo-447592.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
+          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+        },
+        {
+          "id": 3,
+          "title": "Film It!",
+          "subtitle": "Subtitle3",
+          "created_at": "2021-01-06",
+          "image": "https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
+          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+        },
+        {
+          "id": 4,
+          "title": "Visit the East",
+          "subtitle": "Subtitle4",
+          "created_at": "2021-12-22",
+          "image": "https://images.pexels.com/photos/2408666/pexels-photo-2408666.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500",
+          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+        }
+      ]
+    },
+    "partnersBlock": {
+      "title": "parteneri",
+      "partners": [
+        {
+          "id": 1,
+          "title": "Mercedes",
+          "image": "http://localhost/storage/uploads/partners/apple.png"
+        },
+        {
+          "id": 2,
+          "title": "Simple is better",
+          "image": "http://localhost/storage/uploads/partners/bmw.png"
+        },
+        {
+          "id": 3,
+          "title": "Film It!",
+          "image": "http://localhost/storage/uploads/partners/dacia.png"
+        },
+        {
+          "id": 4,
+          "title": "Visit the East",
+          "image": "http://localhost/storage/uploads/partners/zaporojets.png"
+        }
+      ]
+    },
+    "footerMenu": {
+      "topMenu": [
+        {
+          "id": 1,
+          "title": "Termeni și condiții",
+          "href": "/terms"
+        },
+        {
+          "id": 2,
+          "title": "Confidențialitate",
+          "href": "/privacy"
+        }
+      ],
+      "firstBlock": [
+        {
+          "id": 1,
+          "title": "Verificare online",
+          "href": "/terms"
+        },
+        {
+          "id": 2,
+          "title": "Ordine ANC",
+          "href": "/privacy"
+        },
+        {
+          "id": 3,
+          "title": "Stadiu dosar",
+          "href": "/privacy"
+        },
+        {
+          "id": 4,
+          "title": "Depunere jurământ",
+          "href": "/privacy"
+        },
+        {
+          "id": 5,
+          "title": "Cetățenie română",
+          "href": "/privacy"
+        }
+      ],
+      "secondBlock": [
+        {
+          "id": 1,
+          "title": "Acte",
+          "href": "/terms"
+        },
+        {
+          "id": 2,
+          "title": "Ordine ANC",
+          "href": "/privacy"
+        },
+        {
+          "id": 3,
+          "title": "Stadiu dosar",
+          "href": "/privacy"
+        },
+        {
+          "id": 4,
+          "title": "Depunere jurământ",
+          "href": "/privacy"
+        },
+        {
+          "id": 5,
+          "title": "Cetățenie română",
+          "href": "/privacy"
+        }
+      ],
+      "thirdBlock": [
+        {
+          "id": 1,
+          "title": "Întrebări frecvente",
+          "href": "/terms"
+        },
+        {
+          "id": 2,
+          "title": "Ordine ANC",
+          "href": "/privacy"
+        },
+        {
+          "id": 3,
+          "title": "Stadiu dosar",
+          "href": "/privacy"
+        },
+        {
+          "id": 4,
+          "title": "Depunere jurământ",
+          "href": "/privacy"
+        },
+        {
+          "id": 5,
+          "title": "Cetățenie română",
+          "href": "/privacy"
+        }
+      ]
+    },
+    "newsPage": {
+      "articles": [
+        {
+          "id": 1,
+          "title": "Diving to the deep",
+          "slug": "news/1",
+          "subtitle": "Subtitle",
+          "created_at": "2020-12-28",
+          "image": "https://images.pexels.com/photos/932638/pexels-photo-932638.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260",
+          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+        },
+        {
+          "id": 2,
+          "title": "Conquer the World",
+          "slug": "news/2",
+          "subtitle": "Subtitle2",
+          "created_at": "2021-06-15",
+          "image": "https://images.pexels.com/photos/1576937/pexels-photo-1576937.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500",
+          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+        },
+        {
+          "id": 3,
+          "title": "Explore the beautiful",
+          "slug": "news/3",
+          "subtitle": "Subtitle3",
+          "created_at": "2021-01-06",
+          "image": "https://images.pexels.com/photos/2123755/pexels-photo-2123755.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
+          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+        },
+        {
+          "id": 4,
+          "title": "Visit the East",
+          "slug": "news/4",
+          "subtitle": "Subtitle4",
+          "created_at": "2021-12-22",
+          "image": "https://images.pexels.com/photos/2408666/pexels-photo-2408666.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500",
+          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+        },
+        {
+          "id": 5,
+          "title": "Visit the East",
+          "slug": "news/5",
+          "subtitle": "Subtitle4",
+          "created_at": "2021-12-22",
+          "image": "https://images.pexels.com/photos/2408666/pexels-photo-2408666.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500",
+          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+        },
+        {
+          "id": 6,
+          "title": "Visit the East",
+          "slug": "news/6",
+          "subtitle": "Subtitle4",
+          "created_at": "2021-12-22",
+          "image": "https://images.pexels.com/photos/447592/pexels-photo-447592.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
+          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+        },
+        {
+          "id": 7,
+          "title": "Visit the East",
+          "slug": "news/7",
+          "subtitle": "Subtitle4",
+          "created_at": "2021-12-22",
+          "image": "https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
+          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+        }
+      ]
+    },
+    "documentsPage": {
+      "title": "Acte românești",
+      "documents": [
+        {
+          "id": 1,
+          "title": "Pașaport românesc",
+          "slug": "pasaport"
+        },
+        {
+          "id": 2,
+          "title": "Buletin Românesc",
+          "slug": "pasaport"
+        },
+        {
+          "id": 3,
+          "title": "Permis Românesc",
+          "slug": "pasaport"
+        },
+        {
+          "id": 4,
+          "title": "Alocații",
+          "slug": "pasaport"
+        },
+        {
+          "id": 5,
+          "title": "Transcrieri certificate",
+          "slug": "pasaport"
+        },
+        {
+          "id": 6,
+          "title": "Apostilă",
+          "slug": "pasaport"
+        },
+        {
+          "id": 7,
+          "title": "Cazier românesc",
+          "slug": "pasaport"
+        }
+      ]
+    },
+    "questionsPage": {
+      "title": "Întrebări frecvente",
+      "questionCategories": [
+        {
+          "id": 1,
+          "title": "Redobândirea cetățeniei române",
+          "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam.",
+          "href": "/questions/1"
+        },
+        {
+          "id": 2,
+          "title": "Transcrierea actelor de stare civilă",
+          "description":  "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam.",
+          "href": "/questions/2"
+        },
+        {
+          "id": 3,
+          "title": "Perfectarea actelor românești",
+          "description":  "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam!!!",
+          "href": "/questions/3"
+        },
+        {
+          "id": 4,
+          "title": "Programări online",
+          "description":  "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+          "href": "/questions/4"
+        }
+      ],
+      "questionsByCategories": [
+        {
+          "id": 1,
+          "category": "Redobândirea cetățeniei române",
+          "questions": [
+            {
+              "id": 1,
+              "title": "Redobândirea cetățeniei române",
+              "created_at": "2020-12-28",
+              "answer": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+            },
+            {
+              "id": 2,
+              "category": "Visit the East",
+              "title": "Visit the East",
+              "created_at": "2021-12-22",
+              "answer": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+            },
+            {
+              "id": 3,
+              "category": "Visit the East",
+              "title": "Visit the East",
+              "created_at": "2021-12-22",
+              "answer": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "category": "Transcrierea actelor de stare civilă",
+          "questions": [
+            {
+              "id": 4,
+              "title": "Redobândirea cetățeniei române",
+              "created_at": "2020-12-28",
+              "answer": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+            },
+            {
+              "id": 5,
+              "category": "Visit the East",
+              "title": "Visit the East",
+              "created_at": "2021-12-22",
+              "answer": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+            }
+          ]
+
+        },
+        {
+          "id": 3,
+          "category": "Perfectarea actelor românești",
+          "questions": [
+            {
+              "id": 6,
+              "title": "Redobândirea cetățeniei române",
+              "created_at": "2020-12-28",
+              "answer": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "category": "Programări online"
+        }
+      ]
+    },
+    "contactsPage": {
+      "title": "Contacte"
+    }
+
+  }
+}

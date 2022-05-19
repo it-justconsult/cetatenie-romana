@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-cetro-gray">
+  <!-- <div class="bg-cetro-gray">
     <div
-      class="px-4 py-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-8"
+      class="px-4 py-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
     >
       <div
         class="max-w-xl mb-10 mx-auto text-center lg:max-w-2xl md:mb-12"
@@ -77,6 +77,142 @@
           </div>
         </a>
       </div>
+    </div>
+  </div> -->
+  <div
+    class="
+      px-4
+      py-16
+      mx-auto
+      sm:max-w-xl
+      md:max-w-full
+      lg:max-w-screen-xl
+      md:px-24
+      lg:px-8 lg:py-20
+    "
+  >
+    <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+      <h2
+        class="
+          max-w-lg
+          mb-6
+          font-sans
+          text-3xl
+          font-bold
+          leading-none
+          tracking-tight
+          text-cetro-green
+          sm:text-4xl
+          md:mx-auto
+          uppercase
+        "
+      >
+        {{ citizenshipStepsTitle }}
+      </h2>
+      <p class="text-base text-gray-700 md:text-lg">
+        {{ citizenshipStepsSubtitle }}
+      </p>
+    </div>
+    <div
+      class="
+        relative
+        grid
+        gap-8
+        row-gap-5
+        mb-8
+        md:row-gap-8
+        lg:grid-cols-4
+        sm:grid-cols-1
+      "
+    >
+      <div
+        class="
+          absolute
+          inset-0
+          flex
+          items-center
+          justify-center
+          sm:hidden
+          lg:flex
+        "
+      >
+        <div class="w-px h-full bg-gray-300 lg:w-full lg:h-px"></div>
+      </div>
+      <div
+        class="
+          p-5
+          duration-300
+          transform
+          bg-white
+          border
+          rounded
+          shadow-sm
+          hover:-translate-y-2
+          cursor-pointer
+        "
+        v-for="(step, id) in citizenshipSteps"
+        v-bind:key="id"
+      >
+        <div class="flex items-center justify-center mb-2">
+          <!-- <p class="text-lg text-grey-400 ">{{ step.title }}</p> -->
+          <p
+            class="
+              flex
+              items-center
+              justify-center
+              w-24
+              h-12
+              font-bold
+              rounded
+              text-lg text-cetro-black
+              bg-gray-100
+            "
+          >
+           Etapa {{ step.id }}
+          </p>
+        </div>
+        <p
+          class="
+            font-bold
+            text-2xl
+            leading-6
+            text-cetro-green
+            py-10
+            text-center
+          "
+        >
+           {{ step.text }}
+        </p>
+        <p class="mt-10 text-center text-gray-400 hover:text-cetro-green">
+          Vezi soluția
+        </p>
+      </div>
+    </div>
+    <div class="text-center">
+      <!-- <a
+        href="/"
+        class="
+          inline-flex
+          items-center
+          justify-center
+          w-full
+          h-12
+          px-6
+          font-medium
+          tracking-wide
+          text-white
+          transition
+          duration-200
+          rounded
+          shadow-md
+          md:w-auto
+          bg-deep-purple-accent-400
+          hover:bg-deep-purple-accent-700
+          focus:shadow-outline focus:outline-none
+        "
+      >
+        Learn more
+      </a> -->
     </div>
   </div>
 </template>

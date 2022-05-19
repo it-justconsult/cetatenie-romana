@@ -155,11 +155,13 @@ export default {
 .has-submenu:hover .subnav {
   display: flex;
   justify-content: flex-start;
+  
 }
 
 .has-submenu:hover ul {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+ 
 }
 </style>

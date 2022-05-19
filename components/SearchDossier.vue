@@ -1,5 +1,5 @@
 <template>
-<!--    <section class="search-dossier flex justify-center items-center mt-3">
+  <!--    <section class="search-dossier flex justify-center items-center mt-3">
       <div class="dossier-block ml-3">
         <form action="">
           <div class="input-block">
@@ -78,11 +78,26 @@
       </div>
     </section>-->
   <div class="relative">
-    <img src="https://images.pexels.com/photos/3747463/pexels-photo-3747463.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="absolute inset-0 object-cover w-full h-full" alt="" />
+    <img
+      src="https://images.pexels.com/photos/3747463/pexels-photo-3747463.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+      class="absolute inset-0 object-cover w-full h-full"
+      alt=""
+    />
     <div class="relative bg-gray-900 bg-opacity-75">
-      <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div
+        class="
+          px-4
+          py-16
+          mx-auto
+          sm:max-w-xl
+          md:max-w-full
+          lg:max-w-screen-xl
+          md:px-24
+          lg:px-8 lg:py-20
+        "
+      >
         <div class="flex flex-col items-center justify-between xl:flex-row">
-          <div class="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
+          <!-- <div class="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
             <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
               The quick, brown fox <br class="hidden md:block" />
               jumps over a <span class="text-teal-accent-400">lazy dog</span>
@@ -96,58 +111,94 @@
                 <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z"></path>
               </svg>
             </a>
-          </div>
-          <div class="w-full max-w-xl xl:px-8 xl:w-5/12">
+          </div> -->
+          <div class="w-full max-w-full">
             <div class="bg-white rounded shadow-2xl p-7 sm:p-10">
-              <h3 class="mb-4 text-xl font-semibold sm:text-center sm:mb-6 sm:text-2xl">
-                Sign up for updates
+              <h3
+                class="
+                  mb-4
+                  text-lg
+                  font-bold
+                  uppercase
+                  sm:text-center sm:mb-6 sm:text-2xl
+                  font-bold
+                  text-cetro-green
+                "
+              >
+                Verifică Stadiu dosar
               </h3>
-              <form>
-                <div class="mb-1 sm:mb-2">
-                  <label for="firstName" class="inline-block mb-1 font-medium">First name</label>
-                  <input
-                    placeholder="John"
-                    required=""
-                    type="text"
-                    class="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
-                    id="firstName"
-                    name="firstName"
-                  />
-                </div>
-                <div class="mb-1 sm:mb-2">
-                  <label for="lastName" class="inline-block mb-1 font-medium">Last name</label>
-                  <input
-                    placeholder="Doe"
-                    required=""
-                    type="text"
-                    class="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
-                    id="lastName"
-                    name="lastName"
-                  />
-                </div>
-                <div class="mb-1 sm:mb-2">
-                  <label for="email" class="inline-block mb-1 font-medium">E-mail</label>
-                  <input
-                    placeholder="john.doe@example.org"
-                    required=""
-                    type="text"
-                    class="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
-                    id="email"
-                    name="email"
-                  />
-                </div>
-                <div class="mt-4 mb-2 sm:mb-4">
+              <p class="text-center text-xl lg:px-40">
+                Primește o înștiințare despre apariția ordinului Autorității
+                Naționale pentru Cetățenie (ANC) privind acordarea cetățeniei
+                române. Pentru aceasta este suficient să completezi formularul.
+              </p>
+
+              <div
+                class="
+                  relative
+                  grid
+                  gap-8
+                  row-gap-5
+                  mb-8
+                  pt-10
+                  md:row-gap-8
+                  lg:grid-cols-2
+                  sm:grid-cols-1
+                "
+              >
+                <div>
                   <button
-                    type="submit"
-                    class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                    class="
+                      inline-flex
+                      items-center
+                      justify-center
+                      w-full
+                      h-12
+                      px-6
+                      py-10
+                      uppercase
+                      font-medium
+                      tracking-wide
+                      text-white
+                      transition
+                      duration-200
+                      rounded
+                      shadow-md
+                      bg-cetro-green
+                      hover:bg-cetro-black
+                      focus:shadow-outline focus:outline-none
+                    "
                   >
-                    Subscribe
+                    Am număr de dosar
                   </button>
                 </div>
-                <p class="text-xs text-gray-600 sm:text-sm">
-                  We respect your privacy. Unsubscribe at any time.
-                </p>
-              </form>
+                <div>
+                  <button
+                    class="
+                      inline-flex
+                      items-center
+                      justify-center
+                      w-full
+                      h-12
+                      px-6
+                      py-10
+                      uppercase
+                      font-medium
+                      tracking-wide
+                      text-white
+                      transition
+                      duration-200
+                      rounded
+                      shadow-md
+                      bg-cetro-green
+                      hover:bg-cetro-black
+                      focus:shadow-outline focus:outline-none
+                    "
+                  >
+                    Nu am număr de dosar
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -163,90 +214,3 @@ export default {
   mixins: [hasContentProps],
 }
 </script>
-<style>
-
-
-section.search-dossier {
-  //display: flex;
-  //justify-content: center;
-  //align-items: center;
-  //margin-top: 40px; /*TODO: delete*/;
-}
-
-.dossier-block {
-  //margin-left: 24px;
-}
-
-.dossier_number {
-
-}
-
-.input-block {
-  //background-color: #ecb1b1;
-}
-
-.get-info-block {
-  //background-color: #424242;
-  //font-size: 22px;
-  //color: #fff;
-  //text-align: center;
-}
-
-.get-info-block .questions {
-
-}
-
-.get-info-block .get-info-button {
-  //color: #000;
-  //font-size: 22px;
-  //border-radius: 2px;
-  //background: #72BB5D;
-}
-
-.get-info-image {
-  //min-width: 140px;
-  //min-height: 140px;
-}
-
-.order-block {
-  //display: flex;
-  //flex-direction: column;
-  //justify-content: space-between;
-  //margin-left: 49px;
-  //background-color: #424242;
-  //font-size: 22px;
-  //color: #fff;
-  //text-align: center;
-}
-
-.text-block {
-}
-
-.subscribe-block {
-  //display: flex;
-  //flex-direction: column;
-  //align-items: center;
-  //justify-content: space-between;
-}
-
-.subscribe-button {
-  //padding: 5px;
-  //color: #000;
-  //font-size: 22px;
-  //border-radius: 2px;
-  //background: #72BB5D;
-}
-
-.subscribe-block__item {
-  //margin-top: 12px;
-}
-
-input.subscribe-block__item {
-  //color: #000;
-}
-
-input.subscribe-block__item::placeholder {
-  //color: #000;
-  //font-weight: normal;
-}
-</style>
