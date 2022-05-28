@@ -1,6 +1,16 @@
 <template>
   <div>
-    <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+    <div
+      class="
+        px-4
+        mx-auto
+        sm:max-w-xl
+        md:max-w-full
+        lg:max-w-screen-xl
+        md:px-24
+        lg:px-8
+      "
+    >
       <div class="relative z-50 flex items-center justify-between">
         <a
           :aria-label="logoName"
@@ -10,38 +20,142 @@
         >
           <img :src="logoSrc" alt="Logo" class="logo-image" />
         </a>
-        <ul class="menu-block hidden space-x-8 lg:flex">
+
+        <ul class="menu-block hidden space-x-8 lg:flex justify-between">
           <li
             v-for="item in menu"
             :key="item.id"
-            :class="item.submenu ? 'has-submenu' : 'no-submenu'"
-            class="relative"
+            class="static py-2 group inline-flex"
           >
             <nuxt-link
-              class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-cetro-green"
-              exact
-              active-class="active"
+              class="
+                font-medium
+                tracking-wide
+                text-gray-700
+                transition-colors
+                duration-200
+                hover:text-cetro-green
+                uppercase
+                py-6
+                group-hover:text-cetro-green
+              "
               :to="item.href"
-              >{{ item.title }}</nuxt-link
+              >{{ item.title }}
+              <div
+                class="
+                  mt-2
+                  w-full
+                  h-1
+                  ml-auto
+                  duration-300
+                  origin-left
+                  transform
+                  scale-x-0
+                  bg-cetro-green
+                  group-hover:scale-x-100
+                "
+              ></div>
+            </nuxt-link>
+
+            <div
+              v-if="item.submenu"
+              class="
+                group-hover:transition-all group-hover:ease-in-out
+                absolute
+                flex
+                invisible
+                opacity-0
+                duration-700
+                group-hover:visible group-hover:opacity-100
+                h-80
+                submenu
+                mt-20
+              "
             >
-            <ul v-if="item.submenu" class="justify-end hidden lg:flex absolute">
-              <li v-for="sublink in item.submenu" :key="sublink.id">
-                <a
-                  :aria-label="sublink.title"
-                  :href="sublink.href"
-                  :title="sublink.title"
-                  class="subnav bg-white px-2 font-medium tracking-wide text-gray-700 transition-colors duration-200 hidden hover:text-cetro-green"
-                  >{{ sublink.title }}</a
-                >
-              </li>
-            </ul>
+              <div
+                class="flex-1 py-5 px-5 bg-cetro-green rounded-bl-md shadow-lg"
+              >
+                <ul>
+                  <li
+                    v-for="(link, id) in item.submenu.slice(0, 10)"
+                    v-bind:key="id"
+                    class="flex flex-row"
+                  >
+                    <nuxt-link
+                      exact
+                      :to="link.href"
+                      class="
+                        text-white
+                        font-bold
+                        uppercase
+                        w-full
+                        py-3
+                        antialiased
+                        px-2
+                        hover:text-cetro-black
+                      "
+                    >
+                      {{ link.title }}
+                    </nuxt-link>
+                  </li>
+                </ul>
+                <div class="flex mt-2 text-center">
+                  <nuxt-link
+                    class="
+                      text-white
+                      font-bold
+                      mx-auto
+                      uppercase
+                      hover:text-cetro-black
+                      pr-12
+                    "
+                    :to="item.href"
+                    v-if="item.submenu.length > 10"
+                    >Mai multe...</nuxt-link
+                  >
+                </div>
+              </div>
+              <div
+                class="
+                  flex-1
+                  px-5
+                  bg-white
+                  rounded-br-md
+                  text-cetro-green text-md
+                  subpixel-antialiased
+                  py-5
+                "
+              >
+                <div class="py-14 px-4">
+                  <p>
+                    Salutare! Știm că ești pierdut în avalanșa de informații și
+                    ai nevoie de ajutor. Aici vei afla multe lucruri utile ție.
+                    Sperăm că astfel vei vedea „lumina din capătul tunelului” în
+                    drumul spre redobândirea cetățeniei române. Și da, la moment
+                    ar putea să-ți pară complicat, dar cu certitudine te vei
+                    descurca. Succes! Iar dacă ai nevoie de ajutor, scrie-ne
+                    chiar acum și vei fi ghidat.
+                  </p>
+                </div>
+              </div>
+            </div>
           </li>
         </ul>
+
         <!-- Mobile menu -->
         <div class="lg:hidden">
           <button
             aria-label="Open Menu"
-            class="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-deep-purple-50 focus:bg-deep-purple-50"
+            class="
+              p-2
+              -mr-1
+              transition
+              duration-200
+              rounded
+              focus:outline-none focus:shadow-outline
+              hover:bg-deep-purple-50
+              focus:bg-deep-purple-50
+            "
             title="Open Menu"
             @click="changeMobileMenu"
           >
@@ -68,7 +182,16 @@
                 <div>
                   <button
                     aria-label="Close Menu"
-                    class="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                    class="
+                      p-2
+                      -mt-2
+                      -mr-2
+                      transition
+                      duration-200
+                      rounded
+                      hover:bg-gray-200
+                      focus:bg-gray-200 focus:outline-none focus:shadow-outline
+                    "
                     title="Close Menu"
                     @click="changeMobileMenu"
                   >
@@ -88,21 +211,44 @@
                       :aria-label="item.title"
                       :href="item.href"
                       :title="item.title"
-                      class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                      class="
+                        font-medium
+                        tracking-wide
+                        text-gray-700
+                        transition-colors
+                        duration-200
+                        hover:text-deep-purple-accent-400
+                      "
                       >{{ item.title }}</a
                     >
                     <ul
                       v-if="item.submenu"
-                      class="px-3 font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                      class="
+                        px-3
+                        font-medium
+                        tracking-wide
+                        text-gray-700
+                        transition-colors
+                        duration-200
+                        hover:text-deep-purple-accent-400
+                      "
                     >
                       <li v-for="sublink in item.submenu" :key="sublink.id">
-                        <a
+                        <nuxt-link
                           :aria-label="sublink.title"
-                          :href="sublink.href"
+                          :to="sublink.href"
                           :title="sublink.title"
-                          class="subnav font-medium tracking-wide text-gray-700 transition-colors duration-200 lg:hidden hover:text-cetro-green"
-                          >{{ sublink.title }}</a
-                        >
+                          class="
+                            subnav
+                            font-medium
+                            tracking-wide
+                            text-gray-700
+                            transition-colors
+                            duration-200
+                            lg:hidden
+                            hover:text-cetro-green
+                          "
+                          >{{ sublink.title }}</nuxt-link>
                       </li>
                     </ul>
                   </li>
@@ -129,39 +275,41 @@ export default {
   },
   data() {
     return {
+      navHovered: false,
       isVisibleMobileMenu: false,
     }
   },
   computed: {
-    logoName(){
+    logoName() {
       return (this.content.logo || {}).name
     },
-    logoSrc(){
+    logoSrc() {
       return (this.content.logo || {}).src
     },
-    menu(){
+    menu() {
       return (this.content || {}).menu
-    }
+    },
   },
   methods: {
     changeMobileMenu() {
       this.isVisibleMobileMenu = !this.isVisibleMobileMenu
     },
+    hoverToggle(item) {
+      if (item.submenu) {
+        this.navHovered = !this.navHovered
+      }
+      console.log(item)
+    },
   },
 }
 </script>
 <style scoped>
-
-.has-submenu:hover .subnav {
-  display: flex;
-  justify-content: flex-start;
-  
+.submenu {
+  width: 100%;
+  left: 0;
 }
 
-.has-submenu:hover ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
- 
+.submenu ul {
+  columns: 2;
 }
 </style>

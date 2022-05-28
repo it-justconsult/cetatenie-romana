@@ -9,22 +9,62 @@
       {
         "id": 2,
         "title": "Acte românești",
-        "href" : "/acte",
+        "href": "/acte",
         "submenu": [
           {
             "id": 3,
-            "title": "Buletin",
-            "href": "/acte/buletin"
+            "title": "Cetățenie română",
+            "href": "/acte/cetatenie-romana"
           },
           {
             "id": 99,
-            "title": "Pașaport",
-            "href": "/acte/pasaport"
+            "title": "Jurământ de credință",
+            "href": "/acte/juramant-de-credinta"
           },
           {
             "id": 100,
-            "title": "Cetățenie",
-            "href": "/acte/cetatenie"
+            "title": "Certificate de naștere și căsătorie românești",
+            "href": "/acte/certificat-de-nastere-si-casatorie-romanesti"
+          },
+          {
+            "id": 3,
+            "title": "Pașaport românesc",
+            "href": "/acte/pasaport-romanesc"
+          },
+          {
+            "id": 4,
+            "title": "Buletin românesc",
+            "href": "/acte/buletin-romanesc"
+          },
+          {
+            "id": 5,
+            "title": "Alocație pentru copil",
+            "href": "/acte/alocatie-pentru-copil"
+          },
+          {
+            "id": 6,
+            "title": "Permis de conducere românesc",
+            "href": "/acte/permis-de-conducere-romanesc"
+          },
+          {
+            "id": 7,
+            "title": "Atestate profesionale",
+            "href": "/acte/atestate-profesionale"
+          },
+          {
+            "id": 8,
+            "title": "Echivalarea diplomei",
+            "href": "/acte/echivalarea-diplomei"
+          },
+          {
+            "id": 10,
+            "title": "Dosar de cetățenie prin judecată",
+            "href": "/acte/dosar-de-cetatenie-prin-judecata"
+          },
+          {
+            "id": 11,
+            "title": "Apostila pe acte",
+            "href": "/acte/apostila-pe-acte"
           }
         ]
       },
@@ -36,7 +76,7 @@
       {
         "id": 5,
         "title": "Întrebări frecvente",
-        "href": "/questions"
+        "href": "/faq"
       },
       {
         "id": 6,
@@ -45,13 +85,13 @@
       }
     ],
     "logo": {
-      "src": "http://localhost/storage/uploads/img/logo.png",
+      "src": "https://cetatenieromana.md/public/images/logo.png",
       "name": "Cetățenie"
     },
     "heroBlock": {
       "title": "Lorem ipsum dolor sit amet, consectetur.",
       "subtitle": "Lorem ipsum dolor sit amet2",
-      "created_at":  "2020-12-28",
+      "created_at": "2020-12-28",
       "video_background": "http://localhost/storage/uploads/media/europe.mp4"
     },
     "citizenshipSteps": {
@@ -62,25 +102,25 @@
           "id": 1,
           "title": "Etapa 1",
           "text": "Doresc să obțin cetățenie română",
-          "url": "/steps/1"
+          "slug": "/steps/1"
         },
         {
           "id": 2,
           "title": "Etapa 2",
           "text": "Am depus pentru cetățenie română - Sunt în așteptare",
-          "url": "/steps/2"
+          "slug": "/steps/2"
         },
         {
           "id": 3,
           "title": "Etapa 3",
           "text": "Am cetățenie română, Ce fac mai departe?",
-          "url": "/steps/3"
+          "slug": "/steps/3"
         },
         {
           "id": 4,
           "title": "Etapa 4",
           "text": "Am cetățenie română, dar îmi mai trebuie câteva acte",
-          "url": "/steps/4"
+          "slug": "/steps/4"
         }
       ]
     },
@@ -89,7 +129,7 @@
       "subtitle": "Lorem ipsum dolor sit amet.",
       "created_at": "2020-12-28",
       "buttonTitle": "Află numărul dosarului"
-      },
+    },
     "searchOrder": {
       "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
       "subtitle": "Lorem ipsum dolor sit amet.",
@@ -103,6 +143,7 @@
         {
           "id": 1,
           "title": "Visit the East",
+          "slug": "diving-to-the-deep",
           "subtitle": "Subtitle",
           "created_at": "2020-12-28",
           "image": "https://images.pexels.com/photos/2408666/pexels-photo-2408666.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500",
@@ -112,6 +153,7 @@
           "id": 2,
           "title": "Simple is better",
           "subtitle": "Subtitle2",
+          "slug": "conquer-the-world",
           "created_at": "2021-06-15",
           "image": "https://images.pexels.com/photos/447592/pexels-photo-447592.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
           "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
@@ -119,6 +161,7 @@
         {
           "id": 3,
           "title": "Film It!",
+          "slug": "explore-the-beautiful",
           "subtitle": "Subtitle3",
           "created_at": "2021-01-06",
           "image": "https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
@@ -128,6 +171,7 @@
           "id": 4,
           "title": "Visit the East",
           "subtitle": "Subtitle4",
+          "slug": "visit-the-east",
           "created_at": "2021-12-22",
           "image": "https://images.pexels.com/photos/2408666/pexels-photo-2408666.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500",
           "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
@@ -254,110 +298,668 @@
         }
       ]
     },
-    "newsPage": {
-      "articles": [
+    "news": {
+      "title": "Ultimele Știri",
+      "items": [
         {
           "id": 1,
           "title": "Diving to the deep",
-          "slug": "news/1",
+          "slug": "diving-to-the-deep",
           "subtitle": "Subtitle",
           "created_at": "2020-12-28",
           "image": "https://images.pexels.com/photos/932638/pexels-photo-932638.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260",
-          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+          "short": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque.",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tellus erat, rutrum nec volutpat id, auctor vel arcu. Nullam accumsan lectus id elit sollicitudin, vitae aliquam ante luctus. Praesent non lorem nec quam viverra tincidunt. Nunc vitae nunc eu augue imperdiet tristique. Aenean finibus lacus ipsum, quis hendrerit nunc dapibus nec. Curabitur pellentesque, velit quis vulputate tristique, eros odio dictum odio, vitae consequat urna magna ornare enim. Aenean tempus augue vel arcu ultricies rhoncus. Praesent eu purus at tortor auctor congue vitae sit amet velit. Mauris id felis lacus. Phasellus nulla sapien, vulputate nec imperdiet id, efficitur eu est. Fusce nec placerat ipsum, a sagittis est. Curabitur mattis facilisis sagittis. Praesent maximus ac quam vitae hendrerit. Suspendisse commodo malesuada varius. Phasellus lobortis massa non metus ultrices blandit. Quisque tempor quam lectus, non lobortis justo ullamcorper et. Mauris varius urna elit, in ultrices lacus sodales et. Cra haretra mi nec nibh facilisis, sed maximus libero ultricies. In iaculis magna id rutrum tincidunt. Donec at ex vel dui consequat blandit. Donec mattis lectus sed odio placerat, sit amet tempus dui gravida. Cras accumsan sem sed arcu dignissim, eget eleifend nisi auctor. Fusce ornare sodales accumsan. Nunc faucibus, leo lacinia placerat accumsan, ex dolor tempor leo, et sollicitudin ante nulla sed justo. Morbi id bibendum mi. Donec vestibulum fringilla fringilla. Sed eros risus, malesuada at erat nec, pharetra ullamcorper nibh. Sed a malesuada nibh. Suspendisse nulla libero, porttitor quis nisl sit amet, feugiat auctor purus. Pellentesque sem neque, gravida id auctor sed, blandit at sem. Sed ut mauris fringilla, efficitur neque non, maximus libero. Suspendisse a velit sed metus tincidunt posuere. Nam faucibus luctus faucibus. Sed justo velit, hendrerit a dignissim at, ultrices vel dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vitae diam urna. Pellentesque viverra tellus eros, ut euismod tortor rhoncus a. Suspendisse eu semper augue, eu varius nibh. Nullam ipsum nibh, luctus id magna ut, efficitur venenatis sapien. Sed auctor eros ac quam tristique fermentum. Integer lacinia dictum pulvinar. Praesent sagittis justo ut faucibus sodales. Cras ornare eros vel dui luctus commodo. Sed maximus, orci in convallis rhoncus, ipsum velit congue dolor, aliquam pellentesque erat ipsum eu erat. Proin eget dui pharetra, malesuada mauris ut, congue arcu Maecenas placerat massa eu consectetur convallis. Suspendisse potenti. Sed gravida elit nulla. Fusce at risus id sapien condimentum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque nibh ipsum, lobortis nec nulla eget, sollicitudin porttitor tellus. Integer sed lectus nisl. Nulla aliquam nunc erat, sed luctus nulla aliquam sed.",
+          "featured": [
+            {
+              "title": "Conquer the World",
+              "slug": "conquer-the-world",
+              "image": "https://images.pexels.com/photos/1576937/pexels-photo-1576937.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500",
+              "short": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+            },
+            {
+              "title": "Explore the beautiful",
+              "slug": "explore-the-beautiful",
+              "image": "https://images.pexels.com/photos/2123755/pexels-photo-2123755.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
+              "short": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+            },
+            {
+              "title": "Visit the East",
+              "slug": "visit-the-east",
+              "image": "https://images.pexels.com/photos/2408666/pexels-photo-2408666.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500",
+              "short": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+            }
+          ]
         },
         {
           "id": 2,
           "title": "Conquer the World",
-          "slug": "news/2",
+          "slug": "conquer-the-world",
           "subtitle": "Subtitle2",
           "created_at": "2021-06-15",
           "image": "https://images.pexels.com/photos/1576937/pexels-photo-1576937.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500",
-          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+          "short": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque.",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tellus erat, rutrum nec volutpat id, auctor vel arcu. Nullam accumsan lectus id elit sollicitudin, vitae aliquam ante luctus. Praesent non lorem nec quam viverra tincidunt. Nunc vitae nunc eu augue imperdiet tristique. Aenean finibus lacus ipsum, quis hendrerit nunc dapibus nec. Curabitur pellentesque, velit quis vulputate tristique, eros odio dictum odio, vitae consequat urna magna ornare enim. Aenean tempus augue vel arcu ultricies rhoncus. Praesent eu purus at tortor auctor congue vitae sit amet velit. Mauris id felis lacus. Phasellus nulla sapien, vulputate nec imperdiet id, efficitur eu est. Fusce nec placerat ipsum, a sagittis est. Curabitur mattis facilisis sagittis. Praesent maximus ac quam vitae hendrerit. Suspendisse commodo malesuada varius. Phasellus lobortis massa non metus ultrices blandit. Quisque tempor quam lectus, non lobortis justo ullamcorper et. Mauris varius urna elit, in ultrices lacus sodales et. Cra haretra mi nec nibh facilisis, sed maximus libero ultricies. In iaculis magna id rutrum tincidunt. Donec at ex vel dui consequat blandit. Donec mattis lectus sed odio placerat, sit amet tempus dui gravida. Cras accumsan sem sed arcu dignissim, eget eleifend nisi auctor. Fusce ornare sodales accumsan. Nunc faucibus, leo lacinia placerat accumsan, ex dolor tempor leo, et sollicitudin ante nulla sed justo. Morbi id bibendum mi. Donec vestibulum fringilla fringilla. Sed eros risus, malesuada at erat nec, pharetra ullamcorper nibh. Sed a malesuada nibh. Suspendisse nulla libero, porttitor quis nisl sit amet, feugiat auctor purus. Pellentesque sem neque, gravida id auctor sed, blandit at sem. Sed ut mauris fringilla, efficitur neque non, maximus libero. Suspendisse a velit sed metus tincidunt posuere. Nam faucibus luctus faucibus. Sed justo velit, hendrerit a dignissim at, ultrices vel dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vitae diam urna. Pellentesque viverra tellus eros, ut euismod tortor rhoncus a. Suspendisse eu semper augue, eu varius nibh. Nullam ipsum nibh, luctus id magna ut, efficitur venenatis sapien. Sed auctor eros ac quam tristique fermentum. Integer lacinia dictum pulvinar. Praesent sagittis justo ut faucibus sodales. Cras ornare eros vel dui luctus commodo. Sed maximus, orci in convallis rhoncus, ipsum velit congue dolor, aliquam pellentesque erat ipsum eu erat. Proin eget dui pharetra, malesuada mauris ut, congue arcu Maecenas placerat massa eu consectetur convallis. Suspendisse potenti. Sed gravida elit nulla. Fusce at risus id sapien condimentum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque nibh ipsum, lobortis nec nulla eget, sollicitudin porttitor tellus. Integer sed lectus nisl. Nulla aliquam nunc erat, sed luctus nulla aliquam sed."
         },
         {
           "id": 3,
           "title": "Explore the beautiful",
-          "slug": "news/3",
+          "slug": "explore-the-beautiful",
           "subtitle": "Subtitle3",
           "created_at": "2021-01-06",
           "image": "https://images.pexels.com/photos/2123755/pexels-photo-2123755.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
-          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+          "short": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque.",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tellus erat, rutrum nec volutpat id, auctor vel arcu. Nullam accumsan lectus id elit sollicitudin, vitae aliquam ante luctus. Praesent non lorem nec quam viverra tincidunt. Nunc vitae nunc eu augue imperdiet tristique. Aenean finibus lacus ipsum, quis hendrerit nunc dapibus nec. Curabitur pellentesque, velit quis vulputate tristique, eros odio dictum odio, vitae consequat urna magna ornare enim. Aenean tempus augue vel arcu ultricies rhoncus. Praesent eu purus at tortor auctor congue vitae sit amet velit. Mauris id felis lacus. Phasellus nulla sapien, vulputate nec imperdiet id, efficitur eu est. Fusce nec placerat ipsum, a sagittis est. Curabitur mattis facilisis sagittis. Praesent maximus ac quam vitae hendrerit. Suspendisse commodo malesuada varius. Phasellus lobortis massa non metus ultrices blandit. Quisque tempor quam lectus, non lobortis justo ullamcorper et. Mauris varius urna elit, in ultrices lacus sodales et. Cra haretra mi nec nibh facilisis, sed maximus libero ultricies. In iaculis magna id rutrum tincidunt. Donec at ex vel dui consequat blandit. Donec mattis lectus sed odio placerat, sit amet tempus dui gravida. Cras accumsan sem sed arcu dignissim, eget eleifend nisi auctor. Fusce ornare sodales accumsan. Nunc faucibus, leo lacinia placerat accumsan, ex dolor tempor leo, et sollicitudin ante nulla sed justo. Morbi id bibendum mi. Donec vestibulum fringilla fringilla. Sed eros risus, malesuada at erat nec, pharetra ullamcorper nibh. Sed a malesuada nibh. Suspendisse nulla libero, porttitor quis nisl sit amet, feugiat auctor purus. Pellentesque sem neque, gravida id auctor sed, blandit at sem. Sed ut mauris fringilla, efficitur neque non, maximus libero. Suspendisse a velit sed metus tincidunt posuere. Nam faucibus luctus faucibus. Sed justo velit, hendrerit a dignissim at, ultrices vel dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vitae diam urna. Pellentesque viverra tellus eros, ut euismod tortor rhoncus a. Suspendisse eu semper augue, eu varius nibh. Nullam ipsum nibh, luctus id magna ut, efficitur venenatis sapien. Sed auctor eros ac quam tristique fermentum. Integer lacinia dictum pulvinar. Praesent sagittis justo ut faucibus sodales. Cras ornare eros vel dui luctus commodo. Sed maximus, orci in convallis rhoncus, ipsum velit congue dolor, aliquam pellentesque erat ipsum eu erat. Proin eget dui pharetra, malesuada mauris ut, congue arcu Maecenas placerat massa eu consectetur convallis. Suspendisse potenti. Sed gravida elit nulla. Fusce at risus id sapien condimentum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque nibh ipsum, lobortis nec nulla eget, sollicitudin porttitor tellus. Integer sed lectus nisl. Nulla aliquam nunc erat, sed luctus nulla aliquam sed."
         },
         {
           "id": 4,
           "title": "Visit the East",
-          "slug": "news/4",
+          "slug": "visit-the-east",
           "subtitle": "Subtitle4",
           "created_at": "2021-12-22",
           "image": "https://images.pexels.com/photos/2408666/pexels-photo-2408666.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500",
-          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
-        },
-        {
-          "id": 5,
-          "title": "Visit the East",
-          "slug": "news/5",
-          "subtitle": "Subtitle4",
-          "created_at": "2021-12-22",
-          "image": "https://images.pexels.com/photos/2408666/pexels-photo-2408666.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500",
-          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
-        },
-        {
-          "id": 6,
-          "title": "Visit the East",
-          "slug": "news/6",
-          "subtitle": "Subtitle4",
-          "created_at": "2021-12-22",
-          "image": "https://images.pexels.com/photos/447592/pexels-photo-447592.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
-          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
-        },
-        {
-          "id": 7,
-          "title": "Visit the East",
-          "slug": "news/7",
-          "subtitle": "Subtitle4",
-          "created_at": "2021-12-22",
-          "image": "https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
-          "text": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
+          "short": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque.",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tellus erat, rutrum nec volutpat id, auctor vel arcu. Nullam accumsan lectus id elit sollicitudin, vitae aliquam ante luctus. Praesent non lorem nec quam viverra tincidunt. Nunc vitae nunc eu augue imperdiet tristique. Aenean finibus lacus ipsum, quis hendrerit nunc dapibus nec. Curabitur pellentesque, velit quis vulputate tristique, eros odio dictum odio, vitae consequat urna magna ornare enim. Aenean tempus augue vel arcu ultricies rhoncus. Praesent eu purus at tortor auctor congue vitae sit amet velit. Mauris id felis lacus. Phasellus nulla sapien, vulputate nec imperdiet id, efficitur eu est. Fusce nec placerat ipsum, a sagittis est. Curabitur mattis facilisis sagittis. Praesent maximus ac quam vitae hendrerit. Suspendisse commodo malesuada varius. Phasellus lobortis massa non metus ultrices blandit. Quisque tempor quam lectus, non lobortis justo ullamcorper et. Mauris varius urna elit, in ultrices lacus sodales et. Cra haretra mi nec nibh facilisis, sed maximus libero ultricies. In iaculis magna id rutrum tincidunt. Donec at ex vel dui consequat blandit. Donec mattis lectus sed odio placerat, sit amet tempus dui gravida. Cras accumsan sem sed arcu dignissim, eget eleifend nisi auctor. Fusce ornare sodales accumsan. Nunc faucibus, leo lacinia placerat accumsan, ex dolor tempor leo, et sollicitudin ante nulla sed justo. Morbi id bibendum mi. Donec vestibulum fringilla fringilla. Sed eros risus, malesuada at erat nec, pharetra ullamcorper nibh. Sed a malesuada nibh. Suspendisse nulla libero, porttitor quis nisl sit amet, feugiat auctor purus. Pellentesque sem neque, gravida id auctor sed, blandit at sem. Sed ut mauris fringilla, efficitur neque non, maximus libero. Suspendisse a velit sed metus tincidunt posuere. Nam faucibus luctus faucibus. Sed justo velit, hendrerit a dignissim at, ultrices vel dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vitae diam urna. Pellentesque viverra tellus eros, ut euismod tortor rhoncus a. Suspendisse eu semper augue, eu varius nibh. Nullam ipsum nibh, luctus id magna ut, efficitur venenatis sapien. Sed auctor eros ac quam tristique fermentum. Integer lacinia dictum pulvinar. Praesent sagittis justo ut faucibus sodales. Cras ornare eros vel dui luctus commodo. Sed maximus, orci in convallis rhoncus, ipsum velit congue dolor, aliquam pellentesque erat ipsum eu erat. Proin eget dui pharetra, malesuada mauris ut, congue arcu Maecenas placerat massa eu consectetur convallis. Suspendisse potenti. Sed gravida elit nulla. Fusce at risus id sapien condimentum feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque nibh ipsum, lobortis nec nulla eget, sollicitudin porttitor tellus. Integer sed lectus nisl. Nulla aliquam nunc erat, sed luctus nulla aliquam sed."
         }
       ]
     },
     "documentsPage": {
       "title": "Acte românești",
-      "documents": [
+      "items": [
         {
-          "id": 1,
-          "title": "Pașaport românesc",
-          "slug": "pasaport"
-        },
-        {
-          "id": 2,
-          "title": "Buletin Românesc",
-          "slug": "pasaport"
+          "id": 3,
+          "title": "Cetățenie română",
+          "slug": "cetatenie-romana",
+          "description": "Cetățenia română, care te asigură cu un pașaport european, este un vis al multor moldoveni. Poți iniția procesul de redobândire a cetățeniei române dacă unul dintre părinții tăi, bunici sau chiar străbunici a fost născut până la 28 iunie 1940 pe teritoriul României Mari (inclusiv pe teritoriul actualului stat Republica Moldova). Pentru a obține cetățenia română ai însă de parcurs un drum cu multe „hopuri” și „povârnișuri”. Iată de ce este bine, chiar din start să cunoști etapele.  Pornește la drum echipat cu un bagaj de cunoștințe temeinice, pe care le vei culege din plin chiar de aici.  Vei găsi multă informație utilă despre fiecare etapă, iar astfel vei putea  parcurge întreg  procesul de redobândire a cetățeniei române de sine stătător. Iar dacă, la un moment dat, vei simți că ai nevoie de ajutor, completează formularul și vei fi ghidat, la orice etapă.",
+          "image": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+          "questions": [
+            {
+              "title": "Redobândirea cetățeniei române",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Acte de stare civilă moldovenești",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Duplicate acte de stare civilă",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Programare pentru depunerea dosarului",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Legalizarea actelor de stare civilă și identitate la notar",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Cazier judiciar moldovenesc",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Dosar cetățenie română ",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Depunerea dosarului de redobândire a cetățeniei române",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Stadiu dosar cetățenie română",
+              "description": "Descrierea"
+            }
+          ]
         },
         {
           "id": 3,
-          "title": "Permis Românesc",
-          "slug": "pasaport"
+          "title": "Jurământ de credință",
+          "slug": "juramant-de-credinta",
+          "description": "Cetățenia română, care te asigură cu un pașaport european, este un vis al multor moldoveni. Poți iniția procesul de redobândire a cetățeniei române dacă unul dintre părinții tăi, bunici sau chiar străbunici a fost născut până la 28 iunie 1940 pe teritoriul României Mari (inclusiv pe teritoriul actualului stat Republica Moldova). Pentru a obține cetățenia română ai însă de parcurs un drum cu multe „hopuri” și „povârnișuri”. Iată de ce este bine, chiar din start să cunoști etapele.  Pornește la drum echipat cu un bagaj de cunoștințe temeinice, pe care le vei culege din plin chiar de aici.  Vei găsi multă informație utilă despre fiecare etapă, iar astfel vei putea  parcurge întreg  procesul de redobândire a cetățeniei române de sine stătător. Iar dacă, la un moment dat, vei simți că ai nevoie de ajutor, completează formularul și vei fi ghidat, la orice etapă.",
+          "image": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+          "questions": [
+            {
+              "title": "Redobândirea cetățeniei române",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Acte de stare civilă moldovenești",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Duplicate acte de stare civilă",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Programare pentru depunerea dosarului",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Legalizarea actelor de stare civilă și identitate la notar",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Cazier judiciar moldovenesc",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Dosar cetățenie română ",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Depunerea dosarului de redobândire a cetățeniei române",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Stadiu dosar cetățenie română",
+              "description": "Descrierea"
+            }
+          ]
         },
         {
-          "id": 4,
-          "title": "Alocații",
-          "slug": "pasaport"
+          "id": 3,
+          "title": "Certificate de naștere și căsătorie românești",
+          "slug": "certificat-de-nastere-si-casatorie-romanesti",
+          "description": "Cetățenia română, care te asigură cu un pașaport european, este un vis al multor moldoveni. Poți iniția procesul de redobândire a cetățeniei române dacă unul dintre părinții tăi, bunici sau chiar străbunici a fost născut până la 28 iunie 1940 pe teritoriul României Mari (inclusiv pe teritoriul actualului stat Republica Moldova). Pentru a obține cetățenia română ai însă de parcurs un drum cu multe „hopuri” și „povârnișuri”. Iată de ce este bine, chiar din start să cunoști etapele.  Pornește la drum echipat cu un bagaj de cunoștințe temeinice, pe care le vei culege din plin chiar de aici.  Vei găsi multă informație utilă despre fiecare etapă, iar astfel vei putea  parcurge întreg  procesul de redobândire a cetățeniei române de sine stătător. Iar dacă, la un moment dat, vei simți că ai nevoie de ajutor, completează formularul și vei fi ghidat, la orice etapă.",
+          "image": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+          "questions": [
+            {
+              "title": "Redobândirea cetățeniei române",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Acte de stare civilă moldovenești",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Duplicate acte de stare civilă",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Programare pentru depunerea dosarului",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Legalizarea actelor de stare civilă și identitate la notar",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Cazier judiciar moldovenesc",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Dosar cetățenie română ",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Depunerea dosarului de redobândire a cetățeniei române",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Stadiu dosar cetățenie română",
+              "description": "Descrierea"
+            }
+          ]
         },
         {
-          "id": 5,
-          "title": "Transcrieri certificate",
-          "slug": "pasaport"
+          "id": 3,
+          "title": "Pașaport românesc",
+          "slug": "pasaport-romanesc",
+          "description": "Cetățenia română, care te asigură cu un pașaport european, este un vis al multor moldoveni. Poți iniția procesul de redobândire a cetățeniei române dacă unul dintre părinții tăi, bunici sau chiar străbunici a fost născut până la 28 iunie 1940 pe teritoriul României Mari (inclusiv pe teritoriul actualului stat Republica Moldova). Pentru a obține cetățenia română ai însă de parcurs un drum cu multe „hopuri” și „povârnișuri”. Iată de ce este bine, chiar din start să cunoști etapele.  Pornește la drum echipat cu un bagaj de cunoștințe temeinice, pe care le vei culege din plin chiar de aici.  Vei găsi multă informație utilă despre fiecare etapă, iar astfel vei putea  parcurge întreg  procesul de redobândire a cetățeniei române de sine stătător. Iar dacă, la un moment dat, vei simți că ai nevoie de ajutor, completează formularul și vei fi ghidat, la orice etapă.",
+          "image": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+          "questions": [
+            {
+              "title": "Redobândirea cetățeniei române",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Acte de stare civilă moldovenești",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Duplicate acte de stare civilă",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Programare pentru depunerea dosarului",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Legalizarea actelor de stare civilă și identitate la notar",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Cazier judiciar moldovenesc",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Dosar cetățenie română ",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Depunerea dosarului de redobândire a cetățeniei române",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Stadiu dosar cetățenie română",
+              "description": "Descrierea"
+            }
+          ]
         },
         {
-          "id": 6,
-          "title": "Apostilă",
-          "slug": "pasaport"
+          "id": 3,
+          "title": "Buletin românesc",
+          "slug": "buletin-romanesc",
+          "description": "Cetățenia română, care te asigură cu un pașaport european, este un vis al multor moldoveni. Poți iniția procesul de redobândire a cetățeniei române dacă unul dintre părinții tăi, bunici sau chiar străbunici a fost născut până la 28 iunie 1940 pe teritoriul României Mari (inclusiv pe teritoriul actualului stat Republica Moldova). Pentru a obține cetățenia română ai însă de parcurs un drum cu multe „hopuri” și „povârnișuri”. Iată de ce este bine, chiar din start să cunoști etapele.  Pornește la drum echipat cu un bagaj de cunoștințe temeinice, pe care le vei culege din plin chiar de aici.  Vei găsi multă informație utilă despre fiecare etapă, iar astfel vei putea  parcurge întreg  procesul de redobândire a cetățeniei române de sine stătător. Iar dacă, la un moment dat, vei simți că ai nevoie de ajutor, completează formularul și vei fi ghidat, la orice etapă.",
+          "image": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+          "questions": [
+            {
+              "title": "Redobândirea cetățeniei române",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Acte de stare civilă moldovenești",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Duplicate acte de stare civilă",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Programare pentru depunerea dosarului",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Legalizarea actelor de stare civilă și identitate la notar",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Cazier judiciar moldovenesc",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Dosar cetățenie română ",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Depunerea dosarului de redobândire a cetățeniei române",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Stadiu dosar cetățenie română",
+              "description": "Descrierea"
+            }
+          ]
         },
         {
-          "id": 7,
-          "title": "Cazier românesc",
-          "slug": "pasaport"
+          "id": 3,
+          "title": "Alocație pentru copil",
+          "slug": "alocatie-pentru-copil",
+          "description": "Cetățenia română, care te asigură cu un pașaport european, este un vis al multor moldoveni. Poți iniția procesul de redobândire a cetățeniei române dacă unul dintre părinții tăi, bunici sau chiar străbunici a fost născut până la 28 iunie 1940 pe teritoriul României Mari (inclusiv pe teritoriul actualului stat Republica Moldova). Pentru a obține cetățenia română ai însă de parcurs un drum cu multe „hopuri” și „povârnișuri”. Iată de ce este bine, chiar din start să cunoști etapele.  Pornește la drum echipat cu un bagaj de cunoștințe temeinice, pe care le vei culege din plin chiar de aici.  Vei găsi multă informație utilă despre fiecare etapă, iar astfel vei putea  parcurge întreg  procesul de redobândire a cetățeniei române de sine stătător. Iar dacă, la un moment dat, vei simți că ai nevoie de ajutor, completează formularul și vei fi ghidat, la orice etapă.",
+          "image": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+          "questions": [
+            {
+              "title": "Redobândirea cetățeniei române",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Acte de stare civilă moldovenești",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Duplicate acte de stare civilă",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Programare pentru depunerea dosarului",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Legalizarea actelor de stare civilă și identitate la notar",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Cazier judiciar moldovenesc",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Dosar cetățenie română ",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Depunerea dosarului de redobândire a cetățeniei române",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Stadiu dosar cetățenie română",
+              "description": "Descrierea"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Permis de conducere românesc",
+          "slug": "permis-de-conducere-romanesc",
+          "description": "Cetățenia română, care te asigură cu un pașaport european, este un vis al multor moldoveni. Poți iniția procesul de redobândire a cetățeniei române dacă unul dintre părinții tăi, bunici sau chiar străbunici a fost născut până la 28 iunie 1940 pe teritoriul României Mari (inclusiv pe teritoriul actualului stat Republica Moldova). Pentru a obține cetățenia română ai însă de parcurs un drum cu multe „hopuri” și „povârnișuri”. Iată de ce este bine, chiar din start să cunoști etapele.  Pornește la drum echipat cu un bagaj de cunoștințe temeinice, pe care le vei culege din plin chiar de aici.  Vei găsi multă informație utilă despre fiecare etapă, iar astfel vei putea  parcurge întreg  procesul de redobândire a cetățeniei române de sine stătător. Iar dacă, la un moment dat, vei simți că ai nevoie de ajutor, completează formularul și vei fi ghidat, la orice etapă.",
+          "image": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+          "questions": [
+            {
+              "title": "Redobândirea cetățeniei române",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Acte de stare civilă moldovenești",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Duplicate acte de stare civilă",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Programare pentru depunerea dosarului",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Legalizarea actelor de stare civilă și identitate la notar",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Cazier judiciar moldovenesc",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Dosar cetățenie română ",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Depunerea dosarului de redobândire a cetățeniei române",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Stadiu dosar cetățenie română",
+              "description": "Descrierea"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Atestate profesionale",
+          "slug": "atestate-profesionale",
+          "description": "Cetățenia română, care te asigură cu un pașaport european, este un vis al multor moldoveni. Poți iniția procesul de redobândire a cetățeniei române dacă unul dintre părinții tăi, bunici sau chiar străbunici a fost născut până la 28 iunie 1940 pe teritoriul României Mari (inclusiv pe teritoriul actualului stat Republica Moldova). Pentru a obține cetățenia română ai însă de parcurs un drum cu multe „hopuri” și „povârnișuri”. Iată de ce este bine, chiar din start să cunoști etapele.  Pornește la drum echipat cu un bagaj de cunoștințe temeinice, pe care le vei culege din plin chiar de aici.  Vei găsi multă informație utilă despre fiecare etapă, iar astfel vei putea  parcurge întreg  procesul de redobândire a cetățeniei române de sine stătător. Iar dacă, la un moment dat, vei simți că ai nevoie de ajutor, completează formularul și vei fi ghidat, la orice etapă.",
+          "image": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+          "questions": [
+            {
+              "title": "Redobândirea cetățeniei române",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Acte de stare civilă moldovenești",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Duplicate acte de stare civilă",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Programare pentru depunerea dosarului",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Legalizarea actelor de stare civilă și identitate la notar",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Cazier judiciar moldovenesc",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Dosar cetățenie română ",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Depunerea dosarului de redobândire a cetățeniei române",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Stadiu dosar cetățenie română",
+              "description": "Descrierea"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Echivalarea diplomei",
+          "slug": "echivalarea-diplomei",
+          "description": "Cetățenia română, care te asigură cu un pașaport european, este un vis al multor moldoveni. Poți iniția procesul de redobândire a cetățeniei române dacă unul dintre părinții tăi, bunici sau chiar străbunici a fost născut până la 28 iunie 1940 pe teritoriul României Mari (inclusiv pe teritoriul actualului stat Republica Moldova). Pentru a obține cetățenia română ai însă de parcurs un drum cu multe „hopuri” și „povârnișuri”. Iată de ce este bine, chiar din start să cunoști etapele.  Pornește la drum echipat cu un bagaj de cunoștințe temeinice, pe care le vei culege din plin chiar de aici.  Vei găsi multă informație utilă despre fiecare etapă, iar astfel vei putea  parcurge întreg  procesul de redobândire a cetățeniei române de sine stătător. Iar dacă, la un moment dat, vei simți că ai nevoie de ajutor, completează formularul și vei fi ghidat, la orice etapă.",
+          "image": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+          "questions": [
+            {
+              "title": "Redobândirea cetățeniei române",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Acte de stare civilă moldovenești",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Duplicate acte de stare civilă",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Programare pentru depunerea dosarului",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Legalizarea actelor de stare civilă și identitate la notar",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Cazier judiciar moldovenesc",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Dosar cetățenie română ",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Depunerea dosarului de redobândire a cetățeniei române",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Stadiu dosar cetățenie română",
+              "description": "Descrierea"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Dosar de cetățenie prin judecată",
+          "slug": "dosar-de-cetatenie-prin-judecata",
+          "description": "Cetățenia română, care te asigură cu un pașaport european, este un vis al multor moldoveni. Poți iniția procesul de redobândire a cetățeniei române dacă unul dintre părinții tăi, bunici sau chiar străbunici a fost născut până la 28 iunie 1940 pe teritoriul României Mari (inclusiv pe teritoriul actualului stat Republica Moldova). Pentru a obține cetățenia română ai însă de parcurs un drum cu multe „hopuri” și „povârnișuri”. Iată de ce este bine, chiar din start să cunoști etapele.  Pornește la drum echipat cu un bagaj de cunoștințe temeinice, pe care le vei culege din plin chiar de aici.  Vei găsi multă informație utilă despre fiecare etapă, iar astfel vei putea  parcurge întreg  procesul de redobândire a cetățeniei române de sine stătător. Iar dacă, la un moment dat, vei simți că ai nevoie de ajutor, completează formularul și vei fi ghidat, la orice etapă.",
+          "image": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+          "questions": [
+            {
+              "title": "Redobândirea cetățeniei române",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Acte de stare civilă moldovenești",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Duplicate acte de stare civilă",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Programare pentru depunerea dosarului",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Legalizarea actelor de stare civilă și identitate la notar",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Cazier judiciar moldovenesc",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Dosar cetățenie română ",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Depunerea dosarului de redobândire a cetățeniei române",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Stadiu dosar cetățenie română",
+              "description": "Descrierea"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Apostila pe acte",
+          "slug": "apostila-pe-acte",
+          "description": "Cetățenia română, care te asigură cu un pașaport european, este un vis al multor moldoveni. Poți iniția procesul de redobândire a cetățeniei române dacă unul dintre părinții tăi, bunici sau chiar străbunici a fost născut până la 28 iunie 1940 pe teritoriul României Mari (inclusiv pe teritoriul actualului stat Republica Moldova). Pentru a obține cetățenia română ai însă de parcurs un drum cu multe „hopuri” și „povârnișuri”. Iată de ce este bine, chiar din start să cunoști etapele.  Pornește la drum echipat cu un bagaj de cunoștințe temeinice, pe care le vei culege din plin chiar de aici.  Vei găsi multă informație utilă despre fiecare etapă, iar astfel vei putea  parcurge întreg  procesul de redobândire a cetățeniei române de sine stătător. Iar dacă, la un moment dat, vei simți că ai nevoie de ajutor, completează formularul și vei fi ghidat, la orice etapă.",
+          "image": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+          "questions": [
+            {
+              "title": "Redobândirea cetățeniei române",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Acte de stare civilă moldovenești",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Duplicate acte de stare civilă",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Programare pentru depunerea dosarului",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Legalizarea actelor de stare civilă și identitate la notar",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Cazier judiciar moldovenesc",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Dosar cetățenie română ",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Depunerea dosarului de redobândire a cetățeniei române",
+              "description": "Descrierea"
+            },
+            {
+              "title": "Stadiu dosar cetățenie română",
+              "description": "Descrierea"
+            }
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "title": "Întrebări frecvente",
+      "items": [
+        {
+          "id": 1,
+          "title": "Redobândirea cetățeniei române",
+          "description": "Descrierea redobândirea cetățeniei române",
+          "slug": "redobindirea_cetateniei_ramane",
+          "questions": [
+            {
+              "title": "Redobândirea cetățeniei române",
+              "description": "Raspuns la intrebare"
+            },
+            {
+              "title": "Redobândirea cetățeniei române",
+              "description": "Raspuns la intrebare"
+            },
+            {
+              "title": "Redobândirea cetățeniei române",
+              "description": "Raspuns la intrebare"
+            },
+            {
+              "title": "Redobândirea cetățeniei române",
+              "description": "Raspuns la intrebare"
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "title": "Transcrierea actelor de stare civilă",
+          "slug": "transcrierea_actelor_de_stare_civila",
+          "description": "Descrierea transcrierea cetățeniei române",
+          "questions": [
+            {
+              "title": "Transcrierea actelor de stare civilă",
+              "description": "Raspuns la intrebare"
+            },
+            {
+              "title": "Transcrierea actelor de stare civilă",
+              "description": "Raspuns la intrebare"
+            },
+            {
+              "title": "Transcrierea actelor de stare civilă",
+              "description": "Raspuns la intrebare"
+            },
+            {
+              "title": "Transcrierea actelor de stare civilă",
+              "description": "Raspuns la intrebare"
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "title": "Perfectarea actelor românești",
+          "slug": "perfectarea_actelor_romanesti",
+          "description": "Descrierea perfectarea actelor românești",
+          "questions": [
+            {
+              "title": "Perfectarea actelor românești",
+              "description": "Raspuns la intrebare"
+            },
+            {
+              "title": "Perfectarea actelor românești",
+              "description": "Raspuns la intrebare"
+            },
+            {
+              "title": "Perfectarea actelor românești",
+              "description": "Raspuns la intrebare"
+            },
+            {
+              "title": "Perfectarea actelor românești",
+              "description": "Raspuns la intrebare"
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "title": "Programări online",
+          "description": "Descrierea programări online",
+          "questions": [
+            {
+              "title": "Redobândirea cetățeniei române",
+              "description": "Raspuns la intrebare"
+            },
+            {
+              "title": "Redobândirea cetățeniei române",
+              "description": "Raspuns la intrebare"
+            },
+            {
+              "title": "Redobândirea cetățeniei române",
+              "description": "Raspuns la intrebare"
+            },
+            {
+              "title": "Redobândirea cetățeniei române",
+              "description": "Raspuns la intrebare"
+            }
+          ]
         }
       ]
     },
@@ -373,19 +975,19 @@
         {
           "id": 2,
           "title": "Transcrierea actelor de stare civilă",
-          "description":  "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam.",
+          "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam.",
           "href": "/questions/2"
         },
         {
           "id": 3,
           "title": "Perfectarea actelor românești",
-          "description":  "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam!!!",
+          "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam!!!",
           "href": "/questions/3"
         },
         {
           "id": 4,
           "title": "Programări online",
-          "description":  "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
           "href": "/questions/4"
         }
       ],
@@ -434,7 +1036,6 @@
               "answer": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque."
             }
           ]
-
         },
         {
           "id": 3,
@@ -455,8 +1056,81 @@
       ]
     },
     "contactsPage": {
-      "title": "Contacte"
+      "title": "Contacte",
+      "items": [
+        {
+          "title": "Chișinău",
+          "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2719.9446516000385!2d28.851029916252088!3d47.021691436190785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97c3f04c96549%3A0x973e2954a59fc5f2!2sJustConsult!5e0!3m2!1sro!2s!4v1653756176365!5m2!1sro!2s",
+          "lines": [
+            {
+              "label": "Număr de Telefon",
+              "value": "022 10-50-80",
+              "href": "tel:+37322105080"
+            },
+            {
+              "label": "E-mail",
+              "value": "contact@justconsult.md",
+              "href": "mailto:contact@justconsult.md"
+            },
+            {
+              "label": "Program de lucru",
+              "value": "Luni-Vineri: 8:00 - 18:00 <br/> Sâmbătă: 8:00 - 15:00"
+            },
+            {
+              "label": "Adresa",
+              "value": "mun. Chișinău <br/> str. Ismail 81/1, et. 2, biroul 212"
+            }
+          ]
+        },
+        {
+          "title": "Cahul",
+          "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1650.8750373240769!2d28.194579444236428!3d45.90271602152874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b65c946e43b56b%3A0x78b0935dc68b28e6!2zU3RyYWRhIEJvZ2RhbiBQZXRyaWNlaWN1LUhhyJlkZXUgMTQsIENhaHVsIDM5MDksINCc0L7Qu9C00LDQstC40Y8!5e0!3m2!1sro!2s!4v1648198667990!5m2!1sro!2s",
+          "lines": [
+            {
+              "label": "Număr de Telefon",
+              "value": "022 80-20-83",
+              "href": "tel:+37322802083"
+            },
+            {
+              "label": "Adresa Web",
+              "value": "www.justconsult.md/cahul",
+              "href": "https://www.justconsult.md/cahul"
+            },
+            {
+              "label": "Program de lucru",
+              "value": "Luni-Vineri: 8:00 - 18:00 <br/> Sâmbătă: 8:00 - 15:00"
+            },
+            {
+              "label": "Adresa",
+              "value": "mun. Cahul <br/> str. Bogdan Petriceicu Hașdeu 14"
+            }
+          ]
+        },
+        {
+          "title": "Bălți",
+          "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d474.1278472207199!2d27.92301444437776!3d47.76065530944403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cb67325e96a655%3A0xd2e53235cc226187!2zUG_Fn3RhIENlbnRyYWzEgywgU3RyYWRhIMiYdGVmYW4gY2VsIE1hcmUsIELEg2zIm2ksINCc0L7Qu9C00LDQstC40Y8!5e0!3m2!1sro!2s!4v1648198843240!5m2!1sro!2s",
+          "lines": [
+            {
+              "label": "Număr de Telefon",
+              "value": "022 10 50 80",
+              "href": "tel:+37322105080"
+            },
+            {
+              "label": "Adresa Web",
+              "value": "www.justconsult.md/balti",
+              "href": "https://www.justconsult.md/balti"
+            },
+            {
+              "label": "Program de lucru",
+              "value": "Luni-Vineri: 8:00 - 18:00 <br/> Sâmbătă: 8:00 - 15:00"
+            },
+            {
+              "label": "Adresa",
+              "value": "mun. Bălți <br/> str. Ștefan cel Mare 60, <br/> etajul 2 (în incinta Oficiului Poștal)"
+            }
+          ]
+        }
+      ]
     }
-
   }
 }

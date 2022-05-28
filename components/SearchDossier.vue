@@ -1,82 +1,4 @@
 <template>
-  <!--    <section class="search-dossier flex justify-center items-center mt-3">
-      <div class="dossier-block ml-3">
-        <form action="">
-          <div class="input-block">
-            <input
-              id="dossier_number"
-              class="dossier_number placeholder-gray
-              bg-gray-700 rounded w-full py-2 px-4 text-2xl focus:outline-none focus:bg-white" name="dossier_number"
-              placeholder="Numărul dosarului" type="text">
-          </div>
-          <div class="get-info-block bg-cetro-black text-2xl text-cetro-white text-white text-center">
-            <p class="questions">{{ content.searchDossier.title }}</p>
-            <p class="questions">{{ content.searchDossier.subtitle }}</p>
-            <img alt="Link to partners" class="get-info-image min-w-[140] min-h-[140]" src="">
-            <button class="get-info-button text-black bg-cetro-green text-2xl rounded-2xl p-2" type="submit">{{ content.searchDossier.buttonTitle }}</button>
-          </div>
-        </form>
-        <form class="w-full max-w-sm">
-          <div class="md:flex flex-col md:items-center mb-6">
-            <div class="">
-              <label class="block text-black font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
-                Introduceti dosar/ordin
-              </label>
-            </div>
-            <div class="md:w-2/3">
-              <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-black leading-tight focus:outline-none focus:bg-white focus:border-green-500" id="inline-full-name" type="text" value="Jane Doe">
-            </div>
-          </div>
-          <div class="md:flex flex-col md:items-center mb-6">
-            <div class="md:w-1/3">
-              <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-password">
-                Password
-              </label>
-            </div>
-            <div class="md:w-2/3">
-              <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-password" type="password" placeholder="******************">
-            </div>
-          </div>
-          <div class="md:flex md:items-center mb-6">
-            <div class="md:w-1/3"></div>
-            <label class="md:w-2/3 block text-gray-500 font-bold">
-              <input class="mr-2 leading-tight" type="checkbox">
-              <span class="text-sm">
-        Send me your newsletter!
-      </span>
-            </label>
-          </div>
-          <div class="md:flex md:items-center">
-            <div class="md:w-1/3"></div>
-            <div class="md:w-2/3">
-              <button class="shadow bg-green-500 hover:bg-deep-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
-                {{ content.searchDossier.buttonTitle }}
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="order-block flex flex-col justify-between ml-3 bg-cetro-black text-2xl text-white text-center">
-        <form action="">
-          <div class="input-block">
-            <input
-              class="dossier_number bg-gray-700 rounded w-full py-2 px-4 text-2xl focus:outline-none focus:bg-white focus:border-purple-500"
-              name="order_number" placeholder="Numărul ordinului" type="text">
-          </div>
-
-          <div class="text-block">
-            <p>{{ content.searchOrder.title }}</p>
-            <p>{{ content.searchOrder.subtitle }}</p>
-          </div>
-          <div class="subscribe-block flex flex-col items-center justify-between">
-            <input class="subscribe-block__item mt-3 text-black placeholder-black" placeholder="Nume Prenume" type="text">
-            <input class="subscribe-block__item mt-3 text-black placeholder-black" placeholder="Număr de contact" type="tel">
-            <input class="subscribe-block__item mt-3 text-black placeholder-black" placeholder="Email" type="email">
-            <button class="subscribe-block__item subscribe-button p-1 text-black text-2xl rounded-2xl bg-cetro-green" type="submit">{{ content.searchOrder.buttonTitle }}</button>
-          </div>
-        </form>
-      </div>
-    </section>-->
   <div class="relative">
     <img
       src="https://images.pexels.com/photos/3747463/pexels-photo-3747463.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
@@ -97,65 +19,357 @@
         "
       >
         <div class="flex flex-col items-center justify-between xl:flex-row">
-          <!-- <div class="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
-            <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
-              The quick, brown fox <br class="hidden md:block" />
-              jumps over a <span class="text-teal-accent-400">lazy dog</span>
-            </h2>
-            <p class="max-w-xl mb-4 text-base text-gray-400 md:text-lg">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudan, totam rem aperiam, eaque ipsa quae.
-            </p>
-            <a href="/" aria-label="" class="inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-teal-accent-400 hover:text-teal-accent-700">
-              Learn more
-              <svg class="inline-block w-3 ml-2" fill="currentColor" viewBox="0 0 12 12">
-                <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z"></path>
-              </svg>
-            </a>
-          </div> -->
           <div class="w-full max-w-full">
             <div class="bg-white rounded shadow-2xl p-7 sm:p-10">
-              <h3
-                class="
-                  mb-4
-                  text-lg
-                  font-bold
-                  uppercase
-                  sm:text-center sm:mb-6 sm:text-2xl
-                  font-bold
-                  text-cetro-green
-                "
-              >
-                Verifică Stadiu dosar
-              </h3>
-              <p class="text-center text-xl lg:px-40">
-                Primește o înștiințare despre apariția ordinului Autorității
-                Naționale pentru Cetățenie (ANC) privind acordarea cetățeniei
-                române. Pentru aceasta este suficient să completezi formularul.
-              </p>
+              <div v-if="!showForm && !showSuccessMsg">
+                <h3
+                  class="
+                    mb-4
+                    text-lg
+                    font-bold
+                    uppercase
+                    sm:text-center sm:mb-6 sm:text-2xl
+                    font-bold
+                    text-cetro-green
+                  "
+                >
+                  Verifică Stadiu dosar
+                </h3>
+                <p class="text-center text-xl lg:px-40">
+                  Primește o înștiințare despre apariția ordinului Autorității
+                  Naționale pentru Cetățenie (ANC) privind acordarea cetățeniei
+                  române. Pentru aceasta este suficient să completezi
+                  formularul.
+                </p>
 
+                <div
+                  class="
+                    relative
+                    grid
+                    gap-8
+                    row-gap-5
+                    mb-8
+                    pt-10
+                    md:row-gap-8
+                    lg:grid-cols-2
+                    sm:grid-cols-1
+                  "
+                >
+                  <div>
+                    <button
+                      class="
+                        inline-flex
+                        items-center
+                        justify-center
+                        w-full
+                        h-12
+                        px-6
+                        py-10
+                        uppercase
+                        font-medium
+                        tracking-wide
+                        text-white
+                        transition
+                        duration-200
+                        rounded
+                        shadow-md
+                        bg-cetro-green
+                        hover:bg-cetro-black
+                        focus:shadow-outline focus:outline-none
+                      "
+                      @click="displayForm('with_dossier')"
+                    >
+                      <fa icon="fa-solid fa-file-circle-check" />
+                      <p class="pl-1">Am număr de dosar</p>
+                    </button>
+                    <p class="px-2 py-4 text-cetro-text-gray">
+                      *Dacă cunoști numărul dosarului de cetățenie română
+                      (primit la momentul depunerii în România la sediul ANC),
+                      selectează opțiunea „Am număr de dosar” și completează
+                      formularul respectiv. Atunci, când ordinul va fi emis, vei
+                      primi mesaj pe email.
+                    </p>
+                  </div>
+                  <div>
+                    <button
+                      class="
+                        inline-flex
+                        items-center
+                        justify-center
+                        w-full
+                        h-12
+                        px-6
+                        py-10
+                        uppercase
+                        font-medium
+                        tracking-wide
+                        text-white
+                        transition
+                        duration-200
+                        rounded
+                        shadow-md
+                        bg-cetro-green
+                        hover:bg-cetro-black
+                        focus:shadow-outline focus:outline-none
+                      "
+                      @click="displayForm('without_dossier')"
+                    >
+                      <fa icon="fa-solid fa-file-circle-xmark" />
+                      <p class="pl-1">Nu am număr de dosar</p>
+                    </button>
+                    <p class="px-2 py-4 text-cetro-text-gray">
+                      *Dacă ai depus dosarul de cetățenie la unul dintre
+                      Consulatele României și nu cunoști numărul dosarului,
+                      selectează opțiunea „Nu am număr de dosar”, pentru a
+                      expedia o scrisoare către Autoritatea Națională pentru
+                      Cetățenie (ANC).
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div v-if="showForm">
+                <div class="px-5 lg:px-10 py-5">
+                  <h3
+                    class="
+                      text-2xl
+                      font-bold
+                      text-center text-cetro-green
+                      uppercase
+                    "
+                    v-if="selectedForm == 'with_dossier'"
+                  >
+                    Primește notificare când apari în Ordinul ANC
+                  </h3>
+                  <h3
+                    v-if="selectedForm == 'without_dossier'"
+                    class="
+                      text-2xl
+                      font-bold
+                      text-center text-cetro-green
+                      uppercase
+                    "
+                  >
+                    Expediază o scrisoare către ANC
+                  </h3>
+                  <div class="form">
+                    <div class="input-container">
+                      <span class="font-bold text-cetro-text-gray"
+                        >Numărul Dosar:</span
+                      >
+                      <input
+                        class="
+                          bg-cetro-gray
+                          placeholder:text-slate-400
+                          block
+                          w-full
+                          border border-cetro-green
+                          rounded-md
+                          py-4
+                          pl-9
+                          pr-3
+                          shadow-sm
+                          focus:outline-none
+                          focus:border-cetro-green
+                          focus:ring-cetro-green
+                          focus:ring-1
+                          sm:text-md
+                          font-bold
+                        "
+                        placeholder="Ex. 12345/2022"
+                        type="text"
+                        name="dossier"
+                        autocomplete="off"
+                        v-model="form.dossier"
+                      />
+                    </div>
+                    <div class="input-container">
+                      <span class="font-bold text-cetro-text-gray"
+                        >Nume / Prenume:</span
+                      >
+                      <input
+                        autocomplete="off"
+                        class="
+                          bg-cetro-gray
+                          placeholder:text-slate-400
+                          block
+                          w-full
+                          border border-cetro-green
+                          rounded-md
+                          py-4
+                          pl-9
+                          pr-3
+                          shadow-sm
+                          focus:outline-none
+                          focus:border-cetro-green
+                          focus:ring-cetro-green
+                          focus:ring-1
+                          sm:text-md
+                          font-bold
+                        "
+                        placeholder="Ex. Ciobanu Cristina"
+                        type="text"
+                        name="name"
+                        v-model="form.name"
+                      />
+                    </div>
+
+                    <div class="input-container">
+                      <span class="font-bold text-cetro-text-gray"
+                        >Număr de telefon:</span
+                      >
+                      <input
+                        autocomplete="off"
+                        class="
+                          bg-cetro-gray
+                          placeholder:text-slate-400
+                          block
+                          w-full
+                          border border-cetro-green
+                          rounded-md
+                          py-4
+                          pl-9
+                          pr-3
+                          shadow-sm
+                          focus:outline-none
+                          focus:border-cetro-green
+                          focus:ring-cetro-green
+                          focus:ring-1
+                          sm:text-md
+                          font-bold
+                        "
+                        placeholder="Ex. 068112233"
+                        type="text"
+                        name="phone"
+                        v-model="form.phone"
+                      />
+                    </div>
+
+                    <div class="input-container">
+                      <span class="font-bold text-cetro-text-gray"
+                        >Adresa de Email:</span
+                      >
+                      <input
+                        autocomplete="off"
+                        class="
+                          bg-cetro-gray
+                          placeholder:text-slate-400
+                          block
+                          w-full
+                          border border-cetro-green
+                          rounded-md
+                          py-4
+                          pl-9
+                          pr-3
+                          shadow-sm
+                          focus:outline-none
+                          focus:border-cetro-green
+                          focus:ring-cetro-green
+                          focus:ring-1
+                          sm:text-md
+                          font-bold
+                        "
+                        placeholder="Ex. cristiaceban@gmail.com"
+                        type="email"
+                        name="email"
+                        v-model="form.email"
+                      />
+                    </div>
+
+                    <p class="py-2">
+                      *Datele cu caracter personal transmise prin intermediul
+                      acestui formular sunt folosite și protejate în
+                      conformitate cu legislația în vigoare. 
+                    </p>
+
+                    <div class="input-container">
+                      <button
+                        class="
+                          mt-10
+                          inline-flex
+                          items-center
+                          justify-center
+                          w-full
+                          px-6
+                          py-6
+                          uppercase
+                          font-medium
+                          tracking-wide
+                          text-white
+                          transition
+                          duration-200
+                          rounded
+                          shadow-md
+                          bg-cetro-green
+                          hover:bg-cetro-black
+                          focus:shadow-outline focus:outline-none
+                        "
+                        @click="sendForm"
+                      >
+                        Trimite
+                      </button>
+                    </div>
+                    <div class="input-container">
+                      <button
+                        @click="displayForm()"
+                        class="
+                          inline-flex
+                          items-center
+                          justify-center
+                          w-full
+                          px-6
+                          py-3
+                          uppercase
+                          font-medium
+                          tracking-wide
+                          text-cetro-text-gray
+                          transition
+                          duration-200
+                          rounded
+                          shadow-md
+                          bg-white
+                          hover:bg-cetro-gray
+                          focus:shadow-outline focus:outline-none
+                        "
+                      >
+                        Anulează
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div></div>
+              </div>
               <div
-                class="
-                  relative
-                  grid
-                  gap-8
-                  row-gap-5
-                  mb-8
-                  pt-10
-                  md:row-gap-8
-                  lg:grid-cols-2
-                  sm:grid-cols-1
-                "
+                class="flex justify-center"
+                v-if="showSuccessMsg && selectedForm === 'with_dossier'"
               >
-                <div>
+                <div class="lg:w-6/12 xs:w-full justify-center">
+                  <div class="flex justify-center py-4">
+                    <img
+                      class="object-none object-center animate-pulse"
+                      src="~/assets/img/sent-icon.png"
+                    />
+                  </div>
+                  <p
+                    class="
+                      text-2xl
+                      font-bold
+                      uppercase
+                      text-center text-cetro-green
+                    "
+                  >
+                    Datele completate au fost expediate și urmează să primești
+                    notificare pe email atunci când va publicat ordinul tău!
+                  </p>
+
                   <button
                     class="
+                      mt-10
                       inline-flex
                       items-center
                       justify-center
                       w-full
-                      h-12
                       px-6
-                      py-10
+                      py-4
                       uppercase
                       font-medium
                       tracking-wide
@@ -168,20 +382,44 @@
                       hover:bg-cetro-black
                       focus:shadow-outline focus:outline-none
                     "
+                    @click="confirm()"
                   >
-                    Am număr de dosar
+                    OK
                   </button>
                 </div>
-                <div>
+              </div>
+              <div
+                class="flex justify-center"
+                v-if="showSuccessMsg && selectedForm === 'without_dossier'"
+              >
+                <div class="lg:w-6/12 xs:w-full justify-center">
+                  <div class="flex justify-center py-4">
+                    <img
+                      class="object-none object-center animate-pulse"
+                      src="~/assets/img/sent-icon.png"
+                    />
+                  </div>
+                  <p
+                    class="
+                      text-2xl
+                      font-bold
+                      uppercase
+                      text-center text-cetro-green
+                    "
+                  >
+                    Datele completate au fost expediate, în scurt timp vei fi
+                    contactat de către un specialist în acte românești!
+                  </p>
+
                   <button
                     class="
+                      mt-10
                       inline-flex
                       items-center
                       justify-center
                       w-full
-                      h-12
                       px-6
-                      py-10
+                      py-4
                       uppercase
                       font-medium
                       tracking-wide
@@ -194,8 +432,9 @@
                       hover:bg-cetro-black
                       focus:shadow-outline focus:outline-none
                     "
+                    @click="confirm()"
                   >
-                    Nu am număr de dosar
+                    OK
                   </button>
                 </div>
               </div>
@@ -212,5 +451,52 @@ import hasContentProps from '~/mixins/hasContentProps'
 export default {
   name: 'SearchDossier',
   mixins: [hasContentProps],
+  data: function () {
+    return {
+      showForm: false,
+      selectedForm: null,
+      showSuccessMsg: false,
+      successMsg: {
+        with_dossier: '',
+        without_dossier: '',
+      },
+      form: {
+        name: '',
+        phone: '',
+        dossier: '',
+        email: '',
+      },
+    }
+  },
+  methods: {
+    confirm: function () {
+      this.selectedForm = ''
+      this.showForm = false
+      this.showSuccessMsg = false
+    },
+    displayForm: function (code) {
+      this.selectedForm = code
+      this.showForm = !this.showForm
+    },
+    sendForm: function () {
+      /**
+       * Send Code Here
+       */
+
+      this.showForm = false
+      this.showSuccessMsg = true
+      this.form = {
+        name: '',
+        phone: '',
+        dossier: '',
+        email: '',
+      }
+    },
+  },
 }
 </script>
+<style scoped>
+.input-container {
+  padding-top: 15px;
+}
+</style>

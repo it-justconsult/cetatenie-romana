@@ -16,11 +16,12 @@ export default {
   publicRuntimeConfig: {
     apiToken: process.env.API_KEY,
   },
+  pageTransition: "out-in",
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/css/main.css',
   ],
-
+ 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   // plugins: [],
 
@@ -28,14 +29,24 @@ export default {
   components: false,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-   buildModules: [
-     "@nuxt/components"
+  buildModules: [
+    "@nuxt/components",
+    '@nuxtjs/fontawesome',
+
     // https://go.nuxtjs.dev/eslint
     // '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     // '@nuxtjs/tailwindcss',
     // '@nuxt/postcss8',
   ],
+  fontawesome: {
+    component: 'Fa',
+    suffix: false,
+    icons: {
+      solid: true,
+      brands: true,
+    },
+},
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [

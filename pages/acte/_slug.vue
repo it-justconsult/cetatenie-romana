@@ -14,7 +14,7 @@
           md:mx-auto
         "
       >
-        {{ article ? article.title : '' }}
+        {{ document ? document.title : '' }}
       </h2>
     </div>
 
@@ -32,16 +32,19 @@
         justify-between
       "
     >
-      <div class="text-md w-full text-cetro-black lg:max-w-screen-lg lg:mr-10">
-        <img
-          class="mx-auto mt-4 max-h-80 object-cover w-full"
-          :src="article.image"
-        />
-
-        <p class="py-4 text-md font text-cetro-black">
-          {{ article.text }}
-        </p>
-        <div class="px-0 py-10 mx-auto w-full md:px-24 lg:px-8 lg:py-10">
+      <div class="text-lg w-full font-semibold text-cetro-black lg:max-w-screen-lg lg:mr-10">
+        {{ document.description }}
+        <img class="w-full object-contain mx-auto mt-4" :src="document.image" />
+        <div
+          class="
+            px-0
+            py-10
+            mx-auto
+            w-full
+            md:px-24
+            lg:px-8 lg:py-10
+          "
+        >
           <div class="max-w-screen-xl sm:text-center sm:mx-auto">
             <h2
               class="
@@ -110,34 +113,89 @@
             </div>
           </div>
         </div>
-        <nuxt-link
-          :to="'/news'"
-          class="
-            inline-flex
-            items-center
-            justify-center
-            w-full
-            px-6
-            py-4
-            mt-4
-            uppercase
-            font-medium
-            text-cetro-green
-            transition
-            duration-200
-            rounded-lg
-            shadow-md shadow-cetro-green
-            bg-white
-            hover:bg-cetro-green hover:text-white
-            focus:shadow-outline focus:outline-none
-          "
+
+        <!-- Questions -->
+
+        <div
+          class="border rounded shadow-sm mb-2"
+          v-for="(item, id) in document.questions"
+          v-bind:key="id"
         >
-          TOATE ARTICOLELE
-        </nuxt-link>
+          <button
+            @click="changeTab(id)"
+            type="button"
+            :aria-label="item.title"
+            :title="item.title "
+            class="
+              flex
+              items-center
+              justify-between
+              w-full
+              p-4
+              focus:outline-none
+            "
+          >
+            <p class="text-xl font-medium text-cetro-green">
+              <fa
+                icon="fa-solid fa-circle-chevron-right"
+                v-if="selectedElement === id"
+              />
+              {{ item.title }}
+            </p>
+            <div
+              class="
+                flex
+                items-center
+                justify-center
+                w-8
+                h-8
+                border
+                rounded-full
+              "
+            >
+              <!-- Add "transform rotate-180" classes on svg, if is open" -->
+              <svg
+                viewBox="0 0 24 24"
+                class="w-3 text-gray-600 transition-transform duration-500"
+                v-bind:class="
+                  selectedElement === id ? 'transform rotate-180' : ''
+                "
+              >
+                <polyline
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  points="2,7 12,17 22,7"
+                  stroke-linejoin="round"
+                ></polyline>
+              </svg>
+            </div>
+          </button>
+
+          <transition
+            enter-active-class="duration-600 delay-100 ease-out   "
+            enter-class="-translate-x-full opacity-0"
+            enter-to-class="translate-x-0 opacity-100"
+            leave-active-class="duration-600 ease-in "
+            leave-class="translate-x-0 opacity-100"
+            leave-to-class="-translate-x-full opacity-0 "
+          >
+            <div
+              class="p-4 pt-0 transition duration-300 ease-in-out"
+              v-show="selectedElement === id"
+            >
+              <p class="text-gray-700">
+                {{ item.description }}
+              </p>
+            </div>
+          </transition>
+        </div>
       </div>
 
       <div class="text-base w-full lg:w-96 py-2 px-2">
-        <div class="form shadow-xl px-4 py-4">
+        <div class="form shadow-xl px-4 py-4 sticky top-1">
           <h2
             class="
               text-cetro-green text-xl
@@ -150,9 +208,7 @@
             Obține consultația gratuită a unui expert în redobândirea cetățeniei
             române
           </h2>
-          <p
-            class="text-center font-bold text-xs mb-5 max-w-md text-cetro-black"
-          >
+          <p class="text-center font-bold text-xs mb-5 max-w-md text-cetro-black">
             Completează câmpurile de mai jos și noi te vom contacta!
           </p>
           <div class="input-container mt-2 mb-2">
@@ -245,105 +301,43 @@
             </button>
           </div>
         </div>
-        <h3 class="text-cetro-green font-bold text-lg uppercase mt-20">
-          Articole Recomandate
-        </h3>
-        <hr class="my-2 border-cetro-green border-2" />
-
-        <div
-          class="grid gap-8 lg:grid-cols-1 sm:max-w-sm sm:mx-auto lg:max-w-full"
-        >
-          <nuxt-link
-            :to="'/news/' + item.slug"
-            v-for="(item, id) in article.featured"
-            :key="id"
-            class="
-              bg-white
-              rounded
-              shadow-sm
-              duration-300
-              transform
-              hover:-translate-y-4
-              cursor-pointer
-              group
-            "
-          >
-            <img :src="item.image" alt="" class="object-cover w-full h-64" />
-            <div class="p-5 border border-t-0">
-              <h3
-                aria-label="Category"
-                class="
-                  inline-block
-                  mb-3
-                  text-2xl
-                  font-bold
-                  leading-5
-                  transition-colors
-                  duration-300
-                  text-cetro-black
-                  group-hover:text-cetro-green
-                "
-              >
-                {{ item.title }}
-              </h3>
-              <p class="mb-2 text-gray-700">
-                {{ item.short }}
-              </p>
-              <p
-                aria-label=""
-                class="
-                  inline-flex
-                  items-center
-                  font-semibold
-                  transition-colors
-                  duration-200
-                  text-cetro-green
-                  hover:text-cetro-green
-                "
-              >
-                {{ content.newsBlock.buttonTitle }}
-              </p>
-            </div>
-          </nuxt-link>
-        </div>
       </div>
     </div>
   </div>
 </template>
-
 <script>
 import uploadContent from '~/mixins/uploadContent'
 
 export default {
-  name: 'ArticlePage',
-  mixins: [uploadContent],
-  props: {
-    slug: {
-      type: String,
-      default: '',
-    },
-  },
-  data() {
-    return {}
-  },
   computed: {
-    article: function () {
-      if (!this.content.news) return []
-      let items = this.content.news.items.filter((obj) => {
+    documents: function () {
+      if (!this.content.documentsPage) return {}
+      return this.content.documentsPage
+    },
+    document: function () {
+      if (!this.content.documentsPage) return {}
+      let items = this.content.documentsPage.items.filter((obj) => {
         return obj.slug === this.slug
       })
       return items[0] ? items[0] : {}
     },
   },
+  mixins: [uploadContent],
   data: function () {
     return {
       form: {},
+      selectedElement: 0,
     }
   },
   methods: {
     sendForm: function () {},
+    changeTab: function (element) {
+      this.selectedElement = element
+    },
+  },
+  async asyncData({ params }) {
+    const slug = params.slug // When calling /abc the slug will be "abc"
+    return { slug }
   },
 }
 </script>
-
-<style scoped></style>

@@ -2,3 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.out-in-enter-active,
+.out-in-leave-active {
+  transition: opacity 0.5s;
+}
+.out-in-enter,
+.out-in-leave-active {
+  opacity: 0;
+}

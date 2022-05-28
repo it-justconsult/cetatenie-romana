@@ -1,35 +1,134 @@
 <template>
-  <div class='px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20'>
-    <div class='max-w-xl sm:mx-auto lg:max-w-2xl'>
-      <div class='max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12'>
-        <h2
-          class='max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto'>
-          Quick, brown fox jumps over a lazy dog
-        </h2>
-        <p class='text-base text-gray-700 md:text-lg'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque rem aperiam, eaque ipsa quae.</p>
-      </div>
-      <div class='space-y-4'>
-        <div v-for='question in getQuestions' :key='question.id' class='border-b'>
-          <button
-            aria-label='Open item' class='flex items-center justify-between w-full p-4 focus:outline-none'
-            title='Open item'
-            type='button'
-            @click='openQuestion(question.id)'
-          >
-            <p class='text-lg font-medium'>{{ question.title }}</p>
-            <!-- Add "transform rotate-180" classes on svg, if is open" -->
-            <svg
-              :class="isActiveQuestion(question.id)? 'transform rotate-180': ''"
-              class='w-3 text-gray-600 transition-transform duration-900'
-              viewBox='0 0 24 24'
+  <div>
+    <div class="bg-cetro-green py-20 mx-auto flex justify-center">
+      <h2
+        class="
+          uppercase
+          font-sans
+          text-3xl
+          font-bold
+          leading-none
+          tracking-tight
+          text-white
+          sm:text-4xl
+          md:mx-auto
+        "
+      >
+        {{ this.content.faq ? this.content.faq.title : '' }}
+      </h2>
+    </div>
+
+    <div
+      class="
+        px-4
+        py-16
+        mx-auto
+        sm:max-w-xl
+        md:max-w-full
+        lg:max-w-scren-2xl
+        md:px-24
+        lg:px-8 lg:py-20
+        lg:mb-40
+      "
+    >
+      <div class="max-w-xl px-4 sm:mx-auto lg:max-w-screen-xl">
+        <div class="flex flex-col mb-16 sm:text-center">
+          <a href="/" class="mb-6 sm:mx-auto"> </a>
+          <div class="max-w-xl md:mx-auto sm:text-center lg:max-w-2xl">
+            <h2
+              class="
+                max-w-full
+                mb-6
+                font-sans
+                text-3xl
+                font-bold
+                leading-none
+                tracking-tight
+                text-gray-900
+                sm:text-4xl
+                md:mx-auto
+              "
             >
-              <polyline
-                fill='none' points='2,7 12,17 22,7' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round'
-                stroke-miterlimit='10' stroke-width='2'></polyline>
-            </svg>
-          </button>
-          <div v-if='question.id === activeQuestion' class='p-4 pt-0'><p class='text-gray-700'>{{question.answer}}</p></div>
+              {{ question.title }}
+            </h2>
+            <p class="text-base text-gray-700 md:text-lg">
+              {{ question.description }}
+            </p>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <div
+            class="border rounded shadow-sm"
+            v-for="(item, id) in question.questions"
+            v-bind:key="id"
+          >
+            <button
+              @click="changeTab(id)"
+              type="button"
+              aria-label="Open item"
+              title="Open item"
+              class="
+                flex
+                items-center
+                justify-between
+                w-full
+                p-4
+                focus:outline-none
+              "
+            >
+              <p class="text-xl	 font-medium text-cetro-green">
+                <fa icon="fa-solid fa-circle-chevron-right" v-if="selectedElement === id" /> {{ item.title }}
+              </p>
+              <div
+                class="
+                  flex
+                  items-center
+                  justify-center
+                  w-8
+                  h-8
+                  border
+                  rounded-full
+                "
+              >
+                <!-- Add "transform rotate-180" classes on svg, if is open" -->
+                <svg
+                  viewBox="0 0 24 24"
+                  class="w-3 text-gray-600 transition-transform duration-500"
+                  v-bind:class="
+                    selectedElement === id ? 'transform rotate-180' : ''
+                  "
+                >
+                  <polyline
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    points="2,7 12,17 22,7"
+                    stroke-linejoin="round"
+                  ></polyline>
+                </svg>
+              </div>
+            </button>
+
+            <transition
+              enter-active-class="duration-600 delay-100 ease-out   "
+              enter-class="-translate-x-full opacity-0"
+              enter-to-class="translate-x-0 opacity-100"
+              leave-active-class="duration-600 ease-in "
+              leave-class="translate-x-0 opacity-100"
+              leave-to-class="-translate-x-full opacity-0 "
+            >
+              <div
+                class="p-4 pt-0 transition duration-300 ease-in-out"
+                v-show="selectedElement === id"
+              >
+                <p class="text-gray-700">
+                  {{ item.description }}
+                </p>
+              </div>
+            </transition>
+          </div>
         </div>
       </div>
     </div>
@@ -43,47 +142,36 @@ export default {
   name: 'QuestionPage',
   mixins: [uploadContent],
   props: {
-    categoryId: {
-      type: Number,
-      default: 1
-    }
+    slug: {
+      type: String,
+      default: 'another',
+    },
   },
-  data () {
+  data() {
     return {
       activeQuestion: 0,
-      questions: []
+      questions: [],
+      selectedElement: 0,
     }
   },
   computed: {
-    getQuestions () {
-      const arr = ((this.content || {}).questionsPage || {}).questionsByCategories
-      const filteredArr = arr && arr.filter((el) => el.id === this.categoryId)
-      const questions = ((filteredArr || [])[0] || {}).questions
-      this.activateFirstQuestion(questions)
-      return questions
-    }
+    question() {
+      if (!this.content.faq) return {}
+      let items = this.content.faq.items.filter((obj) => {
+        return obj.slug === this.slug
+      })
+      return items[0] ? items[0] : {}
+    },
   },
-  mounted () {
-    // console.log(this.categoryId)
-  },
-  updated () {
+  afterCreated() {},
+  updated() {
     // console.log(this.categoryId)
   },
   methods: {
-    isActiveQuestion (currentQuestionId) {
-      return this.activeQuestion === currentQuestionId
+    changeTab: function (element) {
+      this.selectedElement = element
     },
-    openQuestion (questionId) {
-      if (this.activeQuestion !== questionId) {
-        this.activeQuestion = questionId
-      } else {
-        this.activeQuestion = null
-      }
-    },
-    activateFirstQuestion (questions) {
-      this.activeQuestion = ((questions || [])[0] || {}).id
-    }
-  }
+  },
 }
 </script>
 

@@ -15,7 +15,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ['Roboto','Montserrat', ...defaultTheme.fontFamily.sans],
+        sans: ['Roboto', 'Montserrat', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         red: {
@@ -310,6 +310,9 @@ module.exports = {
           800: '#4e342e',
           900: '#3e2723',
         },
+        cetro_green: {
+          50: '#72BB5D',
+        },
         'regal-blue': '#243c5a',
         'cetro-green': '#72BB5D',
         'cetro-gray': '#EFF2F2',
@@ -317,6 +320,7 @@ module.exports = {
         'cetro-white': '#fff',
         'cetro-footer-bg': '#222',
         'cetro-black': '#424242',
+        'just-red': '#b62900'
       },
       spacing: {
         '7': '1.75rem',
@@ -341,6 +345,7 @@ module.exports = {
     textColor: ['responsive', 'hover', 'focus', 'group-hover'],
     opacity: ['responsive', 'hover', 'focus', 'group-hover'],
     backgroundColor: ['responsive', 'hover', 'focus', 'group-hover'],
+    visibility: ["group-hover"],
   },
   plugins: [],
 }

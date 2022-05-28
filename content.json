@@ -36,7 +36,7 @@
       {
         "id": 5,
         "title": "Întrebări frecvente",
-        "href": "/questions"
+        "href": "/faq"
       },
       {
         "id": 6,
@@ -45,7 +45,7 @@
       }
     ],
     "logo": {
-      "src": "http://localhost/storage/uploads/img/logo.png",
+      "src": "https://cetatenieromana.md/public/images/logo.png",
       "name": "Cetățenie"
     },
     "heroBlock": {
@@ -451,6 +451,15 @@
         {
           "id": 4,
           "category": "Programări online"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Întrebări frecvente",
+      "list": [
+        {
+          "id": 1,
+          "title": ""
         }
       ]
     },
