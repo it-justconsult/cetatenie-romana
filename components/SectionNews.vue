@@ -24,10 +24,10 @@
             text-3xl
             font-bold
             leading-none
-            tracking-tight
             text-cetro-white
-            sm:text-4xl
+            sm:text-6xl
             md:mx-auto
+            font-tungsten
           "
         >
           {{ newsBlockTitle }}
@@ -63,12 +63,13 @@
               class="
                 inline-block
                 mb-3
-                text-2xl
+                text-xl
                 font-bold
                 leading-5
                 transition-colors
                 duration-200
                 hover:text-cetro-green
+                font-montserrat
               "
               href="/"
               title="Visit the East"

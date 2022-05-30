@@ -10,8 +10,9 @@
           leading-none
           tracking-tight
           text-white
-          sm:text-4xl
+          sm:text-6xl
           md:mx-auto
+          font-tungsten
         "
       >
         {{ document ? document.title : '' }}
@@ -32,29 +33,20 @@
         justify-between
       "
     >
-      <div class="text-lg w-full font-semibold text-cetro-black lg:max-w-screen-lg lg:mr-10">
+      <div class="text-lg w-full text-cetro-black lg:max-w-screen-lg lg:mr-10">
         {{ document.description }}
         <img class="w-full object-contain mx-auto mt-4" :src="document.image" />
-        <div
-          class="
-            px-0
-            py-10
-            mx-auto
-            w-full
-            md:px-24
-            lg:px-8 lg:py-10
-          "
-        >
+        <div class="px-0 py-10 mx-auto w-full md:px-24 lg:px-8 lg:py-10">
           <div class="max-w-screen-xl sm:text-center sm:mx-auto">
             <h2
               class="
                 font-sans
                 text-xl
                 font-bold
-                tracking-tight
                 text-cetro-black
-                sm:text-2xl sm:leading-none
+                sm:text-4xl
                 uppercase
+                font-tungsten
               "
             >
               Obține asistența în procesul de redobândire a cetățeniei române și
@@ -106,6 +98,8 @@
                   hover:bg-cetro-gray hover:text-cetro-green
                   focus:shadow-outline focus:outline-none
                   animate-pulse
+                  font-tungsten
+                  text-2xl
                 "
               >
                 SUNĂ ACUM
@@ -125,7 +119,7 @@
             @click="changeTab(id)"
             type="button"
             :aria-label="item.title"
-            :title="item.title "
+            :title="item.title"
             class="
               flex
               items-center
@@ -135,7 +129,7 @@
               focus:outline-none
             "
           >
-            <p class="text-xl font-medium text-cetro-green">
+            <p class="text-xl font-medium text-cetro-green font-montserrat">
               <fa
                 icon="fa-solid fa-circle-chevron-right"
                 v-if="selectedElement === id"
@@ -203,12 +197,16 @@
               uppercase
               text-center
               py-5
+              text-2xl
+              font-tungsten
             "
           >
             Obține consultația gratuită a unui expert în redobândirea cetățeniei
             române
           </h2>
-          <p class="text-center font-bold text-xs mb-5 max-w-md text-cetro-black">
+          <p
+            class="text-center font-bold text-xs mb-5 max-w-md text-cetro-black"
+          >
             Completează câmpurile de mai jos și noi te vom contacta!
           </p>
           <div class="input-container mt-2 mb-2">
@@ -294,6 +292,7 @@
                 bg-cetro-green
                 hover:bg-cetro-black
                 focus:shadow-outline focus:outline-none
+                font-bold
               "
               @click="sendForm"
             >

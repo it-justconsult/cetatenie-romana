@@ -35,12 +35,12 @@
       <h2
         class="
           mb-4
-          font-sans
-          text-3xl
+          font-tungsten
+          text-4xl
           font-bold
           tracking-tight
           text-cetro-black
-          sm:text-4xl sm:leading-none
+          sm:text-5xl sm:leading-none
           uppercase
         "
       >
@@ -71,7 +71,7 @@
             md:ml-14 md:mt-0
             h-12
             px-6
-            font-medium
+            font-bold
             tracking-wide
             text-white
             transition

@@ -1,11 +1,7 @@
 {
   "data": {
     "menu": [
-      {
-        "id": 1,
-        "title": "Principală",
-        "href": "/"
-      },
+      
       {
         "id": 2,
         "title": "Acte românești",
@@ -102,25 +98,57 @@
           "id": 1,
           "title": "Etapa 1",
           "text": "Doresc să obțin cetățenie română",
-          "slug": "/steps/1"
+          "slug": "doresc-sa-obtin-cetatenie-romana",
+          "description": "<p>Acum, te afli la prima etapă. Dacă ți-ai propus să redob&acirc;ndești cetățenia rom&acirc;nă, trebuie să știi că vei avea de parcurs un drum lung și pe alocuri complicat.&nbsp;</p> <p>Aici &icirc;nsă vei găsi o &bdquo;hartă&rdquo; completă, care te va ghida pe tot traseul.</p> <p>Procesul de redob&acirc;ndire a cetățeniei rom&acirc;ne este alcătuit din mai multe etape. Respectiv, nu există un termen fix care poate fi comunicat din start.</p><p>Orientativ, reieșind din modul cum sunt organizate etapele și procedurile, din momentul depunerii dosarului și p&acirc;nă vei obține pașaportul rom&acirc;nesc, durează aproximativ 4-5 ani.</p><p>Etapele pe care le vei parcurge sunt:</p>",
+          "image": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+          "steps": [
+            {
+              "title": "Colectarea actelor de stare civilă moldovenești și pregătirea dosarului",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            },
+            {
+              "title": "Depunerea dosarului.",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            },
+            {
+              "title": "Emiterea ordinului ANC",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            },
+            {
+              "title": "Depunerea jurământului",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            },
+            {
+              "title": "Transcrierea actelor de stare civilă",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            },
+            {
+              "title": "Perfectarea Pașaportului românesc",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            },
+            {
+              "title": "Perfectarea altor acte de identitate",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            }
+          ]
         },
         {
           "id": 2,
           "title": "Etapa 2",
           "text": "Am depus pentru cetățenie română - Sunt în așteptare",
-          "slug": "/steps/2"
+          "slug": "doresc-sa-obtin-cetatenie-romana"
         },
         {
           "id": 3,
           "title": "Etapa 3",
           "text": "Am cetățenie română, Ce fac mai departe?",
-          "slug": "/steps/3"
+          "slug": "doresc-sa-obtin-cetatenie-romana"
         },
         {
           "id": 4,
           "title": "Etapa 4",
           "text": "Am cetățenie română, dar îmi mai trebuie câteva acte",
-          "slug": "/steps/4"
+          "slug": "doresc-sa-obtin-cetatenie-romana"
         }
       ]
     },
@@ -370,6 +398,7 @@
           "id": 3,
           "title": "Cetățenie română",
           "slug": "cetatenie-romana",
+          "short": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque.",
           "description": "Cetățenia română, care te asigură cu un pașaport european, este un vis al multor moldoveni. Poți iniția procesul de redobândire a cetățeniei române dacă unul dintre părinții tăi, bunici sau chiar străbunici a fost născut până la 28 iunie 1940 pe teritoriul României Mari (inclusiv pe teritoriul actualului stat Republica Moldova). Pentru a obține cetățenia română ai însă de parcurs un drum cu multe „hopuri” și „povârnișuri”. Iată de ce este bine, chiar din start să cunoști etapele.  Pornește la drum echipat cu un bagaj de cunoștințe temeinice, pe care le vei culege din plin chiar de aici.  Vei găsi multă informație utilă despre fiecare etapă, iar astfel vei putea  parcurge întreg  procesul de redobândire a cetățeniei române de sine stătător. Iar dacă, la un moment dat, vei simți că ai nevoie de ajutor, completează formularul și vei fi ghidat, la orice etapă.",
           "image": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
           "questions": [
@@ -414,6 +443,7 @@
         {
           "id": 3,
           "title": "Jurământ de credință",
+          "short": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque.",
           "slug": "juramant-de-credinta",
           "description": "Cetățenia română, care te asigură cu un pașaport european, este un vis al multor moldoveni. Poți iniția procesul de redobândire a cetățeniei române dacă unul dintre părinții tăi, bunici sau chiar străbunici a fost născut până la 28 iunie 1940 pe teritoriul României Mari (inclusiv pe teritoriul actualului stat Republica Moldova). Pentru a obține cetățenia română ai însă de parcurs un drum cu multe „hopuri” și „povârnișuri”. Iată de ce este bine, chiar din start să cunoști etapele.  Pornește la drum echipat cu un bagaj de cunoștințe temeinice, pe care le vei culege din plin chiar de aici.  Vei găsi multă informație utilă despre fiecare etapă, iar astfel vei putea  parcurge întreg  procesul de redobândire a cetățeniei române de sine stătător. Iar dacă, la un moment dat, vei simți că ai nevoie de ajutor, completează formularul și vei fi ghidat, la orice etapă.",
           "image": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
@@ -459,6 +489,7 @@
         {
           "id": 3,
           "title": "Certificate de naștere și căsătorie românești",
+          "short": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque.",
           "slug": "certificat-de-nastere-si-casatorie-romanesti",
           "description": "Cetățenia română, care te asigură cu un pașaport european, este un vis al multor moldoveni. Poți iniția procesul de redobândire a cetățeniei române dacă unul dintre părinții tăi, bunici sau chiar străbunici a fost născut până la 28 iunie 1940 pe teritoriul României Mari (inclusiv pe teritoriul actualului stat Republica Moldova). Pentru a obține cetățenia română ai însă de parcurs un drum cu multe „hopuri” și „povârnișuri”. Iată de ce este bine, chiar din start să cunoști etapele.  Pornește la drum echipat cu un bagaj de cunoștințe temeinice, pe care le vei culege din plin chiar de aici.  Vei găsi multă informație utilă despre fiecare etapă, iar astfel vei putea  parcurge întreg  procesul de redobândire a cetățeniei române de sine stătător. Iar dacă, la un moment dat, vei simți că ai nevoie de ajutor, completează formularul și vei fi ghidat, la orice etapă.",
           "image": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
@@ -504,6 +535,7 @@
         {
           "id": 3,
           "title": "Pașaport românesc",
+          "short": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque.",
           "slug": "pasaport-romanesc",
           "description": "Cetățenia română, care te asigură cu un pașaport european, este un vis al multor moldoveni. Poți iniția procesul de redobândire a cetățeniei române dacă unul dintre părinții tăi, bunici sau chiar străbunici a fost născut până la 28 iunie 1940 pe teritoriul României Mari (inclusiv pe teritoriul actualului stat Republica Moldova). Pentru a obține cetățenia română ai însă de parcurs un drum cu multe „hopuri” și „povârnișuri”. Iată de ce este bine, chiar din start să cunoști etapele.  Pornește la drum echipat cu un bagaj de cunoștințe temeinice, pe care le vei culege din plin chiar de aici.  Vei găsi multă informație utilă despre fiecare etapă, iar astfel vei putea  parcurge întreg  procesul de redobândire a cetățeniei române de sine stătător. Iar dacă, la un moment dat, vei simți că ai nevoie de ajutor, completează formularul și vei fi ghidat, la orice etapă.",
           "image": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
@@ -549,6 +581,7 @@
         {
           "id": 3,
           "title": "Buletin românesc",
+          "short": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque.",
           "slug": "buletin-romanesc",
           "description": "Cetățenia română, care te asigură cu un pașaport european, este un vis al multor moldoveni. Poți iniția procesul de redobândire a cetățeniei române dacă unul dintre părinții tăi, bunici sau chiar străbunici a fost născut până la 28 iunie 1940 pe teritoriul României Mari (inclusiv pe teritoriul actualului stat Republica Moldova). Pentru a obține cetățenia română ai însă de parcurs un drum cu multe „hopuri” și „povârnișuri”. Iată de ce este bine, chiar din start să cunoști etapele.  Pornește la drum echipat cu un bagaj de cunoștințe temeinice, pe care le vei culege din plin chiar de aici.  Vei găsi multă informație utilă despre fiecare etapă, iar astfel vei putea  parcurge întreg  procesul de redobândire a cetățeniei române de sine stătător. Iar dacă, la un moment dat, vei simți că ai nevoie de ajutor, completează formularul și vei fi ghidat, la orice etapă.",
           "image": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
@@ -594,6 +627,7 @@
         {
           "id": 3,
           "title": "Alocație pentru copil",
+          "short": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque.",
           "slug": "alocatie-pentru-copil",
           "description": "Cetățenia română, care te asigură cu un pașaport european, este un vis al multor moldoveni. Poți iniția procesul de redobândire a cetățeniei române dacă unul dintre părinții tăi, bunici sau chiar străbunici a fost născut până la 28 iunie 1940 pe teritoriul României Mari (inclusiv pe teritoriul actualului stat Republica Moldova). Pentru a obține cetățenia română ai însă de parcurs un drum cu multe „hopuri” și „povârnișuri”. Iată de ce este bine, chiar din start să cunoști etapele.  Pornește la drum echipat cu un bagaj de cunoștințe temeinice, pe care le vei culege din plin chiar de aici.  Vei găsi multă informație utilă despre fiecare etapă, iar astfel vei putea  parcurge întreg  procesul de redobândire a cetățeniei române de sine stătător. Iar dacă, la un moment dat, vei simți că ai nevoie de ajutor, completează formularul și vei fi ghidat, la orice etapă.",
           "image": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
@@ -639,6 +673,7 @@
         {
           "id": 3,
           "title": "Permis de conducere românesc",
+          "short": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque.",
           "slug": "permis-de-conducere-romanesc",
           "description": "Cetățenia română, care te asigură cu un pașaport european, este un vis al multor moldoveni. Poți iniția procesul de redobândire a cetățeniei române dacă unul dintre părinții tăi, bunici sau chiar străbunici a fost născut până la 28 iunie 1940 pe teritoriul României Mari (inclusiv pe teritoriul actualului stat Republica Moldova). Pentru a obține cetățenia română ai însă de parcurs un drum cu multe „hopuri” și „povârnișuri”. Iată de ce este bine, chiar din start să cunoști etapele.  Pornește la drum echipat cu un bagaj de cunoștințe temeinice, pe care le vei culege din plin chiar de aici.  Vei găsi multă informație utilă despre fiecare etapă, iar astfel vei putea  parcurge întreg  procesul de redobândire a cetățeniei române de sine stătător. Iar dacă, la un moment dat, vei simți că ai nevoie de ajutor, completează formularul și vei fi ghidat, la orice etapă.",
           "image": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
@@ -684,6 +719,7 @@
         {
           "id": 3,
           "title": "Atestate profesionale",
+          "short": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque.",
           "slug": "atestate-profesionale",
           "description": "Cetățenia română, care te asigură cu un pașaport european, este un vis al multor moldoveni. Poți iniția procesul de redobândire a cetățeniei române dacă unul dintre părinții tăi, bunici sau chiar străbunici a fost născut până la 28 iunie 1940 pe teritoriul României Mari (inclusiv pe teritoriul actualului stat Republica Moldova). Pentru a obține cetățenia română ai însă de parcurs un drum cu multe „hopuri” și „povârnișuri”. Iată de ce este bine, chiar din start să cunoști etapele.  Pornește la drum echipat cu un bagaj de cunoștințe temeinice, pe care le vei culege din plin chiar de aici.  Vei găsi multă informație utilă despre fiecare etapă, iar astfel vei putea  parcurge întreg  procesul de redobândire a cetățeniei române de sine stătător. Iar dacă, la un moment dat, vei simți că ai nevoie de ajutor, completează formularul și vei fi ghidat, la orice etapă.",
           "image": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
@@ -729,6 +765,7 @@
         {
           "id": 3,
           "title": "Echivalarea diplomei",
+          "short": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque.",
           "slug": "echivalarea-diplomei",
           "description": "Cetățenia română, care te asigură cu un pașaport european, este un vis al multor moldoveni. Poți iniția procesul de redobândire a cetățeniei române dacă unul dintre părinții tăi, bunici sau chiar străbunici a fost născut până la 28 iunie 1940 pe teritoriul României Mari (inclusiv pe teritoriul actualului stat Republica Moldova). Pentru a obține cetățenia română ai însă de parcurs un drum cu multe „hopuri” și „povârnișuri”. Iată de ce este bine, chiar din start să cunoști etapele.  Pornește la drum echipat cu un bagaj de cunoștințe temeinice, pe care le vei culege din plin chiar de aici.  Vei găsi multă informație utilă despre fiecare etapă, iar astfel vei putea  parcurge întreg  procesul de redobândire a cetățeniei române de sine stătător. Iar dacă, la un moment dat, vei simți că ai nevoie de ajutor, completează formularul și vei fi ghidat, la orice etapă.",
           "image": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
@@ -774,6 +811,7 @@
         {
           "id": 3,
           "title": "Dosar de cetățenie prin judecată",
+          "short": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque.",
           "slug": "dosar-de-cetatenie-prin-judecata",
           "description": "Cetățenia română, care te asigură cu un pașaport european, este un vis al multor moldoveni. Poți iniția procesul de redobândire a cetățeniei române dacă unul dintre părinții tăi, bunici sau chiar străbunici a fost născut până la 28 iunie 1940 pe teritoriul României Mari (inclusiv pe teritoriul actualului stat Republica Moldova). Pentru a obține cetățenia română ai însă de parcurs un drum cu multe „hopuri” și „povârnișuri”. Iată de ce este bine, chiar din start să cunoști etapele.  Pornește la drum echipat cu un bagaj de cunoștințe temeinice, pe care le vei culege din plin chiar de aici.  Vei găsi multă informație utilă despre fiecare etapă, iar astfel vei putea  parcurge întreg  procesul de redobândire a cetățeniei române de sine stătător. Iar dacă, la un moment dat, vei simți că ai nevoie de ajutor, completează formularul și vei fi ghidat, la orice etapă.",
           "image": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
@@ -819,6 +857,7 @@
         {
           "id": 3,
           "title": "Apostila pe acte",
+          "short": "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque.",
           "slug": "apostila-pe-acte",
           "description": "Cetățenia română, care te asigură cu un pașaport european, este un vis al multor moldoveni. Poți iniția procesul de redobândire a cetățeniei române dacă unul dintre părinții tăi, bunici sau chiar străbunici a fost născut până la 28 iunie 1940 pe teritoriul României Mari (inclusiv pe teritoriul actualului stat Republica Moldova). Pentru a obține cetățenia română ai însă de parcurs un drum cu multe „hopuri” și „povârnișuri”. Iată de ce este bine, chiar din start să cunoști etapele.  Pornește la drum echipat cu un bagaj de cunoștințe temeinice, pe care le vei culege din plin chiar de aici.  Vei găsi multă informație utilă despre fiecare etapă, iar astfel vei putea  parcurge întreg  procesul de redobândire a cetățeniei române de sine stătător. Iar dacă, la un moment dat, vei simți că ai nevoie de ajutor, completează formularul și vei fi ghidat, la orice etapă.",
           "image": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",

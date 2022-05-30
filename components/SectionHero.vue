@@ -19,7 +19,7 @@
         <div class='mb-16 lg:mb-0 lg:max-w-2xl lg:pr-5'>
           <div class='max-w-2xl mb-6'>
             <h2
-              class='max-w-lg mb-6 font-sans text-4xl font-bold tracking-tight text-cetro-green sm:text-6xl sm:leading-none'>
+              class='max-w-lg mb-6 font-sans text-xl font-bold tracking-tight text-cetro-green sm:text-6xl sm:leading-none font-tungsten'>
               {{ heroBlockTitle }}
             </h2>
             <p class='text-base text-gray-700 md:text-lg'>

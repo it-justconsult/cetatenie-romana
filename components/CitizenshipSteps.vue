@@ -17,13 +17,13 @@
           max-w-lg
           mb-6
           font-sans
-          text-3xl
+          text-4xl
           font-bold
-          leading-none
           tracking-tight
           text-cetro-green
-          sm:text-4xl
+          sm:text-6xl
           md:mx-auto
+          font-tungsten
           uppercase
         "
       >
@@ -58,7 +58,8 @@
       >
         <div class="w-px h-full bg-gray-300 lg:w-full lg:h-px"></div>
       </div>
-      <div
+      <nuxt-link
+        :to="'/step/' + step.slug"
         class="
           p-5
           duration-300
@@ -91,18 +92,19 @@
             "
           >
             <fa icon="fa-solid fa-shoe-prints " />
-            <span class="pl-2">Etapa {{ step.id }}</span>
+            <span class="pl-2 ">Etapa {{ step.id }}</span>
           </p>
         </div>
         <p
           class="
             font-bold
-            text-2xl
+            text-3xl
             leading-6
             text-cetro-green
             py-10
             h-40
             text-center
+            font-tungsten
           "
         >
           {{ step.text }}
@@ -113,6 +115,7 @@
             text-center text-gray-400
             hover:text-cetro-green
             group-hover:text-cetro-green
+            
           "
         >
           Vezi soluția
@@ -132,7 +135,7 @@
             group-hover:scale-x-100
           "
         ></div>
-      </div>
+      </nuxt-link>
     </div>
     <div class="text-center">
       <!-- <a

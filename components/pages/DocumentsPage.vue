@@ -10,11 +10,12 @@
           leading-none
           tracking-tight
           text-white
-          sm:text-4xl
+          sm:text-6xl
           md:mx-auto
+          font-tungsten
         "
       >
-        {{documentsPageTitle}}
+        {{ documentsPageTitle }}
       </h2>
     </div>
     <!-- <div>
@@ -50,7 +51,7 @@
         md:max-w-full
         lg:max-w-screen-xl
         md:px-24
-        lg:px-8 lg:py-20 
+        lg:px-8 lg:py-20
       "
     >
       <div class="relative grid gap-5 sm:grid-cols-1 lg:grid-cols-4">
@@ -93,8 +94,7 @@
               {{ document.title }}
             </p>
             <p class="text-sm leading-5 text-gray-900">
-              Sed ut perspiciatis unde omnis iste. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit.
+              {{ document.short }}
             </p>
           </div>
           <div

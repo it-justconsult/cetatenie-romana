@@ -11,15 +11,15 @@
         lg:px-8
       "
     >
-      <div class="relative z-50 flex items-center justify-between">
-        <a
+      <div class="relative z-50 flex items-center justify-between ">
+        <nuxt-link
           :aria-label="logoName"
           :title="logoName"
           class="columns-2 items-center w-48"
-          href="/"
+          to="/"
         >
-          <img :src="logoSrc" alt="Logo" class="logo-image" />
-        </a>
+          <img src="~/assets/img/logo.png" alt="Logo" class="logo-image" />
+        </nuxt-link>
 
         <ul class="menu-block hidden space-x-8 lg:flex justify-between">
           <li
@@ -38,6 +38,7 @@
                 uppercase
                 py-6
                 group-hover:text-cetro-green
+                 font-tungsten text-2xl
               "
               :to="item.href"
               >{{ item.title }}
@@ -89,10 +90,13 @@
                         font-bold
                         uppercase
                         w-full
-                        py-3
                         antialiased
+                        py-2
                         px-2
                         hover:text-cetro-black
+                        tracking-wider
+                        text-2xl
+                        font-tungsten
                       "
                     >
                       {{ link.title }}
@@ -103,11 +107,11 @@
                   <nuxt-link
                     class="
                       text-white
-                      font-bold
+                      font-semibold
                       mx-auto
-                      uppercase
                       hover:text-cetro-black
                       pr-12
+                      font-montserrat
                     "
                     :to="item.href"
                     v-if="item.submenu.length > 10"
@@ -126,14 +130,14 @@
                   py-5
                 "
               >
-                <div class="py-14 px-4">
-                  <p>
-                    Salutare! Știm că ești pierdut în avalanșa de informații și
+                <div class="py-4 px-4">
+                  <p class=" font-semibold text-lg">
+                    Salutare! <br/>Știm că ești pierdut în avalanșa de informații și
                     ai nevoie de ajutor. Aici vei afla multe lucruri utile ție.
                     Sperăm că astfel vei vedea „lumina din capătul tunelului” în
-                    drumul spre redobândirea cetățeniei române. Și da, la moment
+                    drumul spre redobândirea cetățeniei române. <br/>Și da, la moment
                     ar putea să-ți pară complicat, dar cu certitudine te vei
-                    descurca. Succes! Iar dacă ai nevoie de ajutor, scrie-ne
+                    descurca. <br/> Succes! Iar dacă ai nevoie de ajutor, scrie-ne
                     chiar acum și vei fi ghidat.
                   </p>
                 </div>

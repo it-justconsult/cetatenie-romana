@@ -10,8 +10,9 @@
           leading-none
           tracking-tight
           text-white
-          sm:text-4xl
+          sm:text-6xl
           md:mx-auto
+          font-tungsten
         "
       >
         {{ this.content.faq ? this.content.faq.title : '' }}
@@ -27,8 +28,7 @@
         md:max-w-full
         lg:max-w-scren-2xl
         md:px-24
-        lg:px-8 lg:py-20
-        lg:mb-40
+        lg:px-8 lg:py-20 lg:mb-40
       "
     >
       <div class="max-w-xl px-4 sm:mx-auto lg:max-w-screen-xl">
@@ -44,9 +44,10 @@
                 font-bold
                 leading-none
                 tracking-tight
-                text-gray-900
-                sm:text-4xl
+                text-cetro-green
+                sm:text-6xl
                 md:mx-auto
+                font-tungsten
               "
             >
               {{ question.title }}
@@ -76,8 +77,12 @@
                 focus:outline-none
               "
             >
-              <p class="text-xl	 font-medium text-cetro-green">
-                <fa icon="fa-solid fa-circle-chevron-right" v-if="selectedElement === id" /> {{ item.title }}
+              <p class="text-xl font-medium text-cetro-green">
+                <fa
+                  icon="fa-solid fa-circle-chevron-right"
+                  v-if="selectedElement === id"
+                />
+                {{ item.title }}
               </p>
               <div
                 class="

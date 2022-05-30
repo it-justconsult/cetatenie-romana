@@ -27,15 +27,16 @@
                     mb-4
                     text-lg
                     font-bold
-                    uppercase
-                    sm:text-center sm:mb-6 sm:text-2xl
+                    sm:text-center sm:mb-6 sm:text-4xl
                     font-bold
                     text-cetro-green
+                    font-tungsten
+                    uppercase
                   "
                 >
-                  Verifică Stadiu dosar
+                  Verifică stadiu dosar
                 </h3>
-                <p class="text-center text-xl lg:px-40">
+                <p class="text-center text-xl lg:px-40 font-montserrat">
                   Primește o înștiințare despre apariția ordinului Autorității
                   Naționale pentru Cetățenie (ANC) privind acordarea cetățeniei
                   române. Pentru aceasta este suficient să completezi
@@ -76,13 +77,14 @@
                         bg-cetro-green
                         hover:bg-cetro-black
                         focus:shadow-outline focus:outline-none
+                        font-montserrat
                       "
                       @click="displayForm('with_dossier')"
                     >
-                      <fa icon="fa-solid fa-file-circle-check" />
-                      <p class="pl-1">Am număr de dosar</p>
+                      <fa icon="fa-solid fa-file-circle-check"  class="text-xl"/>
+                      <p class="pl-1 font-bold" >Am număr de dosar</p>
                     </button>
-                    <p class="px-2 py-4 text-cetro-text-gray">
+                    <p class="px-2 py-4 text-cetro-text-gray font-montserrat">
                       *Dacă cunoști numărul dosarului de cetățenie română
                       (primit la momentul depunerii în România la sediul ANC),
                       selectează opțiunea „Am număr de dosar” și completează
@@ -114,10 +116,10 @@
                       "
                       @click="displayForm('without_dossier')"
                     >
-                      <fa icon="fa-solid fa-file-circle-xmark" />
-                      <p class="pl-1">Nu am număr de dosar</p>
+                      <fa icon="fa-solid  fa-file-circle-xmark" class="text-xl" />
+                      <p class="pl-1 font-bold">Nu am număr de dosar</p>
                     </button>
-                    <p class="px-2 py-4 text-cetro-text-gray">
+                    <p class="px-2 py-4 text-cetro-text-gray  font-montserrat">
                       *Dacă ai depus dosarul de cetățenie la unul dintre
                       Consulatele României și nu cunoști numărul dosarului,
                       selectează opțiunea „Nu am număr de dosar”, pentru a
@@ -131,10 +133,11 @@
                 <div class="px-5 lg:px-10 py-5">
                   <h3
                     class="
-                      text-2xl
-                      font-bold
+                      text-4xl
+                      
                       text-center text-cetro-green
                       uppercase
+                      font-tungsten
                     "
                     v-if="selectedForm == 'with_dossier'"
                   >

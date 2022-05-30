@@ -10,14 +10,15 @@
           leading-none
           tracking-tight
           text-white
-          sm:text-4xl
+          sm:text-6xl
           md:mx-auto
+          font-tungsten
         "
       >
         {{ faq.title }}
       </h2>
     </div>
-    
+
     <div
       class="
         px-4
@@ -30,7 +31,6 @@
         lg:px-8 lg:py-20
       "
     >
-    
       <h2 class="text-xl text-center text-cetro-black font-bold">
         Am adunat pentru tine cele mai frecvente întrebări cu privire la
         situațiile care pot avea loc în procesul de redobândire a cetățeniei
@@ -42,7 +42,6 @@
         telefon 0 22 xx xx xx.
       </p>
       <div class="grid gap-8 row-gap-5 lg:grid-cols-2 lg:mb-44">
-        
         <div
           v-for="(category, id) in faq.items"
           :key="id"
@@ -61,7 +60,6 @@
             hover:shadow-lg
           "
         >
-        
           <div
             class="
               absolute
@@ -178,7 +176,7 @@
                     </g>
                   </svg>
                 </div>
-                <h6 class="font-bold text-lg leading-5">
+                <h6 class="font-bold text-4xl leading-5 font-tungsten text-cetro-green">
                   {{ category.title }}
                 </h6>
               </div>

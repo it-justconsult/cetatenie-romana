@@ -10,12 +10,13 @@
           leading-none
           tracking-tight
           text-white
-          sm:text-6xl
+          sm:text-4xl
           md:mx-auto
-          font-tungsten
+          text-center
         "
       >
-        {{ article ? article.title : '' }}
+        {{ step ? step.title : '' }} <br />
+        "{{ step ? step.text : '' }}"
       </h2>
     </div>
 
@@ -33,16 +34,93 @@
         justify-between
       "
     >
-      <div class="text-md w-full text-cetro-black lg:max-w-screen-lg lg:mr-10">
+      <div class="w-full text-cetro-black lg:max-w-screen-lg lg:mr-10">
+        <div v-html="step.description"></div>
         <img
-          class="mx-auto mt-4 max-h-80 object-cover w-full"
-          :src="article.image"
+          class="w-full object-contain mx-auto mt-4 mb-4"
+          :src="step.image"
         />
 
-        <p
-          class="py-4 text-md font text-cetro-black tracking-wider"
-          v-html="article.text"
-        ></p>
+        <!-- Questions -->
+
+        <div
+          class="border rounded shadow-sm mb-1"
+          v-for="(item, id) in step.steps"
+          v-bind:key="id"
+        >
+          <button
+            @click="changeTab(id)"
+            type="button"
+            :aria-label="item.title"
+            :title="item.title"
+            class="
+              flex
+              items-center
+              justify-between
+              w-full
+              p-4
+              focus:outline-none
+            "
+          >
+            <p class="text-xl font-medium text-cetro-green">
+              <fa
+                icon="fa-solid fa-circle-chevron-right"
+                v-if="selectedElement === id"
+              />
+              {{ item.title }}
+            </p>
+            <div
+              class="
+                flex
+                items-center
+                justify-center
+                w-8
+                h-8
+                border
+                rounded-full
+              "
+            >
+              <!-- Add "transform rotate-180" classes on svg, if is open" -->
+              <svg
+                viewBox="0 0 24 24"
+                class="w-3 text-gray-600 transition-transform duration-500"
+                v-bind:class="
+                  selectedElement === id ? 'transform rotate-180' : ''
+                "
+              >
+                <polyline
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  points="2,7 12,17 22,7"
+                  stroke-linejoin="round"
+                ></polyline>
+              </svg>
+            </div>
+          </button>
+
+          <transition
+            enter-active-class="duration-600 delay-100 ease-out   "
+            enter-class="-translate-x-full opacity-0"
+            enter-to-class="translate-x-0 opacity-100"
+            leave-active-class="duration-600 ease-in "
+            leave-class="translate-x-0 opacity-100"
+            leave-to-class="-translate-x-full opacity-0 "
+          >
+            <div
+              class="p-4 pt-0 transition duration-300 ease-in-out"
+              v-show="selectedElement === id"
+            >
+              <p class="text-gray-700">
+                {{ item.description }}
+              </p>
+            </div>
+          </transition>
+        </div>
+        <!-- End Questions -->
+
         <div class="px-0 py-10 mx-auto w-full md:px-24 lg:px-8 lg:py-10">
           <div class="max-w-screen-xl sm:text-center sm:mx-auto">
             <h2
@@ -52,9 +130,8 @@
                 font-bold
                 tracking-tight
                 text-cetro-black
-                sm:text-4xl sm:leading-none
+                sm:text-2xl sm:leading-none
                 uppercase
-                font-tungsten
               "
             >
               Obține asistența în procesul de redobândire a cetățeniei române și
@@ -113,35 +190,69 @@
             </div>
           </div>
         </div>
-        <nuxt-link
-          :to="'/news'"
-          class="
-            inline-flex
-            items-center
-            justify-center
-            w-full
-            px-6
-            py-4
-            mt-4
-            uppercase
-            font-medium
-            text-cetro-green
-            transition
-            duration-200
-            rounded-lg
-            shadow-md shadow-cetro-green
-            bg-white
-            hover:bg-cetro-green hover:text-white
-            focus:shadow-outline focus:outline-none
-            font-bold
-          "
-        >
-          TOATE ARTICOLELE
-        </nuxt-link>
+
+        <div class="relative grid gap-5 sm:grid-cols-1 lg:grid-cols-3">
+          <nuxt-link
+            :to="'/acte/' + document.slug"
+            v-for="(document, id) in documents"
+            v-bind:key="id"
+            class="
+              flex flex-col
+              justify-between
+              overflow-hidden
+              text-left
+              transition-shadow
+              duration-200
+              bg-white
+              rounded
+              shadow-xl
+              group
+              hover:shadow-2xl
+              cursor-pointer
+            "
+          >
+            <div class="p-5">
+              <div
+                class="
+                  flex
+                  items-center
+                  justify-center
+                  w-10
+                  h-10
+                  mb-4
+                  rounded-full
+                  bg-indigo-50
+                  text-xl text-cetro-green
+                "
+              >
+                <fa icon="fa-solid fa-book" />
+              </div>
+              <p class="mb-2 font-bold text-center text-cetro-green uppercase">
+                {{ document.title }}
+              </p>
+              <p class="text-sm leading-5 text-gray-900">
+                {{ document.short }}
+              </p>
+            </div>
+            <div
+              class="
+                w-full
+                h-1
+                ml-auto
+                duration-300
+                origin-left
+                transform
+                scale-x-0
+                bg-cetro-green
+                group-hover:scale-x-100
+              "
+            ></div>
+          </nuxt-link>
+        </div>
       </div>
 
       <div class="text-base w-full lg:w-96 py-2 px-2">
-        <div class="form shadow-xl px-4 py-4">
+        <div class="form shadow-xl px-4 py-4 sticky top-1">
           <h2
             class="
               text-cetro-green text-xl
@@ -249,114 +360,45 @@
             </button>
           </div>
         </div>
-        <h3
-          class="
-            text-cetro-green
-            font-bold
-            text-3xl
-            uppercase
-            mt-20
-            font-tungsten
-          "
-        >
-          Articole Recomandate
-        </h3>
-        <hr class="my-2 border-cetro-green border-2" />
-
-        <div
-          class="grid gap-8 lg:grid-cols-1 sm:max-w-sm sm:mx-auto lg:max-w-full"
-        >
-          <nuxt-link
-            :to="'/news/' + item.slug"
-            v-for="(item, id) in article.featured"
-            :key="id"
-            class="
-              bg-white
-              rounded
-              shadow-sm
-              duration-300
-              transform
-              hover:-translate-y-4
-              cursor-pointer
-              group
-            "
-          >
-            <img :src="item.image" alt="" class="object-cover w-full h-64" />
-            <div class="p-5 border border-t-0">
-              <h3
-                aria-label="Category"
-                class="
-                  inline-block
-                  mb-3
-                  text-2xl
-                  font-bold
-                  leading-5
-                  transition-colors
-                  duration-300
-                  text-cetro-black
-                  group-hover:text-cetro-green
-                "
-              >
-                {{ item.title }}
-              </h3>
-              <p class="mb-2 text-gray-700">
-                {{ item.short }}
-              </p>
-              <p
-                aria-label=""
-                class="
-                  inline-flex
-                  items-center
-                  font-semibold
-                  transition-colors
-                  duration-200
-                  text-cetro-green
-                  hover:text-cetro-green
-                "
-              >
-                {{ content.newsBlock.buttonTitle }}
-              </p>
-            </div>
-          </nuxt-link>
-        </div>
       </div>
     </div>
   </div>
 </template>
-
 <script>
 import uploadContent from '~/mixins/uploadContent'
 
 export default {
-  name: 'ArticlePage',
+  name: 'StepItem',
+  async asyncData({ params }) {
+    const slug = params.slug // When calling /abc the slug will be "abc"
+    return { slug }
+  },
+  data: function () {
+    return {
+      selectedElement: 0,
+      form: {},
+    }
+  },
   mixins: [uploadContent],
-  props: {
-    slug: {
-      type: String,
-      default: '',
-    },
-  },
-  data() {
-    return {}
-  },
+
   computed: {
-    article: function () {
-      if (!this.content.news) return []
-      let items = this.content.news.items.filter((obj) => {
+    documents: function () {
+      if (!this.content.documentsPage) return {}
+      return this.content.documentsPage.items
+    },
+    step: function () {
+      if (!this.content.citizenshipSteps) return {}
+      let items = this.content.citizenshipSteps.steps.filter((obj) => {
         return obj.slug === this.slug
       })
       return items[0] ? items[0] : {}
     },
   },
-  data: function () {
-    return {
-      form: {},
-    }
-  },
   methods: {
     sendForm: function () {},
+    changeTab: function (element) {
+      this.selectedElement = element
+    },
   },
 }
 </script>
-
-<style scoped></style>
