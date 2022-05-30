@@ -7,7 +7,7 @@ export default {
  },
  async beforeMount () {
    await this.$axios.$get(
-     `http://localhost:3000/content.json`
+     `/content.json`
    ).then((res) => {
      this.content = res.data
    })
