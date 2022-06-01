@@ -25,9 +25,9 @@
                 <h3
                   class="
                     mb-4
-                    text-lg
+                    text-4xl
                     font-bold
-                    sm:text-center sm:mb-6 sm:text-4xl
+                    text-center sm:mb-6 sm:text-6xl
                     font-bold
                     text-cetro-green
                     font-tungsten
@@ -36,7 +36,7 @@
                 >
                   Verifică stadiu dosar
                 </h3>
-                <p class="text-center text-xl lg:px-40 font-montserrat">
+                <p class="text-center  text-lg sm:text-xl lg:px-40 ">
                   Primește o înștiințare despre apariția ordinului Autorității
                   Naționale pentru Cetățenie (ANC) privind acordarea cetățeniei
                   române. Pentru aceasta este suficient să completezi

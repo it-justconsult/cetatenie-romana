@@ -9,6 +9,8 @@
         lg:max-w-screen-xl
         md:px-24
         lg:px-8
+        py-8
+        lg:py-2
       "
     >
       <div class="relative z-50 flex items-center justify-between ">

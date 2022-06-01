@@ -25,6 +25,7 @@
           md:mx-auto
           font-tungsten
           uppercase
+          text-center
         "
       >
         {{ citizenshipStepsTitle }}
@@ -102,7 +103,8 @@
             leading-6
             text-cetro-green
             py-10
-            h-40
+            h-20
+            md:h-40
             text-center
             font-tungsten
           "

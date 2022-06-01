@@ -5,7 +5,7 @@
         class="
           uppercase
           font-sans
-          text-3xl
+          text-4xl
           font-bold
           leading-none
           tracking-tight
@@ -62,6 +62,7 @@
                 px-4
                 shadow-lg
                 w-2xl
+                text-center
               "
             >
               <span

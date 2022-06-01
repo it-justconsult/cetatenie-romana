@@ -5,7 +5,7 @@
         class="
           uppercase
           font-sans
-          text-3xl
+          text-4xl
           font-bold
           leading-none
           tracking-tight
@@ -257,6 +257,8 @@
             uppercase
             mt-20
             font-tungsten
+            text-center
+            md:text-left
           "
         >
           Articole Recomandate

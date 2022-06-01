@@ -13,7 +13,7 @@
       "
     >
       <div
-        class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12"
+        class="max-w-xl mb-10 md:mx-auto text-center lg:max-w-2xl md:mb-12"
       >
         <h2
           class="
@@ -21,13 +21,14 @@
             max-w-lg
             mb-6
             font-sans
-            text-3xl
+            text-4xl
             font-bold
             leading-none
             text-cetro-white
             sm:text-6xl
-            md:mx-auto
+            mx-auto
             font-tungsten
+            
           "
         >
           {{ newsBlockTitle }}

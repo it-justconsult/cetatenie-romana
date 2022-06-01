@@ -5,7 +5,7 @@
         class="
           uppercase
           font-sans
-          text-3xl
+          text-4xl
           font-bold
           leading-none
           tracking-tight
@@ -36,7 +36,7 @@
         situațiile care pot avea loc în procesul de redobândire a cetățeniei
         române.
       </h2>
-      <p class="mb-10 text-center text-lg text-cetro-green">
+      <p class="mb-10 mt-2 text-center text-lg text-cetro-green">
         Iar dacă nu ai găsit aici răspunsul căutat, te încurajăm să ne
         contactezi utilizând formularul de contact sau apelându-ne la numărul
         telefon 0 22 xx xx xx.
@@ -121,7 +121,7 @@
             "
           ></div>
           <nuxt-link :to="'/faq/' + category.slug" aria-label="" class="group">
-            <div class="relative h-40 p-5 bg-white rounded-sm flex-grow">
+            <div class="relative h-60 md:h-40 p-5 bg-white rounded-sm flex-grow">
               <div
                 class="
                   flex flex-col
@@ -176,7 +176,15 @@
                     </g>
                   </svg>
                 </div>
-                <h6 class="font-bold text-4xl leading-5 font-tungsten text-cetro-green">
+                <h6
+                  class="
+                    font-bold
+                    text-4xl
+                    font-tungsten
+                    text-cetro-green
+                    text-center
+                  "
+                >
                   {{ category.title }}
                 </h6>
               </div>

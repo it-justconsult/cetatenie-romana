@@ -5,12 +5,12 @@
         class="
           uppercase
           font-sans
-          text-3xl
+          text-4xl
           font-bold
           leading-none
           tracking-tight
           text-white
-          sm:text-6xl
+          lg:text-6xl
           md:mx-auto
           font-tungsten
         "
@@ -48,11 +48,12 @@
                 sm:text-6xl
                 md:mx-auto
                 font-tungsten
+                text-center
               "
             >
               {{ question.title }}
             </h2>
-            <p class="text-base text-gray-700 md:text-lg">
+            <p class="text-base text-gray-700 md:text-lg text-center">
               {{ question.description }}
             </p>
           </div>

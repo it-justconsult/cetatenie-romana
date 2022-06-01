@@ -11,9 +11,9 @@
       lg:px-8 lg:py-20
     "
   >
-    <div class="max-w-screen-xl sm:text-center sm:mx-auto">
+    <div class="max-w-screen-xl text-center mx-auto">
       <div
-        class="inline-block mb-5 rounded-full sm:mx-auto"
+        class="inline-block mb-5 rounded-full mx-auto"
       >
         <div
           class="
@@ -27,6 +27,7 @@
             bg-cetro-gray
             text-cetro-green
             text-2xl
+            mx-auto
           "
         >
           <fa icon="fa-solid fa-phone-volume" />

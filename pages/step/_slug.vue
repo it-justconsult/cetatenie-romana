@@ -5,14 +5,15 @@
         class="
           uppercase
           font-sans
-          text-3xl
+          text-4xl
           font-bold
           leading-none
           tracking-tight
           text-white
-          sm:text-4xl
+          sm:text-6xl
           md:mx-auto
           text-center
+          font-tungsten
         "
       >
         {{ step ? step.title : '' }} <br />
@@ -132,6 +133,7 @@
                 text-cetro-black
                 sm:text-2xl sm:leading-none
                 uppercase
+                text-center
               "
             >
               Obține asistența în procesul de redobândire a cetățeniei române și
@@ -147,6 +149,7 @@
                 px-4
                 shadow-lg
                 w-2xl
+                text-center
               "
             >
               <span
@@ -155,7 +158,6 @@
                   font-bold
                   text-cetro-green
                   pl-4
-                  w-full
                   lg:w-auto
                 "
               >
