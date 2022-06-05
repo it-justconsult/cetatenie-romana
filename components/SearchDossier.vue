@@ -31,7 +31,6 @@
                     font-bold
                     text-cetro-green
                     font-tungsten
-                    uppercase
                   "
                 >
                   Verifică stadiu dosar
@@ -155,7 +154,7 @@
                     Expediază o scrisoare către ANC
                   </h3>
                   <div class="form">
-                    <div class="input-container">
+                    <div class="input-container" v-if="selectedForm == 'with_dossier'">
                       <span class="font-bold text-cetro-text-gray"
                         >Numărul Dosar:</span
                       >

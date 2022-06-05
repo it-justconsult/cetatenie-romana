@@ -15,7 +15,6 @@
     <div class="max-w-xl sm:mb-10 md:mx-auto text-center lg:max-w-2xl md:mb-12">
       <h2
         class="
-          uppercase
           max-w-lg
           mb-6
           font-sans

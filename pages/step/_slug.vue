@@ -1,5 +1,67 @@
 <template>
   <div>
+    <div class="bg-cetro-green py-20  justify-center">
+      <div
+        class="
+          lg:flex
+          px-4
+          py-4
+          mx-auto
+          sm:max-w-xl
+          md:max-w-full
+          lg:max-w-screen-xl
+          md:px-24
+          lg:px-8 lg:py-4
+          justify-start
+        "
+      >
+        <div class="hover:text-cetro-green text-white">
+          <nuxt-link
+            to="/"
+            class="text-6xl hover:bg-white h-xl absolute top-48 lg:mt-12 mt-2"
+          >
+            <fa icon="fa-solid fa-chevron-left " class="h-15 pl-1" />
+          </nuxt-link>
+        </div>
+        <div
+          class="
+            lg:flex
+            px-4
+            py-4
+            sm:max-w-xl
+            md:max-w-full
+            lg:max-w-screen-xl
+            md:px-24
+            mx-auto
+            lg:px-8 lg:py-4
+            justify-between
+          "
+        >
+          <div class="lg:flex">
+            <h2
+              class="
+                uppercase
+                font-sans
+                text-4xl
+                font-bold
+                leading-none
+                tracking-tight
+                text-white
+                sm:text-6xl
+                md:mx-auto
+                font-tungsten
+                text-center
+              "
+            >
+              {{ step ? step.title : '' }} <br />
+              "{{ step ? step.text : '' }}"
+            </h2>
+          </div>
+        </div>
+        <div class="lg:w-96"></div>
+      </div>
+    </div>
+    <!-- 
     <div class="bg-cetro-green py-20 mx-auto flex justify-center">
       <h2
         class="
@@ -19,7 +81,7 @@
         {{ step ? step.title : '' }} <br />
         "{{ step ? step.text : '' }}"
       </h2>
-    </div>
+    </div> -->
 
     <div
       class="
@@ -31,12 +93,12 @@
         md:max-w-full
         lg:max-w-screen-xl
         md:px-24
-        lg:px-8 lg:py-10
+        lg:px-8 lg:py-2
         justify-between
       "
     >
       <div class="w-full text-cetro-black lg:max-w-screen-lg lg:mr-10">
-        <div v-html="step.description"></div>
+        <div class="py-4 text-lg" v-html="step.description"></div>
         <img
           class="w-full object-contain mx-auto mt-4 mb-4"
           :src="step.image"
@@ -152,15 +214,7 @@
                 text-center
               "
             >
-              <span
-                class="
-                  text-4xl
-                  font-bold
-                  text-cetro-green
-                  pl-4
-                  lg:w-auto
-                "
-              >
+              <span class="text-4xl font-bold text-cetro-green pl-4 lg:w-auto">
                 022 84-84-22
               </span>
               <button

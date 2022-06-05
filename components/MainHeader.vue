@@ -37,10 +37,9 @@
                 transition-colors
                 duration-200
                 hover:text-cetro-green
-                uppercase
                 py-6
                 group-hover:text-cetro-green
-                 font-tungsten text-2xl
+                font-tungsten text-2xl
               "
               :to="item.href"
               >{{ item.title }}
@@ -90,7 +89,6 @@
                       class="
                         text-white
                         font-bold
-                        uppercase
                         w-full
                         antialiased
                         py-2

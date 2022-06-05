@@ -31,7 +31,7 @@
       "
     >
       <h2 class="text-center text-4xl font-bold pb-8">
-        <span class="text-just-red">JustConsult</span> -
+        <span class="text-cetro-black">JustConsult</span> -
         <span class="text-cetro-black"> partener oficial al</span>
         <span class="text-cetro-green">cetatenieromana.md</span>
       </h2>
@@ -55,7 +55,7 @@
             focus:outline-none
           "
         >
-          <p class="text-xl font-bold text-just-red uppercase">
+          <p class="text-xl font-bold text-cetro-green uppercase">
             <fa
               icon="fa-solid fa-circle-chevron-right"
               v-if="selectedElement === id"
@@ -108,7 +108,7 @@
                     :href="line.href"
                     target="_blank"
                     class="
-                      text-just-red text-xl
+                      text-cetro-green text-xl
                       font-bold
                       group
                     "
@@ -118,7 +118,7 @@
 
                   <p
                     v-else
-                    class="text-xl font-semibold"
+                    class="text-xl text-cetro-text-gray font-semibold"
                     v-html="line.value"
                   ></p>
                 </div>

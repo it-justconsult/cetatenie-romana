@@ -17,7 +17,6 @@
       >
         <h2
           class="
-            uppercase
             max-w-lg
             mb-6
             font-sans

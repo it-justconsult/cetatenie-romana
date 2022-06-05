@@ -24,7 +24,7 @@
           sm:text-6xl
           md:mx-auto
           font-tungsten
-          uppercase
+          capitalize
           text-center
         "
       >

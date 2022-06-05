@@ -165,7 +165,7 @@
       "buttonTitle": "Abonează-te"
     },
     "newsBlock": {
-      "title": "ultimele știri",
+      "title": "Ultimele știri",
       "buttonTitle": "Vezi detalii",
       "lastNews": [
         {
@@ -207,7 +207,7 @@
       ]
     },
     "partnersBlock": {
-      "title": "parteneri",
+      "title": "Sursa de încredere",
       "partners": [
         {
           "id": 1,

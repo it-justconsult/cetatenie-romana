@@ -1,40 +1,82 @@
 <template>
   <div>
-    <div class="bg-cetro-green py-20 mx-auto flex justify-center">
-      <h2
+    <div class="bg-cetro-green py-20 justify-center">
+      <div
         class="
-          uppercase
-          font-sans
-          text-4xl
-          font-bold
-          leading-none
-          tracking-tight
-          text-white
-          sm:text-6xl
-          md:mx-auto
-          font-tungsten
+          lg:flex
+          px-4
+          py-4
+          mx-auto
+          sm:max-w-xl
+          md:max-w-full
+          lg:max-w-screen-xl
+          md:px-24
+          lg:px-8 lg:py-4
+          justify-start
         "
       >
-        {{ document ? document.title : '' }}
-      </h2>
+        <div class="hover:text-cetro-green text-white">
+          <nuxt-link
+            to="/acte"
+            class="text-6xl hover:bg-white h-xl absolute top-48 lg:mt-12 mt-2"
+          >
+            <fa icon="fa-solid fa-chevron-left " class="h-15 pl-1" />
+          </nuxt-link>
+        </div>
+        <div
+          class="
+            lg:flex
+            px-4
+            py-4
+            sm:max-w-xl
+            md:max-w-full
+            lg:max-w-screen-xl
+            md:px-24
+            mx-auto
+            lg:px-8 lg:py-4
+            justify-between
+          "
+        >
+          <div class="lg:flex">
+            <h2
+              class="
+                uppercase
+                font-sans
+                text-4xl
+                font-bold
+                leading-none
+                tracking-tight
+                text-white
+                sm:text-6xl
+                md:mx-auto
+                font-tungsten
+                text-center
+              "
+            >
+              {{ document ? document.title : '' }}
+            </h2>
+          </div>
+        </div>
+        <div class="lg:w-96"></div>
+      </div>
     </div>
 
     <div
       class="
         lg:flex
         px-4
-        py-10
+        py-4
         mx-auto
         sm:max-w-xl
         md:max-w-full
         lg:max-w-screen-xl
         md:px-24
-        lg:px-8 lg:py-10
+        lg:px-8 lg:py-4
         justify-between
       "
     >
       <div class="text-lg w-full text-cetro-black lg:max-w-screen-lg lg:mr-10">
-        {{ document.description }}
+        <div class="py-4 text-lg" v-html="document.description"></div>
         <img class="w-full object-contain mx-auto mt-4" :src="document.image" />
         <div class="px-0 py-10 mx-auto w-full md:px-24 lg:px-8 lg:py-10">
           <div class="max-w-screen-xl sm:text-center sm:mx-auto">
