@@ -13,7 +13,7 @@
         lg:py-2
       "
     >
-      <div class="relative z-50 flex items-center justify-between ">
+      <div class="relative z-50 flex items-center justify-between">
         <nuxt-link
           :aria-label="logoName"
           :title="logoName"
@@ -39,7 +39,8 @@
                 hover:text-cetro-green
                 py-6
                 group-hover:text-cetro-green
-                font-tungsten text-2xl
+                font-tungsten
+                text-2xl
               "
               :to="item.href"
               >{{ item.title }}
@@ -85,7 +86,7 @@
                   >
                     <nuxt-link
                       exact
-                      :to="link.href"
+                      :to="'/acte/' + link.url"
                       class="
                         text-white
                         font-bold
@@ -131,14 +132,15 @@
                 "
               >
                 <div class="py-4 px-4">
-                  <p class=" font-semibold text-lg">
-                    Salutare! <br/>Știm că ești pierdut în avalanșa de informații și
-                    ai nevoie de ajutor. Aici vei afla multe lucruri utile ție.
-                    Sperăm că astfel vei vedea „lumina din capătul tunelului” în
-                    drumul spre redobândirea cetățeniei române. <br/>Și da, la moment
-                    ar putea să-ți pară complicat, dar cu certitudine te vei
-                    descurca. <br/> Succes! Iar dacă ai nevoie de ajutor, scrie-ne
-                    chiar acum și vei fi ghidat.
+                  <p class="font-semibold text-lg">
+                    Salutare! <br />Știm că ești pierdut în avalanșa de
+                    informații și ai nevoie de ajutor. Aici vei afla multe
+                    lucruri utile ție. Sperăm că astfel vei vedea „lumina din
+                    capătul tunelului” în drumul spre redobândirea cetățeniei
+                    române. <br />Și da, la moment ar putea să-ți pară
+                    complicat, dar cu certitudine te vei descurca. <br />
+                    Succes! Iar dacă ai nevoie de ajutor, scrie-ne chiar acum și
+                    vei fi ghidat.
                   </p>
                 </div>
               </div>
@@ -252,7 +254,8 @@
                             lg:hidden
                             hover:text-cetro-green
                           "
-                          >{{ sublink.title }}</nuxt-link>
+                          >{{ sublink.title }}</nuxt-link
+                        >
                       </li>
                     </ul>
                   </li>
@@ -281,17 +284,42 @@ export default {
     return {
       navHovered: false,
       isVisibleMobileMenu: false,
+      menuList: [
+        {
+          id: 2,
+          title: 'Acte românești',
+          href: '/acte',
+          submenu: [],
+        },
+        {
+          id: 4,
+          title: 'Noutăți',
+          href: '/news',
+        },
+        {
+          id: 5,
+          title: 'Întrebări frecvente',
+          href: '/faq',
+        },
+        {
+          id: 6,
+          title: 'Contacte',
+          href: '/contacts',
+        },
+      ],
     }
   },
   computed: {
+    menu() {
+      if (!this.content) return []
+      this.menuList[0].submenu = this.content.acte
+      return this.menuList
+    },
     logoName() {
       return (this.content.logo || {}).name
     },
     logoSrc() {
       return (this.content.logo || {}).src
-    },
-    menu() {
-      return (this.content || {}).menu
     },
   },
   methods: {
@@ -302,7 +330,6 @@ export default {
       if (item.submenu) {
         this.navHovered = !this.navHovered
       }
-      console.log(item)
     },
   },
 }

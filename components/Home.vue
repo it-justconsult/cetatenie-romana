@@ -37,14 +37,6 @@ export default {
     CaBlock,
   },
   mixins: [uploadContent],
-  layout: 'default',
-  methods: {
-    // async fetchSomething () {
-    // const ip = await this.$axios.$get('http://icanhazip.com')
-    // const data = await this.$axios.$get('http://localhost/api/collections/get/menu?token=af7d2f20a484eddc8ad3e612cd9527')
-    // const content = await this.getContent()
-    // this.ip = ip
-    // },
-  },
+  layout: 'default'
 }
 </script>

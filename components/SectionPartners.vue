@@ -39,20 +39,21 @@
         lg:grid-cols-4
       "
     >
-      <div
+      <a
+        :href="partner.value.url"
         v-for="partner in partnersBlockPartners"
         :key="partner.id"
         class="flex flex-col items-center"
       >
         <img
-          :src="partner.image"
+          :src="imgBase + partner.value.image.path"
           alt="Person"
-          class="object-cover w-60 h-60 mb-6 rounded-2xl shadow"
+          class="object-cover w-40 h-40 px-2 py-2 mb-6 rounded-2xl shadow"
         />
         <div class="flex flex-col items-center">
-          <p class="text-sm font-bold">{{ partner.title }}</p>
+          <p class="text-sm font-bold">{{ partner.value.title }}</p>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </template>
@@ -62,30 +63,17 @@ import hasContentProps from '~/mixins/hasContentProps'
 export default {
   name: 'SectionPartners',
   mixins: [hasContentProps],
+  data: function () {
+    return {}
+  },
   computed: {
     partnersBlockTitle() {
-      return (this.content.partnersBlock || {}).title
+      if (!this.content) return ''
+      return (this.content.mainPage || {}).partnersTitle
     },
     partnersBlockPartners() {
-      return (this.content.partnersBlock || {}).partners
+      return (this.content.mainPage || {}).partners
     },
   },
 }
 </script>
-<style>
-.partners {
-  //margin-top: 30px;
-}
-
-.partners-wrapper {
-  //display: flex;
-}
-
-.partners-wrapper__image {
-  //width: 25%; //padding: 2px; //border-radius: 22%; //overflow: hidden;
-}
-
-.partners-wrapper__image img {
-  //width: auto; //min-height: 100%; //object-fit: fill;
-}
-</style>

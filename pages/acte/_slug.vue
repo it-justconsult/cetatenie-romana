@@ -77,7 +77,11 @@
     >
       <div class="text-lg w-full text-cetro-black lg:max-w-screen-lg lg:mr-10">
         <div class="py-4 text-lg" v-html="document.description"></div>
-        <img class="w-full object-contain mx-auto mt-4" :src="document.image" />
+        <img
+          v-if="document.image"
+          class="w-full object-contain mx-auto mt-4"
+          :src="imgBase + document.image.path"
+        />
         <div class="px-0 py-10 mx-auto w-full md:px-24 lg:px-8 lg:py-10">
           <div class="max-w-screen-xl sm:text-center sm:mx-auto">
             <h2
@@ -117,7 +121,7 @@
                   lg:w-auto
                 "
               >
-                022 84-84-22
+                {{ content.mainPage ? content.mainPage.ctaPhone : '' }}
               </span>
               <button
                 class="
@@ -161,7 +165,7 @@
           <button
             @click="changeTab(id)"
             type="button"
-            :aria-label="item.title"
+            :aria-label="item.value.title"
             :title="item.title"
             class="
               flex
@@ -177,7 +181,7 @@
                 icon="fa-solid fa-circle-chevron-right"
                 v-if="selectedElement === id"
               />
-              {{ item.title }}
+              {{ item.value.title }}
             </p>
             <div
               class="
@@ -224,7 +228,7 @@
               v-show="selectedElement === id"
             >
               <p class="text-gray-700">
-                {{ item.description }}
+                {{ item.value.description }}
               </p>
             </div>
           </transition>
@@ -353,13 +357,13 @@ import uploadContent from '~/mixins/uploadContent'
 export default {
   computed: {
     documents: function () {
-      if (!this.content.documentsPage) return {}
-      return this.content.documentsPage
+      if (!this.content.acte) return {}
+      return this.content.acte
     },
     document: function () {
-      if (!this.content.documentsPage) return {}
-      let items = this.content.documentsPage.items.filter((obj) => {
-        return obj.slug === this.slug
+      if (!this.content.acte) return {}
+      let items = this.content.acte.filter((obj) => {
+        return obj.title_slug === this.slug || obj.url === this.slug
       })
       return items[0] ? items[0] : {}
     },

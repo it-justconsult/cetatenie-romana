@@ -56,7 +56,7 @@
     >
       <div class="relative grid gap-5 sm:grid-cols-1 lg:grid-cols-4">
         <nuxt-link
-          :to="'/acte/' + document.slug"
+          :to="'/acte/' + getUrl(document)"
           v-for="(document, id) in documents"
           v-bind:key="id"
           class="
@@ -129,8 +129,16 @@ export default {
       return (this.content.documentsPage || {}).title
     },
     documents() {
-      return (this.content.documentsPage || {}).items
+      return (this.content || {}).acte
     },
   },
+  methods: {
+    getUrl(item){
+      if(!item.url){
+        return item.title_slug
+      }
+      return item.url
+    }
+  }
 }
 </script>

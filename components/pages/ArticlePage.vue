@@ -61,8 +61,6 @@
       </div>
     </div>
 
-
-
     <div
       class="
         lg:flex
@@ -79,8 +77,10 @@
     >
       <div class="text-md w-full text-cetro-black lg:max-w-screen-lg lg:mr-10">
         <img
+          v-if="article.image"
+          loading="lazy"
           class="mx-auto mt-4 max-h-80 object-cover w-full"
-          :src="article.image"
+          :src="imgBase + (article.image ? article.image.path : '')"
         />
 
         <p
@@ -126,7 +126,7 @@
                   lg:w-auto
                 "
               >
-                022 84-84-22
+                {{ content.mainPage ? content.mainPage.ctaPhone : '' }}
               </span>
               <button
                 class="
@@ -313,8 +313,8 @@
           class="grid gap-8 lg:grid-cols-1 sm:max-w-sm sm:mx-auto lg:max-w-full"
         >
           <nuxt-link
-            :to="'/news/' + item.slug"
-            v-for="(item, id) in article.featured"
+            :to="'/news/' + getUrl(item)"
+            v-for="(item, id) in article.related"
             :key="id"
             class="
               bg-white
@@ -327,7 +327,12 @@
               group
             "
           >
-            <img :src="item.image" alt="" class="object-cover w-full h-64" />
+            <img
+              loading="lazy"
+              :src="imgBase + (item.image ? item.image.path : '')"
+              :alt="item.title"
+              class="object-cover w-full h-64"
+            />
             <div class="p-5 border border-t-0">
               <h3
                 aria-label="Category"
@@ -360,7 +365,7 @@
                   hover:text-cetro-green
                 "
               >
-                {{ content.newsBlock.buttonTitle }}
+                Vezi detalii
               </p>
             </div>
           </nuxt-link>
@@ -376,31 +381,50 @@ import uploadContent from '~/mixins/uploadContent'
 export default {
   name: 'ArticlePage',
   mixins: [uploadContent],
+  data() {
+    return {
+      form: {},
+      article: {},
+    }
+  },
   props: {
     slug: {
       type: String,
       default: '',
     },
   },
-  data() {
-    return {}
-  },
-  computed: {
-    article: function () {
-      if (!this.content.news) return []
-      let items = this.content.news.items.filter((obj) => {
-        return obj.slug === this.slug
-      })
-      return items[0] ? items[0] : {}
-    },
-  },
-  data: function () {
-    return {
-      form: {},
-    }
-  },
+
   methods: {
     sendForm: function () {},
+    loadArticle: async function () {
+      let response = await fetch(
+        `${this.apiBase}api/collections/get/news?token=${this.apiToken}`,
+        {
+          method: 'post',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            filter: { title_slug: this.slug },
+            populate: 1,
+          }),
+        }
+      )
+
+      let article = await response.json()
+      return article
+    },
+    getUrl(article) {
+      if (!article.url) {
+        return article.title_slug
+      }
+      return article.url
+    },
+  },
+  async mounted() {
+    let articlesObject = await this.loadArticle()
+    if (articlesObject.entries[0]) {
+      this.article = articlesObject.entries[0]
+    }
+    console.log(this.article)
   },
 }
 </script>

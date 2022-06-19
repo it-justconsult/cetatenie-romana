@@ -12,9 +12,7 @@
         lg:px-8 lg:py-20
       "
     >
-      <div
-        class="max-w-xl mb-10 md:mx-auto text-center lg:max-w-2xl md:mb-12"
-      >
+      <div class="max-w-xl mb-10 md:mx-auto text-center lg:max-w-2xl md:mb-12">
         <h2
           class="
             max-w-lg
@@ -27,7 +25,6 @@
             sm:text-6xl
             mx-auto
             font-tungsten
-            
           "
         >
           {{ newsBlockTitle }}
@@ -37,7 +34,7 @@
         class="grid gap-8 lg:grid-cols-4 sm:max-w-sm sm:mx-auto lg:max-w-full"
       >
         <nuxt-link
-          :to="'/news/' + article.slug"
+          :to="'/news/' + getUrl(article)"
           v-for="article in newsBlockLastNews"
           :key="article.id"
           class="
@@ -50,12 +47,16 @@
             cursor-pointer
           "
         >
-          <img :src="article.image" alt="" class="object-cover w-full h-64" />
-          <div class="p-5 border border-t-0">
+          <img
+            :src="imgBase + article.image.path"
+            alt=""
+            class="object-cover w-full h-64"
+          />
+          <div class="p-5 border-t-0">
             <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
               <span class="text-gray-600">
                 <fa icon="fa-solid fa-calendar-days" />
-                {{ article.created_at }}
+                {{ toDate(article._created) }}
               </span>
             </p>
             <h3
@@ -72,13 +73,11 @@
                 font-montserrat
               "
               href="/"
-              title="Visit the East"
+              :title="article.title"
             >
               {{ article.title }}
             </h3>
-            <p class="mb-2 text-gray-700">
-              {{ article.text }}
-            </p>
+            <p class="mb-2 text-gray-700" v-html="article.short"></p>
             <span
               aria-label=""
               class="
@@ -90,7 +89,7 @@
                 text-cetro-green
                 hover:text-cetro-green
               "
-              ><span class="mr-1">{{ newsBlockButtonTitle }}</span>
+              ><span class="mr-1">Vezi detalii</span>
               <fa icon="fa-solid fa-chevron-right"
             /></span>
           </div>
@@ -107,13 +106,32 @@ export default {
   mixins: [hasContentProps],
   computed: {
     newsBlockTitle() {
-      return (this.content.newsBlock || {}).title
+      return (this.content.mainPage || {}).newsTitle
     },
     newsBlockLastNews() {
-      return (this.content.newsBlock || {}).lastNews
+      return (this.content || {}).news
     },
-    newsBlockButtonTitle() {
-      return (this.content.newsBlock || {}).buttonTitle
+  },
+  methods: {
+    toDate(timestamp) {
+      var date = new Date(timestamp * 1000)
+      return this.formatDate(date)
+    },
+    padTo2Digits(num) {
+      return num.toString().padStart(2, '0')
+    },
+    formatDate(date) {
+      return [
+        this.padTo2Digits(date.getDate()),
+        this.padTo2Digits(date.getMonth() + 1),
+        date.getFullYear(),
+      ].join('/')
+    },
+    getUrl(article) {
+      if (!article.url) {
+        return article.title_slug
+      }
+      return article.url
     },
   },
 }

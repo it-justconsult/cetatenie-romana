@@ -14,7 +14,7 @@
           md:mx-auto
         "
       >
-        {{ contacts ? contacts.title : '' }}
+        {{ contactPage ? contactPage.title : '' }}
       </h2>
     </div>
 
@@ -38,7 +38,7 @@
 
       <div
         class="border rounded shadow-sm"
-        v-for="(item, id) in contacts.items"
+        v-for="(item, id) in contacts"
         v-bind:key="id"
       >
         <button
@@ -102,24 +102,20 @@
               <div class="flex-1 pl-2 pb-4">
                 <div v-for="(line, lineID) in item.lines" v-bind:key="lineID">
                   <h3 class="text-cetro-black font-bold text-2xl pt-4">
-                    {{ line.label }}:
+                    {{ line.value.label }}:
                   </h3>
                   <a
-                    :href="line.href"
+                    :href="line.value.href"
                     target="_blank"
-                    class="
-                      text-cetro-green text-xl
-                      font-bold
-                      group
-                    "
-                    v-if="line.href"
-                    >{{ line.value }}
+                    class="text-cetro-green text-xl font-bold group"
+                    v-if="line.value.href"
+                    >{{ line.value.value }}
                   </a>
 
                   <p
                     v-else
                     class="text-xl text-cetro-text-gray font-semibold"
-                    v-html="line.value"
+                    v-html="line.value.value"
                   ></p>
                 </div>
               </div>
@@ -150,9 +146,11 @@ export default {
   name: 'ContactsPage',
   mixins: [uploadContent],
   computed: {
+    contactPage: function () {
+      return this.content ? this.content.contactPage : {}
+    },
     contacts: function () {
-      if (!this.content.contactsPage) return {}
-      return this.content.contactsPage
+      return this.content? this.content.contactItems: {}
     },
   },
   data: function () {

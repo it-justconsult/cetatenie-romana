@@ -15,7 +15,7 @@
           font-tungsten
         "
       >
-        {{ faq.title }}
+        {{ faq.title ? faq.title : '' }}
       </h2>
     </div>
 
@@ -32,18 +32,14 @@
       "
     >
       <h2 class="text-xl text-center text-cetro-black font-bold">
-        Am adunat pentru tine cele mai frecvente întrebări cu privire la
-        situațiile care pot avea loc în procesul de redobândire a cetățeniei
-        române.
+        {{ faq.description ? faq.description : '' }}
       </h2>
       <p class="mb-10 mt-2 text-center text-lg text-cetro-green">
-        Iar dacă nu ai găsit aici răspunsul căutat, te încurajăm să ne
-        contactezi utilizând formularul de contact sau apelându-ne la numărul
-        telefon 0 22 xx xx xx.
+        {{ faq.description2 ? faq.description2 : '' }}
       </p>
       <div class="grid gap-8 row-gap-5 lg:grid-cols-2 lg:mb-44">
         <div
-          v-for="(category, id) in faq.items"
+          v-for="(category, id) in faqItems"
           :key="id"
           class="
             relative
@@ -120,8 +116,14 @@
               group-hover:scale-y-100
             "
           ></div>
-          <nuxt-link :to="'/faq/' + category.slug" aria-label="" class="group">
-            <div class="relative h-60 md:h-40 p-5 bg-white rounded-sm flex-grow">
+          <nuxt-link
+            :to="'/faq/' + (category.title_slug ? category.title_slug : '')"
+            aria-label=""
+            class="group"
+          >
+            <div
+              class="relative h-60 md:h-40 p-5 bg-white rounded-sm flex-grow"
+            >
               <div
                 class="
                   flex flex-col
@@ -181,8 +183,7 @@
                     font-bold
                     text-4xl
                     font-tungsten
-                    text-cetro-green
-                    text-center
+                    text-cetro-green text-center
                   "
                 >
                   {{ category.title }}
@@ -207,7 +208,13 @@ export default {
   mixins: [uploadContent],
   computed: {
     faq() {
-      return this.content.faq ? this.content.faq : []
+      if (!this.content.faqPage) return {}
+      console.log(this.content)
+      return this.content.faqPage
+    },
+    faqItems() {
+      if (!this.content.faq) return {}
+      return this.content.faq
     },
   },
   methods: {

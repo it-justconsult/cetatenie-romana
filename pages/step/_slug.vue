@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="bg-cetro-green py-20  justify-center">
+    <div class="bg-cetro-green py-20 justify-center">
       <div
         class="
           lg:flex
@@ -54,7 +54,7 @@
               "
             >
               {{ step ? step.title : '' }} <br />
-              "{{ step ? step.text : '' }}"
+              "{{ step ? step.short : '' }}"
             </h2>
           </div>
         </div>
@@ -100,15 +100,16 @@
       <div class="w-full text-cetro-black lg:max-w-screen-lg lg:mr-10">
         <div class="py-4 text-lg" v-html="step.description"></div>
         <img
+          v-if="step.image"
           class="w-full object-contain mx-auto mt-4 mb-4"
-          :src="step.image"
+          :src="imgBase + (step.image ? step.image.path : '')"
         />
 
         <!-- Questions -->
 
         <div
           class="border rounded shadow-sm mb-1"
-          v-for="(item, id) in step.steps"
+          v-for="(item, id) in step.questions"
           v-bind:key="id"
         >
           <button
@@ -130,7 +131,7 @@
                 icon="fa-solid fa-circle-chevron-right"
                 v-if="selectedElement === id"
               />
-              {{ item.title }}
+              {{ item.value.title }}
             </p>
             <div
               class="
@@ -177,7 +178,7 @@
               v-show="selectedElement === id"
             >
               <p class="text-gray-700">
-                {{ item.description }}
+                {{ item.value.description }}
               </p>
             </div>
           </transition>
@@ -198,8 +199,7 @@
                 text-center
               "
             >
-              Obține asistența în procesul de redobândire a cetățeniei române și
-              perfectare a actelor românești
+              {{ content.mainPage ? content.mainPage.ctaTitle : '' }}
             </h2>
             <div
               class="
@@ -215,7 +215,7 @@
               "
             >
               <span class="text-4xl font-bold text-cetro-green pl-4 lg:w-auto">
-                022 84-84-22
+                {{ content.mainPage ? content.mainPage.ctaPhone : '' }}
               </span>
               <button
                 class="
@@ -249,7 +249,7 @@
 
         <div class="relative grid gap-5 sm:grid-cols-1 lg:grid-cols-3">
           <nuxt-link
-            :to="'/acte/' + document.slug"
+            :to="'/acte/' + document.short_slug"
             v-for="(document, id) in documents"
             v-bind:key="id"
             class="
@@ -439,13 +439,13 @@ export default {
 
   computed: {
     documents: function () {
-      if (!this.content.documentsPage) return {}
-      return this.content.documentsPage.items
+      if (!this.content.acte) return {}
+      return this.content.acte
     },
     step: function () {
-      if (!this.content.citizenshipSteps) return {}
-      let items = this.content.citizenshipSteps.steps.filter((obj) => {
-        return obj.slug === this.slug
+      if (!this.content.steps) return {}
+      let items = this.content.steps.filter((obj) => {
+        return obj.short_slug === this.slug
       })
       return items[0] ? items[0] : {}
     },

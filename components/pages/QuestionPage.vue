@@ -83,7 +83,7 @@
                   icon="fa-solid fa-circle-chevron-right"
                   v-if="selectedElement === id"
                 />
-                {{ item.title }}
+                {{ item.value.title }}
               </p>
               <div
                 class="
@@ -130,7 +130,7 @@
                 v-show="selectedElement === id"
               >
                 <p class="text-gray-700">
-                  {{ item.description }}
+                  {{ item.value.description }}
                 </p>
               </div>
             </transition>
@@ -163,16 +163,13 @@ export default {
   computed: {
     question() {
       if (!this.content.faq) return {}
-      let items = this.content.faq.items.filter((obj) => {
-        return obj.slug === this.slug
+      let items = this.content.faq.filter((obj) => {
+        return obj.title_slug === this.slug
       })
       return items[0] ? items[0] : {}
     },
   },
   afterCreated() {},
-  updated() {
-    // console.log(this.categoryId)
-  },
   methods: {
     changeTab: function (element) {
       this.selectedElement = element

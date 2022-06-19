@@ -12,9 +12,7 @@
     "
   >
     <div class="max-w-screen-xl text-center mx-auto">
-      <div
-        class="inline-block mb-5 rounded-full mx-auto"
-      >
+      <div class="inline-block mb-5 rounded-full mx-auto">
         <div
           class="
             flex
@@ -25,8 +23,7 @@
             mb-4
             rounded-full
             bg-cetro-gray
-            text-cetro-green
-            text-2xl
+            text-cetro-green text-2xl
             mx-auto
           "
         >
@@ -45,7 +42,7 @@
           uppercase
         "
       >
-        Obține consultația unui expert în acte românești
+        {{ content.mainPage ? content.mainPage.ctaTitle : '' }}
       </h2>
       <div
         class="
@@ -60,7 +57,7 @@
         "
       >
         <span class="text-4xl font-bold text-cetro-green pl-4 w-full lg:w-auto">
-          022 84-84-22
+          {{ content.mainPage ? content.mainPage.ctaPhone : '' }}
         </span>
         <button
           class="
@@ -93,7 +90,10 @@
   </div>
 </template>
 <script>
+import hasContentProps from '~/mixins/hasContentProps'
+
 export default {
   name: 'CABlock',
+  mixins: [hasContentProps],
 }
 </script>

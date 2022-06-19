@@ -60,7 +60,7 @@
         <div class="w-px h-full bg-gray-300 lg:w-full lg:h-px"></div>
       </div>
       <nuxt-link
-        :to="'/step/' + step.slug"
+        :to="'/step/' + step.short_slug"
         class="
           p-5
           duration-300
@@ -93,7 +93,7 @@
             "
           >
             <fa icon="fa-solid fa-shoe-prints " />
-            <span class="pl-2 ">Etapa {{ step.id }}</span>
+            <span class="pl-2 ">{{step.title}}</span>
           </p>
         </div>
         <p
@@ -109,7 +109,7 @@
             font-tungsten
           "
         >
-          {{ step.text }}
+          {{ step.short }}
         </p>
         <p
           class="
@@ -175,13 +175,13 @@ export default {
   mixins: [hasContentProps],
   computed: {
     citizenshipStepsTitle() {
-      return (this.content.citizenshipSteps || {}).title
+      return (this.content.mainPage || {}).stepsTitle
     },
     citizenshipStepsSubtitle() {
       return (this.content.citizenshipSteps || {}).subtitle
     },
     citizenshipSteps() {
-      return (this.content.citizenshipSteps || {}).steps
+      return (this.content || {}).steps
     },
   },
 }
