@@ -58,7 +58,7 @@
             <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
               <span class="text-gray-600">
                 <fa icon="fa-solid fa-calendar-days" />
-                {{ toDate(article._created) }}
+                {{ article.date ? article.date : toDate(article._created) }}
               </span>
             </p>
             <h3
@@ -172,6 +172,9 @@ export default {
       totalPages: 0,
     }
   },
+  head: {
+    title: 'Cetățenie Română'
+  },
   methods: {
     changePage: async function (page) {
       this.page = page
@@ -190,7 +193,7 @@ export default {
       }
 
       let res = await fetch(
-        `${this.apiBase}api/collections/get/news?token=${this.apiToken}`,
+        `${this.apiBase}api/collections/get/news?filter[public]=true&token=${this.apiToken}`,
         {
           method: 'post',
           headers: { 'Content-Type': 'application/json' },
@@ -216,7 +219,7 @@ export default {
 
       let end = 1
 
-      if (this.page > 1 ) {
+      if (this.page > 1) {
         start = this.page - 1
       }
 

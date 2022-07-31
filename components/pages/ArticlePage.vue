@@ -393,23 +393,62 @@ export default {
       default: '',
     },
   },
-
+  head() {
+    return {
+      title:
+        'Cetățenie Română - ' +
+        (this.article.seo_title
+          ? this.article.seo_title
+          : this.article.title
+          ? this.article.title
+          : ''),
+      meta: [
+        {
+          description: this.article.seo_description
+            ? this.article.seo_description
+            : this.article.title,
+        },
+      ],
+    }
+  },
   methods: {
     sendForm: function () {},
     loadArticle: async function () {
+      let body = {
+        filter: { title_slug: this.slug, active: true },
+        populate: 1,
+      }
+      //Fetch request
       let response = await fetch(
         `${this.apiBase}api/collections/get/news?token=${this.apiToken}`,
         {
           method: 'post',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            filter: { title_slug: this.slug },
-            populate: 1,
-          }),
+          body: JSON.stringify(body),
         }
       )
 
       let article = await response.json()
+
+      if (!article.title) {
+        body = {
+          url: this.slug,
+          populate: 1,
+          active: true,
+        }
+        //Fetch request
+        let response = await fetch(
+          `${this.apiBase}api/collections/get/news?token=${this.apiToken}`,
+          {
+            method: 'post',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body),
+          }
+        )
+
+        article = await response.json()
+      }
+
       return article
     },
     getUrl(article) {

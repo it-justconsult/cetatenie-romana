@@ -60,7 +60,7 @@
         <div class="w-px h-full bg-gray-300 lg:w-full lg:h-px"></div>
       </div>
       <nuxt-link
-        :to="'/step/' + step.short_slug"
+        :to="'/step/' + getUrl(step)"
         class="
           p-5
           duration-300
@@ -93,7 +93,7 @@
             "
           >
             <fa icon="fa-solid fa-shoe-prints " />
-            <span class="pl-2 ">{{step.title}}</span>
+            <span class="pl-2">{{ step.title }}</span>
           </p>
         </div>
         <p
@@ -117,7 +117,6 @@
             text-center text-gray-400
             hover:text-cetro-green
             group-hover:text-cetro-green
-            
           "
         >
           Vezi soluția
@@ -182,6 +181,14 @@ export default {
     },
     citizenshipSteps() {
       return (this.content || {}).steps
+    },
+  },
+  methods: {
+    getUrl(step) {
+      if (!step.url) {
+        return step.short_slug
+      }
+      return step.url
     },
   },
 }

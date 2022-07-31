@@ -11,5 +11,7 @@ export default {
     const slug = params.slug // When calling /abc the slug will be "abc"
     return { slug }
   },
+ 
+
 }
 </script>

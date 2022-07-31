@@ -174,12 +174,10 @@
             leave-to-class="-translate-x-full opacity-0 "
           >
             <div
-              class="p-4 pt-0 transition duration-300 ease-in-out"
+              class="p-4 pt-0 transition duration-300 ease-in-out step_content"
               v-show="selectedElement === id"
             >
-              <p class="text-gray-700">
-                {{ item.value.description }}
-              </p>
+              <p class="text-gray-700 " v-html="item.value.description"></p>
             </div>
           </transition>
         </div>
@@ -436,6 +434,18 @@ export default {
     }
   },
   mixins: [uploadContent],
+  head() {
+    return {
+      title: this.step.seo_title ? this.step.seo_title : this.step.title,
+      meta: [
+        {
+          description: this.step.seo_description
+            ? this.step.seo_description
+            : this.step.title,
+        },
+      ],
+    }
+  },
 
   computed: {
     documents: function () {
@@ -445,7 +455,7 @@ export default {
     step: function () {
       if (!this.content.steps) return {}
       let items = this.content.steps.filter((obj) => {
-        return obj.short_slug === this.slug
+        return obj.short_slug === this.slug || obj.url === this.slug
       })
       return items[0] ? items[0] : {}
     },
@@ -458,3 +468,10 @@ export default {
   },
 }
 </script>
+<style>
+.step_content  a {
+  font-weight: bold;
+  text-decoration: underline;
+  color: rgba(114, 187, 93, var(--tw-text-opacity));
+}
+</style>

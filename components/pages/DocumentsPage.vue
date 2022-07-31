@@ -132,6 +132,11 @@ export default {
       return (this.content || {}).acte
     },
   },
+  head() {
+    return {
+      title: 'Cetățenie Română - Acte'
+    }
+  },
   methods: {
     getUrl(item){
       if(!item.url){

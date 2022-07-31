@@ -227,8 +227,7 @@
               class="p-4 pt-0 transition duration-300 ease-in-out"
               v-show="selectedElement === id"
             >
-              <p class="text-gray-700">
-                {{ item.value.description }}
+              <p class="text-gray-700" v-html="item.value.description">
               </p>
             </div>
           </transition>
@@ -369,6 +368,18 @@ export default {
     },
   },
   mixins: [uploadContent],
+  head() {
+    return {
+      title: (this.document.seo_title?this.document.seo_title: this.document.title),
+      meta: [
+        {
+          description: (this.document.seo_description
+            ? this.document.seo_description
+            : this.document.title)
+        },
+      ],
+    }
+  },
   data: function () {
     return {
       form: {},
